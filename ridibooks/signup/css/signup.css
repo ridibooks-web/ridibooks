@@ -158,26 +158,21 @@ button {
 }
 
 input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 1px;
+    height: 1px;
+    left: 1px;
     position: absolute;
 }
 
-.check span::before {
-    width: 16px;
-    height: 16px;
+.before {
+    width: 18px;
+    height: 18px;
     border: 1px solid #D1D5D9;
     background: #fff;
     border-radius: 2px;
     position: absolute;
     left: 0;
     top: 0;
-    content: '';
-}
-
-input[type="checkbox"]:checked {
-    border-color: #0077D9;
-    background: #1f8ce6;
 }
 
 .check svg {
@@ -498,7 +493,7 @@ input.birthYear {
 /* 팝업창 */
 .popBox {
     left: 50%;
-    top: 66px;
+    top: 45px;
     width: 420px;
     margin-left: -210px;
     display: block;
@@ -509,7 +504,7 @@ input.birthYear {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
     border-radius: 4px;
 
-    display: none;
+    opacity: 0;
 }
 
 .popBox p {

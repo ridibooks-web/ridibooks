@@ -59,18 +59,55 @@
             $("#redtext_corr").css("display", "block");
          } else {
             $("#redtext_corr").css("display", "none");            
-         }     
+         }
       });
+
+      function mailif() {
+         $(".resend").on("click", function() {
+         $("#redtext_corr").css("display", "none");     
+
+         $(".popBox").animate({
+            opacity: "1",
+            marginTop : "30px"
+         }, 300);
+
+         setTimeout(function() {
+            $(".popBox").animate({
+            opacity: "0",
+            marginTop: "0px"
+         }, 300)     
+         }, 2000);
+         });
+      }
 
       $(".resend").on("click", function() {
          let emailVal = $("#email").val();
 
-         if(emailVal != "" && emailVal.indexOf("@") != -1) {
-            $(".popBox").slideDown();
+         if(emailVal != "" && emailVal.indexOf("@") != -1 && emailVal.indexOf(".com") != -1) {
+            mailif();
+         } else if (emailVal == "") {
+            $("#redtext_corr").css("display", "block");            
+         } else if(emailVal.indexOf("@") == -1 && emailVal.indexOf(".com") == -1) {
+            $("#redtext_corr span").text("올바른 이메일 형식이 아닙니다.");
+            $("#redtext_corr").css("display", "block");           
+         }
 
-            setTimeout(function() {
-               $(".popBox").slideUp();            
-            }, 3000);
+         if(emailVal != "" && emailVal.indexOf("@") != -1 && emailVal.indexOf(".co.kr") != -1) {
+            mailif();
+         } else if (emailVal == "") {
+            $("#redtext_corr").css("display", "block");            
+         } else if(emailVal.indexOf("@") == -1 && emailVal.indexOf(".co.kr") == -1) {
+            $("#redtext_corr span").text("올바른 이메일 형식이 아닙니다.");
+            $("#redtext_corr").css("display", "block");           
+         }
+
+         if(emailVal != "" && emailVal.indexOf("@") != -1 && emailVal.indexOf(".net") != -1) {
+            mailif();
+         } else if (emailVal == "") {
+            $("#redtext_corr").css("display", "block");            
+         } else if(emailVal.indexOf("@") == -1 && emailVal.indexOf(".net") == -1) {
+            $("#redtext_corr span").text("올바른 이메일 형식이 아닙니다.");
+            $("#redtext_corr").css("display", "block");           
          }
       });
    </script>
