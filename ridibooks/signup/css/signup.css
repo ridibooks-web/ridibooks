@@ -206,11 +206,31 @@ input[type="text"], input[type="password"], input[type="email"], input[type="but
     background: white;
     color: #303538;
     font-size: 15px;
+    font-weight: bold;
     border: 1px solid #D6DEEB;
     font-family: ridi-roboto,Apple SD Gothic Neo,"나눔고딕",Nanum Gothic,"돋움",Dotum,Helvetica Neue,arial,sans-serif;
     border-radius: 4px;
     margin-bottom: 10px;
     vertical-align: middle;
+}
+
+label {
+    position: relative;
+}
+
+.inputBlueText {
+    position: absolute;
+    font-size: 15px;
+    color:#1F8CE6;
+    top: -3px;
+    left: 11px;
+    z-index: 11;
+
+    display: none;
+}
+
+#blue_pw {
+    left: 10px;
 }
 
 /* 입력해주세요 문구 */
@@ -220,13 +240,18 @@ input[type="text"], input[type="password"], input[type="email"], input[type="but
     letter-spacing: -0.5px;
     line-height: 15px;
     margin-bottom: 10px;
+    margin-left: 4px;
 
     display: none;
 }
 
-.redtext span {
+.redtext span, #redtext_agree span {
     position: relative;
     top: -2px;
+}
+
+#redtext_agree {
+    margin-top: 6px;
 }
 
 .fig-8kto1h {
