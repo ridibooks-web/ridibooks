@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>회원가입 - 리디북스</title>
    <link rel="stylesheet" href="css/signup.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+   <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
    <!-- header -->   
@@ -47,15 +47,23 @@
       </div>
    </section>
    
+   <div class="popBox">
+    <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="pop_pink" id=""><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
+    <p class="pinktext">만 14세 미만 어린이는 법정대리인의 동의가 필요합니다.</p>
+    <img src="images/다운로드.svg">
+    </div>
+
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    <script>
        function checkBefore() {
-            if($(".before").val() == '' || $(".before").css("background") == "#fff") {
+            let inputTag = $("input[type=\"checkbox\"]");
+
+            if($(inputTag).is(":checked") == false) {
                 $(".before").css("background", "#1f8ce6").css("borderColor", "#0077D9");
-                $(".underCheck").prop("checked", true);
-            } else if($("input").prop("checked") == true){
+                $(inputTag).prop("checked", true);
+            } else if($(inputTag).is(":checked") == true) {
                 $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
-                $("input").prop("checked", false);               
+                $(inputTag).prop("checked", false);
             }
        }
 
@@ -65,7 +73,27 @@
 
        $(".fig-17fh37n").on("click", function() {
             checkBefore();
-       });       
+       });
+
+       $(".blueBtn").on("click", function() {
+        let inputTag = $("input[type=\"checkbox\"]");
+
+            if($(inputTag).is(":checked") == false) {
+                $("#redtext_corr").css("display", "none");     
+
+                $(".popBox").animate({
+                opacity: "1",
+                marginTop : "30px"
+                }, 300);
+
+                setTimeout(function() {
+                $(".popBox").animate({
+                opacity: "0",
+                marginTop: "0px"
+                }, 300)     
+                }, 2000);
+            }
+       });
    </script>
 </body>
 </html>

@@ -6,14 +6,14 @@
 
 body {
     background-color: #EBF6FF;
-    font-family: ridi-roboto,Apple SD Gothic Neo,"나눔고딕",Nanum Gothic,"돋움",Dotum,Helvetica Neue,arial,sans-serif;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
 
 a {
     color: #808991;
     text-decoration: none;
     cursor: pointer;
-    font-family: ridi-roboto,Apple SD Gothic Neo,"나눔고딕",Nanum Gothic,"돋움",Dotum,Helvetica Neue,arial,sans-serif;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
 
 /* header */
@@ -198,6 +198,14 @@ input[type="checkbox"] {
     letter-spacing: -0.03em;
 }
 
+.fig-17fh37n {
+    cursor: pointer;
+}
+
+.blueBtn {
+    cursor: pointer;
+}
+
 /* signupinfo */
 input[type="text"], input[type="password"], input[type="email"], input[type="button"] {
     padding: 15px 10px 13px;
@@ -208,10 +216,14 @@ input[type="text"], input[type="password"], input[type="email"], input[type="but
     font-size: 15px;
     font-weight: bold;
     border: 1px solid #D6DEEB;
-    font-family: ridi-roboto,Apple SD Gothic Neo,"나눔고딕",Nanum Gothic,"돋움",Dotum,Helvetica Neue,arial,sans-serif;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
     border-radius: 4px;
     margin-bottom: 10px;
     vertical-align: middle;
+}
+
+input::placeholder {
+    font-weight: normal;
 }
 
 label {
@@ -452,7 +464,6 @@ input.birthYear {
     background: white;
     color: #303538;
     font-size: 15px;
-    font-weight: bold;
     width: 100%;
     padding: 15px 16px;
     margin-top: 25px;
@@ -465,6 +476,18 @@ input.birthYear {
 
 #redtext_corr {
     margin-left: 4px;
+}
+
+.popBox .pinktext {
+    color: #f5948a;
+}
+
+.pop_pink {
+    fill: #f5948a;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
 }
 
 /* sendMail */
@@ -534,12 +557,13 @@ input.birthYear {
 
 .popBox p {
     color: #5ABF0D;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.45em;
     letter-spacing: -.03em;
     padding-left: 21px;
     position: relative;
     cursor: default;
+    font-weight: bold;
 }
 
 .pop {
@@ -547,7 +571,7 @@ input.birthYear {
     width: 14px;
     height: 14px;
     position: absolute;
-    top: 18px;
+    top: 17px;
 }
 
 .popBox img {
