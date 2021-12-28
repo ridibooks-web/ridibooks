@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>아이디 찾기 - 리디북스</title>
+   <title>비밀번호 재설정 - 리디북스</title>
    <link rel="stylesheet" href="css/login.css">
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
@@ -19,29 +19,71 @@
 
    <!-- section -->
    <section class="info">
-        <div class="findbox">
-            <p class="findTitle">회원님의 아이디는 다음과 같습니다.</p>
-            <p class="blueText" id="findBlue">아이디가 들어갈 부분</p>
-            <p class="grayText" id="linkGray">
-                개인 정보 보호를 위해 앞 두글자만 보여드립니다. <br>
-                전체 아이디는 입력하신 메일 주소로 안내해드렸습니다.
-            </p>
+      <div class="findbox">
+         <p class="title">비밀번호 재설정</p>
+         <form action="#" method="">
+            <label for="id" class="labelid">
+               <input type="text" name="id" id="id" placeholder="아이디">
+            </label>
+             <label for="email" class="pw_mail">
+                 <input type="email" name="email" id="email" placeholder="이메일 주소">
+              </label>
+         </form>
 
-            <div class="btn">
-                <button class="blueBtn" id="find_loginBtn"><a href="#" class="find">로그인</a></button>
-            </div>
-        </div>
-
-         <div class="repwhover">
-            <div class="linkText" id="findID_pw">
-               <p>비밀번호를 잃어버리셨나요?</p>
-                <a href="#" class="repwset">
-                   비밀번호 재설정
-                   <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
+         <div class="btn">
+            <button class="blueBtn" id="findBtn"><a href="#" class="find">찾기</a></button>
          </div>
+
+         <p class="findpwText">새 비밀번호를 설정할 수 있도록 이메일로 메시지가 전송됩니다.</p>
+
+        <div class="linkText">
+           <p>이메일이 기억나지 않으세요?</p>
+            <a href="#" class="solve">
+               해결방법 보러가기
+               <svg viewBox="0 0 30 48" width="10" height="10" fill="#808991" display="inline-block" class="fig-12qtrj3"><path d="M.9 4.4L5.2 0l23.9 23.9L5.1 48 .8 43.7l20-20z"></path></svg>
+            </a>
+        </div>
       </div>
    </section>
+
+   <!-- 팝업창 -->
+   <div class="popBox">
+      <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="pop_pink" id=""><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
+      <p class="pinktext">아이디를 입력해주세요.</p>
+      <img src="images/다운로드.svg">
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script>
+      function findif() {
+         $(".popBox").animate({
+            opacity: "1",
+            marginTop : "30px"
+         }, 300);
+
+         setTimeout(function() {
+            $(".popBox").animate({
+            opacity: "0",
+            marginTop: "0px"
+         }, 300)     
+         }, 2000);
+      }
+
+      $(".find").on("click", function() {
+
+         let idlVal = $("#id").val();
+         let emailVal = $("#email").val();
+
+         if(idlVal == "") {
+            findif();
+         } else if(emailVal == "") {
+            findif()
+            $(".pinktext").text("이메일을 입력해주세요.");
+         } else if(emailVal.indexOf("@") == -1) {
+            findif()
+            $(".pinktext").text("올바른 이메일 형식이 아닙니다.");
+         }
+      });
+   </script>
 </body>
 </html>

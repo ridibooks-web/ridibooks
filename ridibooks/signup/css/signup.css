@@ -220,6 +220,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="but
     border-radius: 4px;
     margin-bottom: 10px;
     vertical-align: middle;
+    letter-spacing: -.03em;
 }
 
 input::placeholder {
@@ -303,7 +304,6 @@ input:focus::placeholder {
 }
 
 #gender_m {
-    margin-right: -1px;
     border-radius: 4px 0 0 4px;
     cursor: pointer;
 }
@@ -325,9 +325,13 @@ input:focus::placeholder {
     left: 39%;
 }
 
-input[name="password"] {
+label {
     margin-bottom: -1px;
+}
+
+input[name="password"] {
     border-radius: 4px 4px 0 0;
+    margin: 0;
 }
 
 input[name="passwordre"] {
