@@ -31,7 +31,7 @@ a {
 
 /* section */
 .info {
-    max-width: 360px;
+    width: 360px;
     margin: 0 auto;
     padding: 60px 0 70px;
 }
@@ -60,6 +60,7 @@ button {
 .blueBtn {
     background: #1f8ce6;
     border: 1px solid #0077D9;
+    margin-top: 10px;
 }
 
 .blueBtn a, .grayBtn a {
@@ -70,8 +71,9 @@ button {
 
 .whiteBtn {
     background: #fff;
-    border: 2px solid #d1d5d9;
-    margin: 10px 0;
+    border: 1px solid #d1d5d9;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px 0 rgb(209 213 217 / 30%);
 }
 
 .whiteBtn a {
@@ -101,7 +103,8 @@ input::placeholder {
 }
 
 input[name="password"] {
-    border-radius: 4px 4px 0 0;
+    border-radius: 0;
+    margin: 0;
 }
 
 input[name="id"] {
@@ -128,68 +131,76 @@ label {
     position: relative;
 }
 
-.inputBlueText {
-    position: absolute;
-    font-size: 15px;
-    color:#1F8CE6;
-    top: -3px;
-    left: 11px;
-    z-index: 11;
-
-    display: none;
-}
-
-#blue_pw {
-    left: 10px;
-}
-
-.checkText {
+.keep {
+    margin-bottom: 10px;
+    padding: 13px 8px 13px 16px;
     position: relative;
-    cursor: pointer;
-}
-
-.check {
-    color: #303538;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.check span {
+    border: 1px solid #d6deeb;
+    background: #f7fbff;
+    border-radius: 0 0 4px 4px;
+    font-size: 12px;
+    color: #738096;
+    letter-spacing: -0.03em;
     display: block;
-    margin-right: 10px;
-    padding: 0px 0px 0px 26px;
-    letter-spacing: -0.39px;
+}
+
+.findidpw {
+    display: inline-block;
+    position: relative;
+    left: 43px;
+}
+
+.findidpw ul {
+    list-style: none;
+}
+
+.findidpw ul li {
+    display: inline-block;
+}
+
+.findidpw ul li a:first-child, .findidpw ul li a:last-child {
+    padding: 0 4px;
+}
+
+.line {
+    border-right: 1px solid #dfdfdf;
+    height: 12px;
+    position: relative;
+    top: 2.5px;
+}
+
+.login_check {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 19px;
+    top: 15px;
 }
 
 input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
+    width: 1px;
+    height: 1px;
+    left: 17px;
+    position: absolute;
+    display: inline-block;
+}
+
+.keep span {
+    padding-left: 23px;
 }
 
 .before {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     border: 1px solid #D1D5D9;
     background: #fff;
     border-radius: 2px;
     position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.check svg {
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    z-index: 11;
-    left: 4px;
-    top: 4px;
-}
-
-.grayBtn {
-    background: #7D8E9E;
-    border: 1px solid #636C73;
+    top: 12px;
+    left: 16px;
+    display: inline-block;
+    z-index: 1;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 10%);
 }
 
 .fig-17fh37n {
@@ -200,33 +211,25 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* 입력해주세요 문구 */
 .redtext {
+    display: none; 
+}
+
+.ridi_icon {
+    fill: #e64938;
+    width: 14px;
+    height: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.login_redtext {
     color: #e64938;
     font-size: 12px;
-    letter-spacing: -0.5px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    margin-left: 4px;
-
-    display: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: -4px;
 }
-
-.redtext span, #redtext_agree span {
-    position: relative;
-    top: -2px;
-}
-
-#redtext_agree {
-    margin-top: 6px;
-}
-
-.fig-8kto1h {
-    width: 12px;
-    height: 12px;
-    fill: #e64938;
-}
-/* ================ */
 
 /* findId */
 .findbox {

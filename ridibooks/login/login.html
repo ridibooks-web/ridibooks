@@ -27,7 +27,9 @@
                <input type="password" name="password" id="pw" placeholder="비밀번호">
             </label>
             <div class="keep">
-               <input type="checkbox">로그인 상태 유지
+               <img src="images/check.png" class="login_check">
+               <div class="before"></div>
+               <input type="checkbox"><span>로그인 상태 유지</span>
                <div class="findidpw">
                   <ul>
                      <li><a href="#">아이디 찾기</a></li>
@@ -35,14 +37,53 @@
                      <li><a href="#">비밀번호 재설정</a></li>
                   </ul>
                </div>
-            </label>
+            </div>   
          </form>
+         <div class="redtext">
+            <svg viewBox="0 0 8 48" class="ridi_icon exclamation exclamation_1"><path d="M4 0C2.1 0 .6 1.5.6 3.4v27.4c0 1.9 1.5 3.4 3.4 3.4s3.4-1.5 3.4-3.4V3.4C7.4 1.5 5.9 0 4 0zm0 41.1c-1.9 0-3.4 1.5-3.4 3.4S2.1 48 4 48s3.4-1.5 3.4-3.4-1.5-3.5-3.4-3.5z"></path></svg>
+            <p class="login_redtext">아이디를 입력해주세요</p>
+         </div>
 
          <div class="btn">
-            <button class="blueBtn"><a href="#">로그인</a></button>
+            <button class="blueBtn" id="loginBtn"><a href="#">로그인</a></button>
             <button class="whiteBtn"><a href="#">회원가입</a></button>
         </div>
       </div>
    </section>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script>
+       function checkBefore() {
+            let inputTag = $("input[type=\"checkbox\"]");
+
+            if($(inputTag).is(":checked") == false) {
+               $(".login_check").css("z-index", "999");
+               $(inputTag).prop("checked", true);
+            } else if($(inputTag).is(":checked") == true) {
+               $(".login_check").css("z-index", "0");
+               $(inputTag).prop("checked", false);
+            }
+       }
+
+       $(".before").on("click", function() {
+            checkBefore();
+       });
+
+       $(".login_check").on("click", function() {
+            checkBefore();
+       });
+
+       $("#loginBtn").on("click", function() {
+         if($("input[type=\"text\"]").val() == "") {
+            $(".redtext").css("display", "block");
+         } else if($("input[type=\"password\"]").val() == "") {
+            $(".login_redtext").text("비밀번호를 입력해주세요");
+            $(".redtext").css("display", "block");            
+         } else {
+            $(".redtext").css("display", "none");            
+         }
+
+       });
+   </script>       
 </body>
 </html>
