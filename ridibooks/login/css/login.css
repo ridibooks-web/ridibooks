@@ -63,6 +63,10 @@ button {
     margin-top: 10px;
 }
 
+.blueBtn:active {
+    background: #0077D9;
+}
+
 .blueBtn a, .grayBtn a {
     color: #fff;
     font-size: 16px;
@@ -74,6 +78,10 @@ button {
     border: 1px solid #d1d5d9;
     margin-top: 10px;
     box-shadow: 0 2px 4px 0 rgb(209 213 217 / 30%);
+}
+
+.whiteBtn:active {
+    background: #F2F4F5;
 }
 
 .whiteBtn a {
