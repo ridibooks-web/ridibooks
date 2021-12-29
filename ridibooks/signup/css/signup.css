@@ -170,6 +170,8 @@ input[type="checkbox"] {
     height: 1px;
     left: 1px;
     position: absolute;
+
+    display: none;
 }
 
 .before {
@@ -396,7 +398,9 @@ input.birthYear {
 
 .agreeBox li {
     display: block;
-    padding: 8px 15px;
+    padding: 8px 27px;
+    position: relative;
+    cursor: pointer;
 }
 
 .agreeTitle {
@@ -406,6 +410,9 @@ input.birthYear {
 
 .agreeTitle span {
     font-weight: bold;
+    position: relative;
+    padding-left: 4px;
+    top: -2px !important;
 }
 
 .agreeLow {
@@ -415,16 +422,31 @@ input.birthYear {
 .agreeBox li span {
     color: #738096;
     font-size: 14px;
+    position: relative;
+    padding-left: 4px;
+    top: -4px;
+}
+
+.agreeTitle svg {
+    position: relative;
+    top: 2px;
 }
 
 .agreeBox li span:hover {
     color: #303538;
 }
 
+.agreeBox li:last-child {
+    padding: 8px 15px;
+}
+
 .agreeBox li a {
     color: #9EA7AD;
     font-size: 12px;
     text-align: right;
+    position: absolute;
+    top: 11px;
+    right: 13px;
 }
 
 .agreeBox li a:hover {
@@ -437,7 +459,7 @@ input.birthYear {
 
 } 
 
-.fig-16m6ba2 {
+.fig-16m6ba1, .fig-16m6ba2, .fig-16m6ba3 {
     width: 18px;
     height: 18px;
     fill: #D6DEEB;
