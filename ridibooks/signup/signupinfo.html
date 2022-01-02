@@ -33,7 +33,7 @@
             </p>
 
             <label for="password">
-               <span class="inputgrayText"  id="gray_pw">비밀번호</span>
+               <span class="inputgrayText" id="gray_pw">비밀번호</span>
                <span class="inputBlueText" id="blue_pw">8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력</span>
                <input type="password" name="password" id="pw" class="necessary" placeholder="비밀번호">
                <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="pwsvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
@@ -179,7 +179,8 @@
 
             $("#gray_id").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $("#idsvg").css("display", "block");
          }
@@ -208,7 +209,8 @@
 
             $("#gray_pw").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $("#pwsvg").css("display", "block");
          }
@@ -232,12 +234,13 @@
          if($("#pwre").val() == "") {
             $("#blue_pwre").css("visibility", "hidden");
             $(this).css("padding", "15px 10px 13px");
-         } else {
+         } else if($("#pw").val() == $("#pwre").val()) {
             $("#blue_pwre").css("visibility", "hidden");
 
             $("#gray_pwre").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $("#pwresvg").css("display", "block");
          }
@@ -267,7 +270,8 @@
 
             $("#gray_mail").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $("#mailsvg").css("display", "block");
          }
@@ -297,7 +301,8 @@
 
             $("#gray_name").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $("#namesvg").css("display", "block");
          }
@@ -312,7 +317,8 @@
             $("#blue_bir").css("visibility", "visible")
             .css("transform", "translateY(7px) scale(0.7)")
             .css("transition", "transform 0.3s ease")
-            .css("transform-origin", "left");
+            .css("transform-origin", "left")
+            .css("color", "#738096");
 
             $(this).css("padding", "21px 10px 7px");
          }
@@ -350,8 +356,8 @@
          if($("#pw").val() == "") {
             $("#redtext_pw").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
-            $("#idsvg").css("display", "none");
-            $("#gray_id").css("visibility", "hidden");
+            $("#pwsvg").css("display", "none");
+            $("#gray_pw").css("visibility", "hidden");
          } else {
             $("#redtext_pw").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
@@ -362,23 +368,47 @@
          if($("#pwre").val() == "") {
             $("#redtext_pw").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
-            $("#idsvg").css("display", "none");
-            $("#gray_id").css("visibility", "hidden");
-         } else {
+            $("#pwresvg").css("display", "none");
+            $("#gray_pwre").css("visibility", "hidden");
+         } else if($("#pw").val() == $("#pwre").val()) {
             $("#redtext_pw").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
+         } else if($("#pw").val() != $("#pwre").val()) {
+            $("#redtext_pw").css("display", "block");
+            $("#redtext_pw span").text("비밀번호가 일치하지 않습니다.");
+            $(this).css("borderColor", "#FABAB3");
+            $("#blue_pwre").css("display", "none");
+            $("#gray_pwre").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#e64938");
+         } else {
+            $("#gray_pwre").css("color", "#738096");
          }
       });
 
-      $("#email").on("blur", function() {      
+      $("#email").on("blur", function() {
+         let mailVal = $("#email").val();
+
          if($("#email").val() == "") {
             $("#redtext_email").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
-            $("#idsvg").css("display", "none");
-            $("#gray_id").css("visibility", "hidden");
+            $("#mailsvg").css("display", "none");
+            $("#gray_name").css("visibility", "hidden");
+         } else if(mailVal.indexOf("@") == -1) {
+            $("#mailsvg").css("display", "none");
+            $("#redtext_email").css("display", "block");
+            $("#redtext_email span").text("올바른 이메일 형식이 아닙니다.");
+            $(this).css("borderColor", "#FABAB3");
+            $("#blue_mail").css("display", "none");
+            $("#gray_mail").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#e64938");
          } else {
             $("#redtext_email").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
+            $("#gray_mail").css("color", "#738096");
          }
       });
 
@@ -386,8 +416,8 @@
          if($("#name").val() == "" ) {
             $("#redtext_name").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
-            $("#idsvg").css("display", "none");
-            $("#gray_id").css("visibility", "hidden");
+            $("#namesvg").css("display", "none");
+            $("#gray_name").css("visibility", "hidden");
          } else {
             $("#redtext_name").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
