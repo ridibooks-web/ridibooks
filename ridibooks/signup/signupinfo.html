@@ -22,36 +22,50 @@
       <div class="box">
          <form action="#" method="">
             <label for="id">
-               <span class="inputBlueText">5~20자 영문, 숫자 입력</span>
+               <span class="inputgrayText" id="gray_id">아이디</span>
+               <span class="inputBlueText" id="blue_id">5~20자 영문, 숫자 입력</span>
                <input type="text" name="id" id="id" class="necessary" placeholder="아이디">
+               <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="idsvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
             </label>
             <p class="redtext" id="redtext_id">
                <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
                <span>아이디를 입력해주세요.</span>
             </p>
+
             <label for="password">
+               <span class="inputgrayText" id="gray_pw">비밀번호</span>
                <span class="inputBlueText" id="blue_pw">8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력</span>
                <input type="password" name="password" id="pw" class="necessary" placeholder="비밀번호">
+               <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="pwsvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
             </label>
+
             <label for="passwordre">
-               <span class="inputBlueText">비밀번호 재입력</span>
+               <span class="inputgrayText" id="gray_pwre">비밀번호 확인</span>
+               <span class="inputBlueText" id="blue_pwre">비밀번호 재입력</span>
                <input type="password" name="passwordre" id="pwre" class="necessary" placeholder="비밀번호 확인">
+               <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="pwresvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
             </label>
             <p class="redtext" id="redtext_pw">
-               <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
+               <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h" id="pwresvg"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
                <span>비밀번호를 입력해주세요.</span>
             </p>
+
             <label for="email">
-               <span class="inputBlueText">이메일 주소 입력</span>
+               <span class="inputgrayText" id="gray_mail">이메일 주소</span>
+               <span class="inputBlueText" id="blue_mail">이메일 주소 입력</span>
                <input type="email" name="email" id="email" class="necessary" placeholder="이메일 주소">
+               <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="mailsvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
             </label>
             <p class="redtext" id="redtext_email">
                <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
                <span>이메일을 입력해주세요.</span>
             </p>
+
             <label for="name">
-               <span class="inputBlueText">이름 입력</span>
+               <span class="inputgrayText" id="gray_name">이름</span>
+               <span class="inputBlueText" id="blue_name">이름 입력</span>
                <input type="text" name="name" id="name" class="necessary" placeholder="이름">
+               <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="namesvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
             </label>
             <p class="redtext" id="redtext_name">
                <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
@@ -62,19 +76,26 @@
             <div class="selectBox">
                <div class="birthBox">
                   <label for="birthYear">
-                     <span class="inputBlueText">예: 1981</span>
+                     <span class="inputgrayText" id="gray_bir">출생년도</span>
+                     <span class="inputBlueText" id="blue_bir">예: 1981</span>
                      <input type="text" name="name" id="birthYear" placeholder="출생년도">
+                     <svg viewBox="0 0 48 48" width="10" height="10" class="fig-2atj3x" id="birsvg"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z" fill="currentColor"></path></svg>
                   </label>
-               </div>
+               </div>   
+
                <div class="genderBox">
                   <label for="gender" class="genderBox_m">
-                     <input type="button" name="gender" id="gender_m"><span class="man">남</span>
+                     <input type="checkbox" name="gender" id="gender_m"><span class="man">남</span>
                   </label>
                   <label for="gender" class="genderBox_w">
-                     <input type="button" name="gender" id="gender_w"><span class="woman">여</span>
+                     <input type="checkbox" name="gender" id="gender_w"><span class="woman">여</span>
                   </label>
                </div>
             </div>
+            <p id="redtext_bir">
+               <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="fig-8kto1h"><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
+               <span>정확히 입력해주세요.</span>
+            </p>
          </form>
 
          <!-- 약관 동의 -->
@@ -135,20 +156,196 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    <script>
       /* 입력창 */
-      $(".necessary").on("click", function() {
+      /* bluetext $ graytext*/
+      $("#id").on("focus", function() {
          $(this).css("borderColor", "#1F8CE6");
-      });
 
-      $(".necessary").on("click", function() {
-         $(".inputBlueText").css("display", "block");
-         $(".inputBlueText").css("transform", "translate(-22px , -12px) scale(0.7)");
-         $(".inputBlueText").css("transition", "transform 0.2s ease 0s");
+         if($("#id").val() == "") {
+            $("#blue_id").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
       });
 
       $("#id").on("blur", function() {
          if($("#id").val() == "") {
+            $("#blue_id").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else {
+            $("#blue_id").css("visibility", "hidden");
+
+            $("#gray_id").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $("#idsvg").css("display", "block");
+         }
+      });
+      /* ====*/
+
+      $("#pw").on("focus", function() {
+         $(this).css("borderColor", "#1F8CE6");
+
+         if($("#pw").val() == "") {
+            $("#blue_pw").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
+      });
+
+      $("#pw").on("blur", function() {
+         if($("#pw").val() == "") {
+            $("#blue_pw").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else {
+            $("#blue_pw").css("visibility", "hidden");
+
+            $("#gray_pw").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $("#pwsvg").css("display", "block");
+         }
+      });
+      /* ====*/
+
+      $("#pwre").on("focus", function() {
+         $(this).css("borderColor", "#1F8CE6");
+
+         if($("#pwre").val() == "") {
+            $("#blue_pwre").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
+      });
+
+      $("#pwre").on("blur", function() {
+         if($("#pwre").val() == "") {
+            $("#blue_pwre").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else if($("#pw").val() == $("#pwre").val()) {
+            $("#blue_pwre").css("visibility", "hidden");
+
+            $("#gray_pwre").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $("#pwresvg").css("display", "block");
+         }
+      });
+
+      /* ====*/
+
+      $("#email").on("focus", function() {
+         $(this).css("borderColor", "#1F8CE6");
+
+         if($("#email").val() == "") {
+            $("#blue_mail").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
+      });
+
+      $("#email").on("blur", function() {
+         if($("#email").val() == "") {
+            $("#blue_mail").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else {
+            $("#blue_mail").css("visibility", "hidden");
+
+            $("#gray_mail").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $("#mailsvg").css("display", "block");
+         }
+      });
+
+      /* ====*/
+
+      $("#name").on("focus", function() {
+         $(this).css("borderColor", "#1F8CE6");
+
+         if($("#name").val() == "") {
+            $("#blue_name").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
+      });
+
+      $("#name").on("blur", function() {
+         if($("#name").val() == "") {
+            $("#blue_name").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else {
+            $("#blue_name").css("visibility", "hidden");
+
+            $("#gray_name").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $("#namesvg").css("display", "block");
+         }
+      });
+
+      /* ====*/
+
+      $("#birthYear").on("focus", function() {
+         $(this).css("borderColor", "#1F8CE6");
+
+         if($("#birthYear").val() == "") {
+            $("#blue_bir").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transition", "transform 0.3s ease")
+            .css("transform-origin", "left")
+            .css("color", "#738096");
+
+            $(this).css("padding", "21px 10px 7px");
+         }
+      });
+
+      $("#birthYear").on("blur", function() {
+         if($("#birthYear").val() == "") {
+            $("#blue_bir").css("visibility", "hidden");
+            $(this).css("padding", "15px 10px 13px");
+         } else {
+            $("#blue_bir").css("visibility", "hidden");
+
+            $("#gray_bir").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left");
+
+            $("#birsvg").css("display", "block");
+         }
+      });
+
+      /* redtext */
+      $("#id").on("blur", function() {
+         if($("#id").val() == "") {
             $("#redtext_id").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
+            $("#idsvg").css("display", "none");
+            $("#gray_id").css("visibility", "hidden");
          } else {
             $("#redtext_id").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
@@ -159,6 +356,8 @@
          if($("#pw").val() == "") {
             $("#redtext_pw").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
+            $("#pwsvg").css("display", "none");
+            $("#gray_pw").css("visibility", "hidden");
          } else {
             $("#redtext_pw").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
@@ -169,41 +368,110 @@
          if($("#pwre").val() == "") {
             $("#redtext_pw").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
-         } else {
+            $("#pwresvg").css("display", "none");
+            $("#gray_pwre").css("visibility", "hidden");
+         } else if($("#pw").val() == $("#pwre").val()) {
             $("#redtext_pw").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
+         } else if($("#pw").val() != $("#pwre").val()) {
+            $("#redtext_pw").css("display", "block");
+            $("#redtext_pw span").text("비밀번호가 일치하지 않습니다.");
+            $(this).css("borderColor", "#FABAB3");
+            $("#blue_pwre").css("display", "none");
+            $("#gray_pwre").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#e64938");
+         } else {
+            $("#gray_pwre").css("color", "#738096");
          }
       });
 
-      $("#email").on("blur", function() {      
+      $("#email").on("blur", function() {
+         let mailVal = $("#email").val();
+
          if($("#email").val() == "") {
             $("#redtext_email").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
+            $("#mailsvg").css("display", "none");
+            $("#gray_name").css("visibility", "hidden");
+         } else if(mailVal.indexOf("@") == -1) {
+            $("#mailsvg").css("display", "none");
+            $("#redtext_email").css("display", "block");
+            $("#redtext_email span").text("올바른 이메일 형식이 아닙니다.");
+            $(this).css("borderColor", "#FABAB3");
+            $("#blue_mail").css("display", "none");
+            $("#gray_mail").css("visibility", "visible")
+            .css("transform", "translateY(7px) scale(0.7)")
+            .css("transform-origin", "left")
+            .css("color", "#e64938");
          } else {
             $("#redtext_email").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
+            $("#gray_mail").css("color", "#738096");
          }
       });
 
       $("#name").on("blur", function() {         
-         if($("#name").val() == "") {
+         if($("#name").val() == "" ) {
             $("#redtext_name").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
+            $("#namesvg").css("display", "none");
+            $("#gray_name").css("visibility", "hidden");
          } else {
             $("#redtext_name").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
          }
       });
 
-      $(".blueBtn").on("click", function() {
-         if($(".necessary").val() == "") {
-            $(".redtext").css("display", "block");
-            $(".necessary").css("borderColor", "#FABAB3");   
-            $(".agree").css("borderColor", "#FABAB3");     
-            $(".agreeTitle").css("borderColor", "#FABAB3");              
+      $("#birthYear").on("blur", function() {         
+         if($("#birthYear").val() < 1900 || $("#birthYear").val() > 2021 || $("#birthYear").val() == "") {
+            $("#redtext_bir").css("display", "block");
+            $(this).css("borderColor", "#FABAB3");
+            $("#birsvg").css("display", "none");
+            $("#gray_bir").css("color", "#e64938");
+         } else {
+            $("#redtext_bir").css("display", "none");
+            $(this).css("borderColor", "#D6DEEB");
+            $("#gray_bir").css("color", "#738096");
          }
       });
 
+      /* gender */
+      $("label.genderBox_m").on("click", function() {
+         let genderTag = $("label input[type=\"checkbox\"]");
+         let genderM = genderTag.eq(0);
+         let genderW = genderTag.eq(1);
+
+         if($(genderM).is(":checked") == false) {
+            $("label.genderBox_m").css("borderColor", "#9ea7ad").css("background", "#DBEFFF");
+            $(genderM).prop("checked", true);
+         } else if($(genderM).is(":checked") == true) {
+            $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");
+            $(genderM).prop("checked", false);
+            $(genderW).prop("checked", false);
+            $("label.genderBox_w").css("borderColor", "#D6DEEB").css("background", "white");
+         }
+      });
+
+      $("label.genderBox_w").on("click", function() {
+         let genderTag = $("label input[type=\"checkbox\"]");
+         let genderM = genderTag.eq(0);
+         let genderW = genderTag.eq(1);
+
+         if($(genderW).is(":checked") == false) {
+            $("label.genderBox_w").css("borderColor", "#9ea7ad").css("background", "#DBEFFF");
+            $(genderW).prop("checked", true);
+         } else if($(genderW).is(":checked") == true) {
+            $("label.genderBox_w").css("borderColor", "#D6DEEB").css("background", "white");
+            $(genderW).prop("checked", false);
+            $(genderM).prop("checked", false);
+            $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");
+         } else if($(genderM).is(":checked") == true) {
+            $(genderM).prop("checked", false);
+            $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");            
+         }
+      });
 
       /* 전체 동의 */
       $(".agreeTitle").on("click", function() {
@@ -213,6 +481,9 @@
             $(".fig-16m6ba1").css("fill", "#1F8CE6");
             $(".fig-16m6ba2").css("fill", "#1F8CE6");
             $(inputTag).prop("checked", true);
+            $(".agree").css("borderColor", "#D6DEEB");     
+            $(".agreeTitle").css("borderColor", "#D6DEEB");
+            $("#redtext_agree").css("display", "none");  
          } else if($(inputTag).is(":checked") == true) {
             $(".fig-16m6ba1").css("fill", "#D6DEEB");
             $(".fig-16m6ba2").css("fill", "#D6DEEB");
@@ -243,10 +514,13 @@
          if($(inputTag).is(":checked") == false) {
             $("#svg2").css("fill", "#1F8CE6");
             $(inputTag).prop("checked", true);
+            $(".agree").css("borderColor", "#D6DEEB");     
+            $(".agreeTitle").css("borderColor", "#D6DEEB");
+            $("#redtext_agree").css("display", "none");  
          } else if($(inputTag).is(":checked") == true) {
             $("#svg2").css("fill", "#D6DEEB");
-            $(inputTag).prop("checked", false);            
-         }
+            $(inputTag).prop("checked", false);    
+         } 
       });
 
       $(".agree_li:nth-child(2)").on("click", function() {
@@ -282,13 +556,28 @@
 
          if($(inputTag).is(":checked") == false) {
             $(".fig-16m6ba3").css("fill", "#1F8CE6");
+            $(".agree").css("borderColor", "#D6DEEB");     
+            $(".agreeTitle").css("borderColor", "#D6DEEB");
+            $("#redtext_agree").css("display", "none");  
             $(inputTag).prop("checked", true);
          } else if($(inputTag).is(":checked") == true) {
             $(".fig-16m6ba3").css("fill", "#D6DEEB");
-            $(inputTag).prop("checked", false);            
+            $(inputTag).prop("checked", false);
          }
       });
       
+   /* 버튼 */
+   $(".blueBtn").on("click", function() {
+         if($(".necessary").val() == "") {
+            $(".redtext").css("display", "block");
+            $(".necessary").css("borderColor", "#FABAB3");   
+            $(".agree").css("borderColor", "#FABAB3");     
+            $(".agreeTitle").css("borderColor", "#FABAB3");              
+         } else if($(".fig-2atj3x").css("display") == "block" && $(".necessary").css("borderColor") == "#D6DEEB") {
+            alert("이메일 전송 페이지로 이동");
+         }
+      });
+
    </script>
 </body>
 </html>

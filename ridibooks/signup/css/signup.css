@@ -230,113 +230,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="but
     border-radius: 4px;
     margin-bottom: 10px;
     vertical-align: middle;
-    letter-spacing: -.03em;
+    letter-spacing: -0.03em;
 }
 
 input::placeholder {
     font-weight: normal;
-}
-
-label {
-    position: relative;
-}
-
-.inputBlueText {
-    position: absolute;
-    font-size: 15px;
-    color:#1F8CE6;
-    top: -3px;
-    left: 11px;
-    z-index: 11;
-
-    display: none;
-}
-
-#blue_pw {
-    left: 10px;
-}
-
-/* 입력해주세요 문구 */
-.redtext {
-    color: #e64938;
-    font-size: 12px;
-    letter-spacing: -0.5px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    margin-left: 4px;
-
-    display: none;
-}
-
-.redtext span, #redtext_agree span {
-    position: relative;
-    top: -2px;
-}
-
-#redtext_agree {
-    margin-top: 6px;
-}
-
-.fig-8kto1h {
-    width: 12px;
-    height: 12px;
-    fill: #e64938;
-}
-/* ================ */
-
-input:focus::placeholder {
-    color: transparent;
-}
-
-.selectBox {
-    display: flex;
-}
-
-.genderBox {
-    width: 50%;
-    display: flex;
-}
-
-.genderBox_w {
-    position: relative;
-    width: 50%;
-    cursor: pointer;
-}
-
-.genderBox_m {
-    position: relative;
-    width: 53.69%;
-    cursor: pointer;
-}
-
-.genderBox_m {
-    padding-left: 6px;
-}
-
-#gender_m {
-    border-radius: 4px 0 0 4px;
-    cursor: pointer;
-}
-
-#gender_w {
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-.man, .woman {
-    position: absolute;
-    left: 44%;
-    top: 25%;
-    font-size: 15px;
-    color: #738096;
-}
-
-.woman {
-    left: 39%;
-}
-
-label {
-    margin-bottom: -1px;
+    top: 10px;
 }
 
 input[name="password"] {
@@ -359,17 +258,165 @@ input:focus {
     box-shadow: inset 0 1px 2px 0 rgb(115 128 150 / 20%);
 }
 
-input[type="button"]:focus {
-    border-color: #9ea7ad;
-    background: #DBEFFF;
+input:focus::placeholder {
+    color: transparent;
+}
+
+input[type="password"]::placeholder {
+    letter-spacing: -0.03em;
+}
+
+input[type="password"] {
+    letter-spacing: -8.6px;
+}
+
+/* 입력해주세요 문구 */
+.redtext, #redtext_bir {
+    color: #e64938;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+
+    display: none;
+}
+
+.redtext span, #redtext_agree span, #redtext_bir span {
+    position: relative;
+    top: -2px;
+}
+
+#redtext_bir {
+    position: relative;
+    top: -3px;
+}
+
+#redtext_agree {
+    margin-top: 6px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.fig-8kto1h {
+    width: 12px;
+    height: 12px;
+    fill: #e64938;
+}
+/* ================ */
+
+.selectBox {
+    display: flex;
+}
+
+label {
+    margin-bottom: -1px;
+}
+
+label {
+    display: flex;
+}
+
+form label {
+    position: relative;
+}
+
+.inputBlueText {
+    text-align: left;
+    position: absolute;
+    color:#1F8CE6;
+    top: -1px;
+    left: 11px;
+    font-size: 15px;
+    z-index: 999;
+
+    visibility: hidden;
+}
+
+.inputgrayText {
+    text-align: left;
+    position: absolute;
+    color:#738096;
+    top: -1px;
+    left: 11px;
+    font-size: 15px;
+    z-index: 999;
+
+    visibility: hidden;
+}
+
+#blue_pw, #gray_pw {
+    top: 3px;
+}
+
+/* gender */
+.genderBox {
+    width: 50%;
+    display: flex;
+}
+
+.genderBox_w {
+    position: relative;
+    width: 50%;
+    cursor: pointer;
+}
+
+.genderBox_m {
+    position: relative;
+    width: 53.69%;
+    cursor: pointer;
+}
+
+label.genderBox_m {
+    margin-left: 6px;
+}
+
+.man, .woman {
+    position: absolute;
+    left: 42%;
+    top: 28%;
+    font-size: 15px;
+    color: #738096;
+}
+
+.woman {
+    left: 40%;
+}
+
+label.genderBox_m,  label.genderBox_w {
+    padding: 15px 10px 13px;
+    width: 100%;
+    height: 48px;
+    background: white;
+    color: #303538;
+    font-size: 15px;
+    border: 1px solid #D6DEEB;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    letter-spacing: -0.03em;
+}
+
+label.genderBox_m:hover,  label.genderBox_w:hover {
+    border-color: #9EA7AD !important;
+    box-shadow: rgb(115 128 150 / 20%) 0px 1px 2px 0px inset !important;
+}
+
+label.genderBox_m {
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+}
+
+label.genderBox_w {
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
 }
 
 input:required, input:invalid {
     border-color: #FABAB3;
-}
-
-input:required::placeholder, input:invalid::placeholder {
-    color: #e64938;
 }
 
 .select {
@@ -382,6 +429,28 @@ input:required::placeholder, input:invalid::placeholder {
 input.birthYear {
     padding: 21px 10px 7px;
     width: 100%;
+}
+
+form label svg {
+    display: inline-block;
+}
+
+.fig-2atj3x {
+    color: #5ABF0D;
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    left: 315px;
+
+    display: none;
+}
+
+#pwsvg {
+    top: 19px;
+}
+
+#birsvg {
+    left: 154px;
 }
 
 /* 약관 동의 */
