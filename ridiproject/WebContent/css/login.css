@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EBF6FF;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+}
+
+a {
+    color: #808991;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+}
+
+/* login */
+/* header */
+.logoBox {
+    text-align: center;
+    border-bottom: 1px solid #D6DEEB;
+    font-size: 12px;
+}
+
+.logo {
+    display: inline-block;
+    padding: 15px 0 12px;
+}
+
+/* section */
+.info {
+    width: 360px;
+    margin: 0 auto;
+    padding: 60px 0 70px;
+}
+
+.loginbox {
+    padding: 24px 10px;
+}
+
+.btn {
+    display: block;
+}
+
+button {
+    box-shadow: 0 2px 4px 0 rgb(31 140 230 / 30%);
+    padding: 16px 34px;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    line-height: 1em;
+    letter-spacing: -0.03em;
+    cursor: pointer;
+}
+
+.blueBtn {
+    background: #1f8ce6;
+    border: 1px solid #0077D9;
+    margin-top: 10px;
+}
+
+.blueBtn:active {
+    background: #0077D9;
+}
+
+.blueBtn a, .grayBtn a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whiteBtn {
+    background: #fff;
+    border: 1px solid #d1d5d9;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px 0 rgb(209 213 217 / 30%);
+}
+
+.whiteBtn:active {
+    background: #F2F4F5;
+}
+
+.whiteBtn a {
+    color: #808991;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 14px 18px;
+    width: 100%;
+    height: 48px;
+    background: white;
+    color: #313538;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #d6deeb;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    letter-spacing: -0.03em;
+}
+
+input::placeholder {
+    font-weight: normal;
+}
+
+input[name="password"] {
+    border-radius: 0;
+    margin: 0;
+}
+
+input[name="id"] {
+    margin: 0;
+    border-radius: 4px 4px 0 0;
+}
+
+label {
+    margin-bottom: -1px;
+}
+
+input:hover {
+    border-color: #9ea7ad;
+    box-shadow: inset 0 1px 2px 0 rgb(115 128 150 / 20%);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #1F8CE6;
+    box-shadow: inset 0 1px 2px 0 rgb(115 128 150 / 20%);
+}
+
+label {
+    position: relative;
+}
+
+.keep {
+    margin-bottom: 10px;
+    padding: 13px 8px 13px 16px;
+    position: relative;
+    border: 1px solid #d6deeb;
+    background: #f7fbff;
+    border-radius: 0 0 4px 4px;
+    font-size: 12px;
+    color: #738096;
+    letter-spacing: -0.03em;
+    display: block;
+}
+
+.findidpw {
+    display: inline-block;
+    position: relative;
+    left: 43px;
+}
+
+.findidpw ul {
+    list-style: none;
+}
+
+.findidpw ul li {
+    display: inline-block;
+}
+
+.findidpw ul li a:first-child, .findidpw ul li a:last-child {
+    padding: 0 4px;
+}
+
+.line {
+    border-right: 1px solid #dfdfdf;
+    height: 12px;
+    position: relative;
+    top: 2.5px;
+}
+
+.login_check {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 19px;
+    top: 15px;
+}
+
+input[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+    left: 17px;
+    position: absolute;
+    display: inline-block;
+}
+
+.keep span {
+    padding-left: 23px;
+}
+
+.before {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #D1D5D9;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    display: inline-block;
+    z-index: 1;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 10%);
+}
+
+.fig-17fh37n {
+    cursor: pointer;
+}
+
+.blueBtn {
+    cursor: pointer;
+}
+
+.redtext {
+    display: none; 
+}
+
+.ridi_icon {
+    fill: #e64938;
+    width: 14px;
+    height: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.login_redtext {
+    color: #e64938;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: -4px;
+}
+
+/* findId */
+.findbox {
+    padding: 0 10px;
+    position: relative;
+}
+
+.title {
+    color: #0077D9;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: -0.54px;
+    padding-bottom: 12px;
+}
+
+.input[type="email"] {
+    border-color: #d6deeb;
+    background: white;
+    color: #303538;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px 16px;
+    margin-bottom: 10px;
+}
+
+.linkText {
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+    letter-spacing: -0.03em;
+}
+
+.linkText p {
+    display: inline-block;
+    color: #636c73;
+
+}
+
+.linkText a {
+    font-weight: 500;
+    padding: 1px 3px;
+    margin-left: 1px;
+    color: #666;
+}
+
+.solve:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+.fig-12qtrj3 {
+    width: 6px;
+    height: 9px;
+    position: relative;
+    top: 1px;
+}
+
+.popBox .pinktext {
+    color: #f5948a;
+}
+
+.pop_pink {
+    fill: #f5948a;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+}
+
+/* findId_2 */
+.findbox {
+    text-align: center;
+}
+
+.findTitle {
+    color: #313538;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3em;
+    letter-spacing: -0.06em;
+    margin-top: 12px;
+}
+
+.blueText {
+    color: #0077d9;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.3em;
+    letter-spacing: -0.03em;
+}
+
+#findBlue {
+    margin: 10px 0;
+}
+
+.grayText {
+    color: #738097;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: -0.03em;
+}
+
+#find_loginBtn, #homeBtn {
+    margin-top: 20px;
+}
+
+#findID_pw {
+    border-top: 2px solid #fff;
+    cursor: pointer;
+    padding: 17px 0;
+}
+
+.repwhover {
+    border-top: 1px solid #d6deeb;
+}
+
+.repwhover:hover {
+    background-color: #E2EFFC;
+}
+
+#findID_pw .repwset {
+    color: #0077D9;
+    font-weight: bold;
+}
+
+#findID_pw .repwset i {
+    position: relative;
+    top: 1px;
+}
+
+/* findPw */
+.findpwText {
+    padding-top: 16px;
+    font-size: 12px;
+    color: #636c73;
+    letter-spacing: -0.03em;
+}
+
+.pw_mail input[type="email"] {
+    border-radius: 0 0 4px 4px;
+}
+
+/* 팝업창 */
+.popBox {
+    left: 50%;
+    top: 45px;
+    width: 420px;
+    margin-left: -210px;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    padding: 15px 50px 15px 15px;
+    background: rgba(0,0,0,.9);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+    border-radius: 4px;
+
+    opacity: 0;
+}
+
+.popBox p {
+    color: #5ABF0D;
+    font-size: 13px;
+    line-height: 1.45em;
+    letter-spacing: -.03em;
+    padding-left: 21px;
+    position: relative;
+    cursor: default;
+    font-weight: bold;
+}
+
+.pop {
+    fill: #5ABF0D;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+}
+
+.popBox img {
+    width: 16px;
+    height: 16px;
+    position: absolute; 
+    cursor: pointer;  
+    top: 34%;
+    right: 10px; 
+}
