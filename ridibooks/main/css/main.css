@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+}
+
+a {
+    color: #808991;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+/* header */
+.searchbox {
+    display: none;
+}
+
+.bluegeader {
+    background-color: #1F8CE6;
+    width: 100%;    
+}
+
+.main_nav {
+    display: flex;
+}
+
+.main_logo ul {
+    display: flex;
+}
+
+.fig-1bk8rmg {
+    width: 119px;
+    height: 18px;
+    fill: white;
+}
+
+.fig-1bk8rmg:hover, .fig-1bk8rmg:active {
+    opacity: 0.8;
+}
+
+.fig-h6w7rm {
+    fill: white;
+    opacity: 0.6;
+    width: 100px;
+    height: 16px;
+}
+
+.fig-h6w7rm:hover, .fig-h6w7rm:active {
+    opacity: 0.8;
+}
+
+.main_menu {
+    display: flex;
+}
+
+.main_menu li svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: white;
+}
+
+.main_categorybox {
+    margin: 0 auto;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.main_category {
+    display: flex;
+}
+
+.fig-oma3mu {
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    fill: #636C73;
+}
+
+/* section */
+
+/* 퀵 메뉴 */
+.fig-8yznbt {
+    width: 44px;
+    height: 44px;
+}
+
+.quick {
+    display: flex;
+}
+
+.quick li a {
+    display: flex;
+}
+
+
+/* 슬라이드 */
+.main_slider {
+    padding: 24px 0;
+}
+
+.title {
+    max-width: 1000px;
+    margin: 0 auto 16px;
+    padding: 6px 0;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#slider-div {
+    width: 1005px !important;
+    margin: 0 auto !important;
+    position: relative;
+}
+
+#slider-div div {
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+#slider-div div a img {
+    height: 210px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 5px rgba(0 0 0 /70%) inset;
+}
+
+#slider-div div a img:hover, #slider-div div a img:active {
+    filter: brightness(87%);
+}
+
+.whitehidden {
+    background-color: white;
+    width: 30px;
+    height: 278px;
+    display: block;
+    position: absolute;
+    top: 29%;
+    left: 84%;
+    transform: translate(-1px, 5px);
+    z-index: 3;
+}
+
+.slick-prev, .slick-next {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0.8px 3px rgb(0 0 0 / 33%);
+    opacity: 0.95;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 38%;
+    z-index: 5;
+}
+
+.slick-prev {
+    top: 34%;
+    left: -6%;
+}
+
+.slick-next {
+    left: 99%;
+}
+
+.slick-prev:hover, .slick-next:hover, 
+.slick-prev:active, .slick-next:active {
+    opacity: 0.6;
+}
+
+.bookname {
+    color: #000;
+    font-size: 13px;
+    padding-top: 9px;
+    font-weight: bold;
+    width: 140px;
+    line-height: 17px;
+    text-align: left;
+}
+
+.fig-1r93q4u, .fig-gnaxy0 {
+    fill: #808991;
+}
+
+.fig-1r93q4u {
+    transform: rotate(180deg);
+}
+
+.fig-gnaxy0 {
+    left: 2px;
+    position: relative;
+}
+
+.fig-18h8pjp {
+    margin-left: 1px;
+}
+
+.fig-18h8pjp path{
+    fill: black;
+}
+
+.graytext {
+    font-size: 14px;
+    color: #636C73;
+    padding-top: 5px;
+}
+
+/* 집 앞 서점에 방금 나온 신간! */
+#homenewbookbox {
+    background: url("../images/homenewbook.png") no-repeat center center;
+    background-size: cover;
+}
+
+#homenewbookbox div div p {
+    color: #fff;
+}
+
+#homenewbookbox a .graytext {
+    color: #9EA7AD;
+}
+
+/* 오늘, 리디의 발견 */
+.findbook p {
+    text-align: center;
+}
+
+
+/* footer */
+footer {
+    background-color: #303538;
+    color: #fff;
+    width: 100%;
+}
+
+.footerbox {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 24px 16px;
+}
+
+/* footer_top */
+.footer_top {
+    display: flex;
+}
+
+.footer_top ul {
+    display: flex;
+}
+
+.footer_top li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer_top li a:hover, .footer_top li a:active {
+    opacity: 0.7;
+}
+
+center li a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fig-j6hn8l {
+    margin-left: 6px;
+    fill: #509deb;
+    width: 14px;
+    height: 14px;
+}
+
+/* ridiInfobox */
+.ridiInfobox p, .footer_bottom p {
+    color: #7e8992;
+}
+
+.ridiInfo:hover, .footer_bottom a:hover,
+.ridiInfo:active, .footer_bottom a:active {
+    opacity: 0.7;
+}
+
+.ridiInfo {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fig-165hqrc {
+    transform: rotate(90deg);
+    fill: #808991;
+}
+
+/* footer_bottom */
+.ridicorp {
+    font-size: 14px;
+}
+
+.law li a {
+    font-size: 11px;
+}
+
+.law {
+    display: flex;
+}
+
+.content {
+    font-size: 10px;
+}
