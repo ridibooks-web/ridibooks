@@ -91,6 +91,10 @@ button, a {
 }
 
 /* section */
+section {
+    margin:0 auto;
+    margin-bottom: 29px;
+}
 
 /* 퀵 메뉴 */
 .fig-8yznbt {
@@ -108,16 +112,17 @@ button, a {
 
 
 /* 슬라이드 */
-.main_slider {
+.main_slider, .horizontalbox {
     padding: 24px 0;
 }
 
-.title {
+.title, .title span {
     max-width: 1000px;
     margin: 0 auto 16px;
     padding: 6px 0;
     font-size: 19px;
     font-weight: 400;
+    color: #000;
 }
 
 #slider-div {
@@ -135,22 +140,34 @@ button, a {
     height: 210px;
     position: relative;
     z-index: 1;
-    box-shadow: 5px 5px 10px 5px rgba(0 0 0 /70%) inset;
+    box-shadow: -1px 8px 8px -4px rgb(0 0 0 / 19%);
 }
 
 #slider-div div a img:hover, #slider-div div a img:active {
     filter: brightness(87%);
 }
 
-.whitehidden {
-    background-color: white;
+.whitehidden_home {
+    background: url("../images/homenewbook.png");
     width: 30px;
     height: 278px;
     display: block;
     position: absolute;
     top: 29%;
-    left: 84%;
-    transform: translate(-1px, 5px);
+    left: 81%;
+    transform: translate(-13px, 5px);
+    z-index: 3;
+}
+
+.whitehidden {
+    background-color: white;
+    width: 30px;
+    height: 1417px;
+    display: block;
+    position: absolute;
+    top: 67%;
+    left: 81%;
+    transform: translate(-13px, 5px);
     z-index: 3;
 }
 
@@ -197,15 +214,19 @@ button, a {
 
 .fig-1r93q4u {
     transform: rotate(180deg);
+    position: relative;
+    left: -2px;
 }
 
 .fig-gnaxy0 {
-    left: 2px;
+    left: 1px;
     position: relative;
 }
 
 .fig-18h8pjp {
     margin-left: 1px;
+    top: 1px;
+    position: relative;
 }
 
 .fig-18h8pjp path{
@@ -230,6 +251,14 @@ button, a {
 
 #homenewbookbox a .graytext {
     color: #9EA7AD;
+}
+
+#homenewbookbox .slick-prev, #homenewbookbox .slick-next {
+    background-color: #384252;
+}
+
+#homenewbookbox .fig-1r93q4u, #homenewbookbox .fig-gnaxy0 {
+    fill: #B8BFC4;
 }
 
 /* 오늘, 리디의 발견 */
@@ -317,3 +346,5 @@ center li a {
 .content {
     font-size: 10px;
 }
+
+@media only screen and (min-width: 1000px) {}
