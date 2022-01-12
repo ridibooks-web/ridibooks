@@ -352,7 +352,29 @@ section {
 
 .quick li a p {
     margin-top: 8px;
+    font-size: 13px;
 }
+
+/* 배너 슬라이드 */
+.banner {
+    width: 1300px !important;
+    height: 100% !important;
+}
+
+.banner div {
+    margin-right: 10px !important;
+}
+
+.banner div a img {
+    border-radius: 6px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.banner div a img:hover, .banner div a img:active {
+    filter: none !important;
+}
+
 
 /* 슬라이드 */
 .main_slider, .horizontalbox {
@@ -369,7 +391,7 @@ section {
 }
 
 #slider-div {
-    width: 1005px !important;
+    width: 1005px;
     margin: 0 auto !important;
     position: relative;
 }
@@ -391,12 +413,12 @@ section {
 }
 
 .whitehidden_home {
-    background: url("../images/homenewbook.png");
+    background: url("../images/homenewbook.png") no-repeat;
     width: 30px;
-    height: 278px;
+    height: 299px;
     display: block;
     position: absolute;
-    top: 29%;
+    top: 17%;
     left: 81%;
     transform: translate(-13px, 5px);
     z-index: 3;
@@ -408,7 +430,7 @@ section {
     height: 1417px;
     display: block;
     position: absolute;
-    top: 67%;
+    top: 71%;
     left: 81%;
     transform: translate(-13px, 5px);
     z-index: 3;
@@ -487,6 +509,7 @@ section {
     background: url("../images/homenewbook.png") no-repeat center center;
     background-size: cover;
     max-width: 100% !important;
+    position: relative;
 }
 
 #homenewbookbox h2 {
@@ -514,6 +537,128 @@ section {
     text-align: center;
 }
 
+/* 사람들이 지금 많이 읽고 있는 책 */
+/* 베스트 셀러 */
+.main_padding, .horizontalbox {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.bestbox ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bestlistbox, .peoplebox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bestlist {
+    display: flex;
+    align-items: center;
+    width: 226px;
+    border-bottom: 1px solid #E6E8EB;
+}
+
+.bestbox ul li:nth-child(7) .bestlist,
+.bestbox ul li:nth-child(8) .bestlist,
+.bestbox ul li:nth-child(9) .bestlist {
+    border: none;
+}
+
+.best_num {
+    margin: 55px 21px 55px 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bookinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.bestlistbox .img_a, .peoplebox .img_a {
+    margin-right: 18px;
+}
+
+.bestlistbox img {
+    box-shadow: -1px 5px 9px -4px rgb(0 0 0 / 40%);
+    width: 80px;
+    height: 120px;
+}
+
+.bestlistbox img:hover, .bestlistbox img :active,
+.peoplebox img:hover, .peoplebox img :active {
+    filter: brightness(87%);
+}
+
+.peoplebox .bookname {
+    padding: 0;
+    letter-spacing: -0.07em;
+    font-size: 12.5px;
+}
+
+.peoplebox .best_num {
+    margin: 31px 21px 31px 0;
+}
+
+.peoplebox img {
+    box-shadow: -1px 4px 7px -4px rgb(0 0 0 / 30%);
+    width: 50px;
+    height: 70px;
+}
+
+/* 리뷰 별 */
+.starbox {
+    font-size: 13px;
+    line-height: 1.2em;
+    overflow-wrap: break-word;
+    color: #666666;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    margin: 0 0 9px 0;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 10px;
+}
+
+.star_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 10px;
+    color: #FA722E;
+    width: 96%;
+}
+
+.star_gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 10px;
+    color: #D1D5D9;
+}
+
+.star_num {
+    color: #999999;
+    font-size: 11px;
+    padding-top: 1px;
+    margin: 0 2px;
+    line-height: 1em;
+}
 
 /* footer */
 footer {
@@ -538,6 +683,14 @@ footer {
     display: flex;
 }
 
+.footer_top ul li {
+    margin-bottom: 15px;
+}
+
+.footer_top ul li:last-child {
+    margin: 0;
+}
+
 .footer_top li a {
     color: #fff;
     font-size: 14px;
@@ -545,6 +698,10 @@ footer {
 
 .footer_top li a:hover, .footer_top li a:active {
     opacity: 0.7;
+}
+
+.center ul {
+    margin-bottom: 28px;
 }
 
 .center ul li:first-child {
@@ -560,6 +717,21 @@ footer {
     font-weight: bold;
 }
 
+.list {
+    display: flex;
+    padding-top: 6px;
+    margin-bottom: 48px;
+}
+
+.list ul {
+    display: block;
+    margin-right: 73px;
+}
+
+.list_inquire, .list_sns {
+    display: none;
+}
+
 .line {
     border-right: 1px solid #525A61;
     height: 14px;
@@ -572,16 +744,16 @@ footer {
     fill: #509deb;
     width: 14px;
     height: 14px;
-}
-
-@media only screen and (min-width: 1000px) {
-    .footer_top {
-        flex-direction: row;
-    }
+    position: relative;
+    top: 3px;
 }
 
 /* ridiInfobox */
-.ridiInfobox p, .footer_bottom p {
+.ridiInfobox {
+    margin-bottom: 5px;
+}
+
+.ridiInfobox p, .content li , .footer_bottom p {
     color: #7e8992;
 }
 
@@ -593,16 +765,51 @@ footer {
 .ridiInfo {
     font-size: 12px;
     cursor: pointer;
+    margin-bottom: 13px;
+    display: inline-block;
 }
 
 .fig-165hqrc {
-    transform: rotate(90deg);
+    transform: scale(0.5) rotate(90deg);
     fill: #808991;
+    margin: 0px 0px -2px 2px;
+}
+
+.content {
+    display: none;
+}
+
+.content:last-child {
+    margin-bottom: 11px;
+}
+
+.content li {
+    font-size: 10px;
+    margin: 0 8px 8px 0;
+    letter-spacing: 1px;
+}
+
+.footerline {
+    top: 1px;
+    height: 10px;
+    opacity: 0.5;
 }
 
 /* footer_bottom */
+.footer_bottom {
+    display: flex;
+    flex-direction: column;
+}
+
 .ridicorp {
     font-size: 14px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.law li {
+    margin-right: 7px;
+    letter-spacing: 0.6px;
 }
 
 .law li a {
@@ -613,7 +820,42 @@ footer {
     display: flex;
 }
 
-.content {
-    font-size: 10px;
+.lawbold {
+    font-weight: bold;
+}
+
+.lawline {
+    top: 6px;
+    height: 10px;
+    opacity: 0.5;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .footer_top {
+        flex-direction: row;
+    }
+
+    .center {
+        margin-right: 42px;
+    }
+
+    .center ul {
+        margin: 0;
+    }
+
+    .list_inquire, .list_sns {
+        display: block;
+    }
+
+    .ridicorp {
+        margin-right: 24px;
+        margin-bottom: 0;
+    }
+
+    .footer_bottom {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
