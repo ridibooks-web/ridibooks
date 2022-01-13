@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+}
+
 body {
     background-color: white;
     font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
@@ -27,6 +31,8 @@ ul {
 button, a {
     cursor: pointer;
 }
+
+
 
 /* header */
 header {
@@ -122,7 +128,7 @@ header {
 
 .loginbtnbox button {
     border-radius: 3px;
-    padding: 6px 13px;
+    padding: 5px 13px;
     font-weight: bold;
 }
 
@@ -155,6 +161,7 @@ header {
     padding: 9px 109px 9px 36px;
     font-size: 16px;
     width: 100%;
+    letter-spacing: -0.06em;
 }
 
 .search input:focus {
@@ -183,8 +190,8 @@ header {
     height: 24px;
     color: #808991;
     position: absolute;
-    left: 0;
-    top: 16px;
+    top: 54px;
+    margin: 0px 4px 0px 22px;
     margin: 0px 4px 0px 6px;
 }
 
@@ -236,6 +243,11 @@ header {
     justify-content: space-around;
 }
 
+.bluetext a {
+    color: #0077D9 !important;
+    font-weight: bold !important;
+}
+
 .fig-oma3mu {
     position: absolute;
     top: 11px;
@@ -254,6 +266,10 @@ header {
     font-weight: 500;
 }
 
+.main_category_list li:first-child {
+    margin-right: 17px;
+}
+
 .main_category_list li a:first-child:hover {
     opacity: 1;
 }
@@ -264,6 +280,18 @@ header {
 
 .main_category_list li a:active {
     color: #0077D9;
+}
+
+@media only screen and (max-width: 320px) {
+    .main_category_list li {
+        padding: 0;
+    }
+    .main_category_list li:first-child {
+        margin-right: 5px;
+    }
+    #nav_line, .main_logo ul li:last-child {
+        display: none;
+    }
 }
 
 /* 검색어 박스 */
@@ -364,7 +392,8 @@ header {
     }
     
     .fig-h1a41g {
-        top: 7px;
+        left: 0;
+        top: 6px;
     }
 
     .searchbox {
@@ -393,6 +422,11 @@ section {
     max-width: 1000px;
     padding: 24px 13px;
     margin: 0 auto;
+    overflow-x: auto;
+}
+
+.quickmenu::-webkit-scrollbar {
+    background-color: transparent;
 }
 
 .fig-8yznbt {
@@ -432,21 +466,60 @@ section {
     height: 100% !important;
 }
 
-.center div {
-    margin-right: 10px !important;
-}
-
 .center div a img {
     border-radius: 6px;
     width: 100% !important;
     height: 100% !important;
 }
 
-.center div a img:hover, .center div a img:active {
-    filter: none !important;
+.center img {
+    transform:scale(0.96);
+    filter: brightness(57%);
+    box-shadow: none !important;
+}
+
+.center .slick-center img {
+    transform:scale(1);
+    filter: none;
+    box-shadow: none !important;
+}
+
+.center .slick-prev {
+    top: 43%;
+    left: 29%;
+    opacity: 0.3;
+}
+
+.center .slick-prev:hover, .center .slick-prev:active {
+    opacity: 0.6;
+}
+
+.center .slick-next {
+    top: 43%;
+    left: 68%;
+    opacity: 0.3;
+}
+
+.center .slick-next:hover, .center .slick-next:active {
+    opacity: 0.6;
+}
+
+#centerbox {
+    position: relative;
+    padding: 20px 0 3px 0;
+    margin: 0 auto;
 }
 
 /* 슬라이드 */
+.main_slider {
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.main_slider::-webkit-scrollbar {
+    background-color: transparent;
+}
+
 .main_slider, .horizontalbox {
     padding: 24px 0;
 }
@@ -471,6 +544,10 @@ section {
     z-index: 1;
 }
 
+#slider-div div::-webkit-scrollbar {
+    background-color: transparent;
+}
+
 #slider-div div a img {
     height: 210px;
     position: relative;
@@ -478,32 +555,12 @@ section {
     box-shadow: -1px 8px 8px -4px rgb(0 0 0 / 19%);
 }
 
-#slider-div div a img:hover, #slider-div div a img:active {
+.homebook div a img:hover, .homebook div a img:active,
+.findbook div a img:hover, .findbook div a img:active,
+.newbook div a img:hover, .newbook div a img:active,
+.veganuary div a img:hover, .veganuary div a img:active,
+.instagram div a img:hover, .instagram div a img:active {
     filter: brightness(87%);
-}
-
-.whitehidden_home {
-    background: url("../images/homenewbook.png") no-repeat;
-    width: 30px;
-    height: 299px;
-    display: block;
-    position: absolute;
-    top: 17%;
-    left: 81%;
-    transform: translate(-13px, 5px);
-    z-index: 3;
-}
-
-.whitehidden {
-    background-color: white;
-    width: 30px;
-    height: 1417px;
-    display: block;
-    position: absolute;
-    top: 71%;
-    left: 81%;
-    transform: translate(-13px, 5px);
-    z-index: 3;
 }
 
 .slick-prev, .slick-next {
@@ -515,17 +572,26 @@ section {
     opacity: 0.95;
     border: 1px solid transparent;
     position: absolute;
-    top: 38%;
+    top: 34%;
     z-index: 5;
 }
 
-.slick-prev {
+.nocenter .slick-prev {
     top: 34%;
-    left: -6%;
+    left: 0%;
 }
 
-.slick-next {
-    left: 99%;
+.nocenter .slick-next {
+    left: 96%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .nocenter .slick-next {
+        left: 99%;
+    }
+    .nocenter .slick-prev {
+        left: -6%;
+    }
 }
 
 .slick-prev:hover, .slick-next:hover, 
@@ -609,9 +675,33 @@ section {
 
 /* 사람들이 지금 많이 읽고 있는 책 */
 /* 베스트 셀러 */
+.time {
+    width: 96px;
+    height: 30px;
+    padding: 9px;
+    padding-right: 13px;
+    margin-bottom: 12px;
+    background-image: linear-gradient(255deg, #0077d9 4%, #72d2e0);
+    border-radius: 14px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time svg {
+    margin-top: 2px;
+}
+
 .main_padding, .horizontalbox {
     margin: 0 auto;
     max-width: 1000px;
+}
+
+.main_padding {
+    padding: 24px 0;
 }
 
 .bestbox ul {
@@ -624,6 +714,11 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    overflow-x: auto;
+}
+
+.bestlistbox::-webkit-scrollbar, .peoplebox::-webkit-scrollbar {
+    background-color: transparent;
 }
 
 .bestlist {
@@ -735,6 +830,12 @@ footer {
     background-color: #303538;
     color: #fff;
     width: 100%;
+    z-index: 5;
+    overflow-x: auto;
+}
+
+footer::-webkit-scrollbar {
+    background-color: transparent;
 }
 
 .footerbox {
@@ -743,10 +844,14 @@ footer {
     padding: 24px 16px;
 }
 
+footer a {
+    display: block;
+}
+
 /* footer_top */
 .footer_top {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .footer_top ul {
@@ -770,19 +875,19 @@ footer {
     opacity: 0.7;
 }
 
-.center ul {
+.footer_center ul {
     margin-bottom: 28px;
 }
 
-.center ul li:first-child {
+.footer_center ul li:first-child {
     padding-right: 10px;
 }
 
-.center ul li:last-child {
+.footer_center ul li:last-child {
     padding-left: 10px;
 }
 
-.center ul li a {
+.footer_center ul li a {
     font-size: 20px;
     font-weight: bold;
 }
@@ -901,16 +1006,25 @@ footer {
 }
 
 
+@media only screen and (max-width: 999px) {
+    .list_inquire {
+        display: none !important;
+    }
+    .list_sns {
+        display: none !important;
+    }
+}
+
 @media only screen and (min-width: 1000px) {
     .footer_top {
         flex-direction: row;
     }
 
-    .center {
+    .footer_center {
         margin-right: 42px;
     }
 
-    .center ul {
+    .footer_center ul {
         margin: 0;
     }
 

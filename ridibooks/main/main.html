@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="css/main.css">
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
     <!-- header -->   
@@ -67,7 +68,7 @@
         <div class="main_category">
             <ul class="main_category_list">
                 <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fig-oma3mu ed4re810"><path d="M2 7.001h20V5H2v2.001zm3 6h14v-2H5v2zm3.999 6h6v-2h-6v2z"></path></svg></a></li>
-                <li><a href="#">일반</a></li>
+                <li class="bluetext"><a href="#">일반</a></li>
                 <li><a href="#">로맨스</a></li>
                 <li><a href="#">판타지</a></li>
                 <li><a href="#">만화</a></li>
@@ -79,7 +80,7 @@
    <!-- section -->
     <section>
         <!-- 메인 배너 -->
-        <div class="main_slider">
+        <div class="main_slider" id="centerbox">
             <div id="slider-div" class="center">
                 <div><a href="#"><img src="images/banner/banner_1.jpg" alt="" width="415" height="276"></a></div>
                 <div><a href="#"><img src="images/banner/banner_2.jpg" alt="" width="415" height="276"></a></div>
@@ -92,7 +93,6 @@
                 <div><a href="#"><img src="images/banner/banner_9.jpg" alt="" width="415" height="276"></a></div>
                 <div><a href="#"><img src="images/banner/banner_10.jpg" alt="" width="415" height="276"></a></div>
             </div>
-            <span class="whitehidden"></span>
         </div>
 
         <!-- 퀵 메뉴 --> 
@@ -147,7 +147,7 @@
         </div>
 
             <!-- 집 앞 서점에 방금 나온 신간! -->
-            <div class="main_slider" id="homenewbookbox">
+            <div class="main_slider nocenter" id="homenewbookbox">
                 <h2 class="title" id="homenewbook">집 앞 서점에 방금 나온 신간!</h2>
                 <div id="slider-div" class="homebook">
                     <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"><p class="bookname">어둠의 속도</p></a>
@@ -187,11 +187,14 @@
                     <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"><p class="bookname">GG</p></a>
                         <a href="#"><p class="graytext">김언희</p></a></div>
                 </div>
-                <span class="whitehidden_home"></span>
             </div>
 
             <!-- 사람들이 지금 많이 읽고 있는 책 -->      
             <div class="horizontalbox">
+                <div class="time">
+                    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M8.467 9L5 6.913V3h1v3.391l3 1.761L8.467 9zM6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" fill="#FFF" stroke="none" stroke-width="1" fill-rule="evenodd"></path></svg>
+                    <div class="timetext"><span>01시 10분</span></div>
+                </div>
                 <h2 class="title">사람들이 지금 많이 읽고 있는 책</h2>
                 <div class="bestbox">
                     <ul>
@@ -290,7 +293,7 @@
             </div>
 
             <!-- 오늘, 리디의 발견 -->
-            <div class="main_slider">
+            <div class="main_slider nocenter">
                 <h2 class="title">오늘, 리디의 발견</h2>
                 <div id="slider-div" class="findbook">
                     <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="겨울을 지날 때" width="140"></a><p class="bookname">겨울을 지날 때</p></div>
@@ -312,7 +315,6 @@
                     <div><a href="#"><img src="images/book/헌책방기담수집가.webp" alt="헌책방 기담 수집가" width="140"></a><p class="bookname">헌책방 기담 수집가</p></div>
                     <div><a href="#"><img src="images/book/나인.webp" alt="나인" width="140"></a><p class="bookname">나인</p></div>
                 </div>
-                <span class="whitehidden"></span>
             </div>
 
             <!-- 베스트 셀러 -->
@@ -426,7 +428,7 @@
             </div>
 
             <!-- 금주의 신간 -->
-            <div class="main_slider">
+            <div class="main_slider nocenter">
                 <h2 class="title">금주의 신간</h2>
                 <div id="slider-div" class="newbook">
                     <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"><p class="bookname">어둠의 속도</p></a>
@@ -469,56 +471,164 @@
             </div>
 
             <!-- 1월 딱 한달만, '비거뉴어리' -->
-        <div class="main_slider">
+            <div class="main_slider nocenter">
             <h2 class="title">
             <a href="#"><span>1월 딱 한달만, '비거뉴어리' </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" width="11" height="14" class="fig-18h8pjp"><path d="M.165 8.366L4.027 4.5.165.635.8 0l4.5 4.5L.8 9l-.635-.634z" fill="#808991"></path></svg></a>
             </h2>
             <div id="slider-div" class="veganuary">
-                <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="겨울을 지날 때" width="140"></a><p class="bookname">겨울을 지날 때</p></div>
-                <div><a href="#"><img src="images/book/나인.webp" alt="나인" width="140"></a><p class="bookname">나인</p></div>
-                <div><a href="#"><img src="images/book/다만죽음을곁에.webp" alt="다만 죽음을 곁에 두고 씁니다" width="140"></a><p class="bookname">다만 죽음을 곁에<br>두고 씁니다</p></div>
-                <div><a href="#"><img src="images/book/밝은밤.webp" alt="밝은 밤" width="140"></a><p class="bookname">밝은 밤</p></div>
-                <div><a href="#"><img src="images/book/밤이라고부르는것들속에는.webp" alt="밤이라고 부르는 것들 속에는" width="140"></a><p class="bookname">밤이라고 부르는 <br> 것들 속에는</p></div>
-                <div><a href="#"><img src="images/book/불편한편의점.webp" alt="불편한 편의점" width="140"></a><p class="bookname">불편한 편의점</p></div>
-                <div><a href="#"><img src="images/book/서로다른계절의여행.webp" alt="서로 다른 계절의 여행" width="140"></a><p class="bookname">서로 다른 계절의 여행</p></div>
-                <div><a href="#"><img src="images/book/시선으로부터.webp" alt="시선으로부터," width="140"></a><p class="bookname">시선으로부터,</p></div>
-                <div><a href="#"><img src="images/book/실격당한자들을위한변론.webp" alt="실격당한 자들을 위한 변론" width="140"></a><p class="bookname">실격당한 자들을 <br> 위한 변론</p></div>
-                <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"></a><p class="bookname">어둠의 속도</p></div>
-                <div><a href="#"><img src="images/book/완전한행복.webp" alt="완전한 행복" width="140"></a><p class="bookname">완전한 행복</p></div>
-                <div><a href="#"><img src="images/book/인생도사막이다.webp" alt="네가 없으면 인생도  사막이다" width="140"></a><p class="bookname">네가 없으면 <br> 인생도 사막이다</p></div>
-                <div><a href="#"><img src="images/book/일의기쁨과슬픔.webp" alt="일의 기쁨과 슬픔" width="140"></a><p class="bookname">일의 기쁨과 슬픔</p></div>
-                <div><a href="#"><img src="images/book/작별하지않는다.webp" alt="작별하지 않는다" width="140"></a><p class="bookname">작별하지 않는다</p></div>
-                <div><a href="#"><img src="images/book/지구끝의온실.webp" alt="지구 끝의 온실" width="140"></a><p class="bookname">지구 끝의 온실</p></div>
-                <div><a href="#"><img src="images/book/행복일거야.webp" alt="이 미로의 끝은 행복일 거야" width="140"></a><p class="bookname">이 미로의 끝은 <br> 행복일 거야</p></div>
-                <div><a href="#"><img src="images/book/헌책방기담수집가.webp" alt="헌책방 기담 수집가" width="140"></a><p class="bookname">헌책방 기담 수집가</p></div>
-                <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"></a><p class="bookname">GG</p></div>
+                <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"><p class="bookname">어둠의 속도</p></a>
+                    <a href="#"><p class="graytext">엘리자베스 문</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">158</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/완전한행복.webp" alt="완전한 행복" width="140"><p class="bookname">완전한 행복</p></a>
+                    <a href="#"><p class="graytext">정유정</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">741</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/불편한편의점.webp" alt="불편한 편의점" width="140"><p class="bookname">불편한 편의점</p></a>
+                    <a href="#"><p class="graytext">김호연</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">170</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/지구끝의온실.webp" alt="지구 끝의 온실" width="140"><p class="bookname">지구 끝의 온실</p></a>
+                    <a href="#"><p class="graytext">김초엽</p></a>
+                
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">225</span></p></div> 
+                <div><a href="#"><img src="images/book/나인.webp" alt="나인" width="140"><p class="bookname">나인</p></a>
+                    <a href="#"><p class="graytext">천선란</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">45</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/시선으로부터.webp" alt="시선으로부터," width="140"><p class="bookname">시선으로부터,</p></a>
+                    <a href="#"><p class="graytext">정세랑</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">512</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="우리의 인생이 겨울을 지날 때" width="140"><p class="bookname">우리의 인생이 <br> 겨울을 지날 때</p></a>
+                    <a href="#"><p class="graytext">캐서린 메이</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">97</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/다만죽음을곁에.webp" alt="다만 죽음을 곁에 두고 씁니다" width="140"><p class="bookname">다만 죽음을 곁에<br>두고 씁니다</p></a>
+                    <a href="#"><p class="graytext">로버트 팬타노</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">63</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/밝은밤.webp" alt="밝은 밤" width="140"><p class="bookname">밝은 밤</p></a>
+                    <a href="#"><p class="graytext">최은영</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">10</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/밤이라고부르는것들속에는.webp" alt="밤이라고 부르는 것들 속에는" width="140"><p class="bookname">밤이라고 부르는 <br> 것들 속에는</p></a>
+                    <a href="#"><p class="graytext">안희연</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">133</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/서로다른계절의여행.webp" alt="서로 다른 계절의 여행" width="140"><p class="bookname">서로 다른 계절의 여행</p></a>
+                    <a href="#"><p class="graytext">나태주, 유라</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">10</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/실격당한자들을위한변론.webp" alt="실격당한 자들을 위한 변론" width="140"><p class="bookname">실격당한 자들을 <br> 위한 변론</p></a>
+                    <a href="#"><p class="graytext">김원영</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">94</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/인생도사막이다.webp" alt="네가 없으면 인생도 인생도 사막이다" width="140"><p class="bookname">네가 없으면 인생도 <br> 인생도 사막이다</p></a>
+                    <a href="#"><p class="graytext">나태주</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">33</span></p>
+                </div>   
+                <div><a href="#"><img src="images/book/일의기쁨과슬픔.webp" alt="일의 기쁨과 슬픔" width="140"><p class="bookname">일의 기쁨과 슬픔</p></a>
+                    <a href="#"><p class="graytext">장류진</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">126</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/작별하지않는다.webp" alt="작별하지 않는다" width="140"><p class="bookname">작별하지 않는다</p></a>
+                    <a href="#"><p class="graytext">한강</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">88</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/행복일거야.webp" alt="이 미로의 끝은 행복일 거야" width="140"><p class="bookname">이 미로의 끝은 <br> 행복일 거야</p></a>
+                    <a href="#"><p class="graytext">나란</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">234</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/헌책방기담수집가.webp" alt="헌책방 기담 수집가" width="140"><p class="bookname">헌책방 기담 수집가</p></a>
+                    <a href="#"><p class="graytext">윤성근</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">74</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"><p class="bookname">GG</p></a>
+                    <a href="#"><p class="graytext">김언희</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">110</span></p>
+                </div>
             </div>
         </div>
 
         <!-- 리디북스토어 인스타그램 추천도서 -->  
-        <div class="main_slider">
+        <div class="main_slider nocenter">
             <h2 class="title">
             <a href="#"><span>리디북스토어 인스타그램 추천도서 </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" width="11" height="14" class="fig-18h8pjp"><path d="M.165 8.366L4.027 4.5.165.635.8 0l4.5 4.5L.8 9l-.635-.634z" fill="#808991"></path></svg></a>
             </h2>
             <div id="slider-div" class="instagram">
-                <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="겨울을 지날 때" width="140"></a><p class="bookname">겨울을 지날 때</p></div>
-                <div><a href="#"><img src="images/book/나인.webp" alt="나인" width="140"></a><p class="bookname">나인</p></div>
-                <div><a href="#"><img src="images/book/다만죽음을곁에.webp" alt="다만 죽음을 곁에 두고 씁니다" width="140"></a><p class="bookname">다만 죽음을 곁에<br>두고 씁니다</p></div>
-                <div><a href="#"><img src="images/book/밝은밤.webp" alt="밝은 밤" width="140"></a><p class="bookname">밝은 밤</p></div>
-                <div><a href="#"><img src="images/book/밤이라고부르는것들속에는.webp" alt="밤이라고 부르는 것들 속에는" width="140"></a><p class="bookname">밤이라고 부르는 <br> 것들 속에는</p></div>
-                <div><a href="#"><img src="images/book/불편한편의점.webp" alt="불편한 편의점" width="140"></a><p class="bookname">불편한 편의점</p></div>
-                <div><a href="#"><img src="images/book/서로다른계절의여행.webp" alt="서로 다른 계절의 여행" width="140"></a><p class="bookname">서로 다른 계절의 여행</p></div>
-                <div><a href="#"><img src="images/book/시선으로부터.webp" alt="시선으로부터," width="140"></a><p class="bookname">시선으로부터,</p></div>
-                <div><a href="#"><img src="images/book/실격당한자들을위한변론.webp" alt="실격당한 자들을 위한 변론" width="140"></a><p class="bookname">실격당한 자들을 <br> 위한 변론</p></div>
-                <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"></a><p class="bookname">어둠의 속도</p></div>
-                <div><a href="#"><img src="images/book/완전한행복.webp" alt="완전한 행복" width="140"></a><p class="bookname">완전한 행복</p></div>
-                <div><a href="#"><img src="images/book/인생도사막이다.webp" alt="네가 없으면 인생도 사막이다" width="140"></a><p class="bookname">네가 없으면 <br> 인생도 사막이다</p></div>
-                <div><a href="#"><img src="images/book/일의기쁨과슬픔.webp" alt="일의 기쁨과 슬픔" width="140"></a><p class="bookname">일의 기쁨과 슬픔</p></div>
-                <div><a href="#"><img src="images/book/작별하지않는다.webp" alt="작별하지 않는다" width="140"></a><p class="bookname">작별하지 않는다</p></div>
-                <div><a href="#"><img src="images/book/지구끝의온실.webp" alt="지구 끝의 온실" width="140"></a><p class="bookname">지구 끝의 온실</p></div>
-                <div><a href="#"><img src="images/book/행복일거야.webp" alt="이 미로의 끝은 행복일 거야" width="140"></a><p class="bookname">이 미로의 끝은 <br> 행복일 거야</p></div>
-                <div><a href="#"><img src="images/book/헌책방기담수집가.webp" alt="헌책방 기담 수집가" width="140"></a><p class="bookname">헌책방 기담 수집가</p></div>
-                <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"></a><p class="bookname">GG</p></div>
+                <div><a href="#"><img src="images/book/어둠의속도.webp" alt="어둠의 속도" width="140"><p class="bookname">어둠의 속도</p></a>
+                    <a href="#"><p class="graytext">엘리자베스 문</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">158</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/완전한행복.webp" alt="완전한 행복" width="140"><p class="bookname">완전한 행복</p></a>
+                    <a href="#"><p class="graytext">정유정</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">741</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/불편한편의점.webp" alt="불편한 편의점" width="140"><p class="bookname">불편한 편의점</p></a>
+                    <a href="#"><p class="graytext">김호연</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">170</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/지구끝의온실.webp" alt="지구 끝의 온실" width="140"><p class="bookname">지구 끝의 온실</p></a>
+                    <a href="#"><p class="graytext">김초엽</p></a>
+                
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">225</span></p></div> 
+                <div><a href="#"><img src="images/book/나인.webp" alt="나인" width="140"><p class="bookname">나인</p></a>
+                    <a href="#"><p class="graytext">천선란</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">45</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/시선으로부터.webp" alt="시선으로부터," width="140"><p class="bookname">시선으로부터,</p></a>
+                    <a href="#"><p class="graytext">정세랑</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">512</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="우리의 인생이 겨울을 지날 때" width="140"><p class="bookname">우리의 인생이 <br> 겨울을 지날 때</p></a>
+                    <a href="#"><p class="graytext">캐서린 메이</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">97</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/다만죽음을곁에.webp" alt="다만 죽음을 곁에 두고 씁니다" width="140"><p class="bookname">다만 죽음을 곁에<br>두고 씁니다</p></a>
+                    <a href="#"><p class="graytext">로버트 팬타노</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">63</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/밝은밤.webp" alt="밝은 밤" width="140"><p class="bookname">밝은 밤</p></a>
+                    <a href="#"><p class="graytext">최은영</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">10</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/밤이라고부르는것들속에는.webp" alt="밤이라고 부르는 것들 속에는" width="140"><p class="bookname">밤이라고 부르는 <br> 것들 속에는</p></a>
+                    <a href="#"><p class="graytext">안희연</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">133</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/서로다른계절의여행.webp" alt="서로 다른 계절의 여행" width="140"><p class="bookname">서로 다른 계절의 여행</p></a>
+                    <a href="#"><p class="graytext">나태주, 유라</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">10</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/실격당한자들을위한변론.webp" alt="실격당한 자들을 위한 변론" width="140"><p class="bookname">실격당한 자들을 <br> 위한 변론</p></a>
+                    <a href="#"><p class="graytext">김원영</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">94</span></p>
+                </div> 
+                <div><a href="#"><img src="images/book/인생도사막이다.webp" alt="네가 없으면 인생도 인생도 사막이다" width="140"><p class="bookname">네가 없으면 인생도 <br> 인생도 사막이다</p></a>
+                    <a href="#"><p class="graytext">나태주</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">33</span></p>
+                </div>   
+                <div><a href="#"><img src="images/book/일의기쁨과슬픔.webp" alt="일의 기쁨과 슬픔" width="140"><p class="bookname">일의 기쁨과 슬픔</p></a>
+                    <a href="#"><p class="graytext">장류진</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">126</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/작별하지않는다.webp" alt="작별하지 않는다" width="140"><p class="bookname">작별하지 않는다</p></a>
+                    <a href="#"><p class="graytext">한강</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">88</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/행복일거야.webp" alt="이 미로의 끝은 행복일 거야" width="140"><p class="bookname">이 미로의 끝은 <br> 행복일 거야</p></a>
+                    <a href="#"><p class="graytext">나란</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">234</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/헌책방기담수집가.webp" alt="헌책방 기담 수집가" width="140"><p class="bookname">헌책방 기담 수집가</p></a>
+                    <a href="#"><p class="graytext">윤성근</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">74</span></p>
+                </div>
+                <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"><p class="bookname">GG</p></a>
+                    <a href="#"><p class="graytext">김언희</p></a>
+                    <p class="starbox"><span class="star"><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_gray"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg><svg viewBox="0 0 50 10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" preserveAspectRatio="xMinYMid slice" class="star_color"><path d="M8.089 9.755L5 8.308 1.91 9.755l.423-3.387L0 3.876l3.352-.645L5 .245l1.647 2.987L10 3.876 7.666 6.368l.423 3.387zm20.001 0L25 8.308l-3.09 1.447.423-3.387L20 3.876l3.352-.645L25 .245l1.647 2.987L30 3.876l-2.334 2.492.424 3.387zm-10 0L15 8.308l-3.09 1.447.423-3.387L10 3.876l3.352-.645L15 .245l1.647 2.987L20 3.876l-2.334 2.492.424 3.387zm20 0L35 8.308l-3.09 1.447.422-3.387L30 3.876l3.352-.645L35 .245l1.647 2.987L40 3.876l-2.334 2.492.424 3.387zm10 0L45 8.308l-3.09 1.447.422-3.387L40 3.876l3.352-.645L45 .245l1.647 2.987L50 3.876l-2.334 2.492.424 3.387z"></path></svg></span><span class="star_num">110</span></p>
+                </div>
             </div>
         </div>
     </section>
@@ -527,7 +637,7 @@
     <footer>
         <div class="footerbox">
             <div class="footer_top">
-                <div class="center">
+                <div class="footer_center">
                     <ul>
                         <li><a href="#">고객센터</a></li>
                         <li class="line"></li>
@@ -648,6 +758,14 @@
             $(this).addClass("underline");
         });
 
+        /* 사람들이 지금 많이 읽고 있는 책 */
+        let today = new Date();
+        let todayHours = today.getHours();
+        let todayMinutes = today.getMinutes();
+
+        $(".timetext").text(todayHours + "시" + todayMinutes + "분");
+
+
         /* footer */
         $(".ridiInfo").on("click", function() {
             if($(".content").css("display") == "none") {
@@ -666,37 +784,38 @@
 				infinite : true, 
 				slidesToShow : 3,
 				slidesToScroll : 3,
-				speed : 100,
+				speed : 200,
 				arrows : true,
 				dots : false,
 				autoplay : true,
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
+                adaptiveHeight:true,
                 centerMode : true,
-                centerPadding:'50px',
+                centerPadding:'5px',
 
                 responsive: [
+                {
+                breakpoint: 999,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '5px',
+                    slidesToShow: 3
+                }
+                },
                 {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '5px',
                     slidesToShow: 3
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
                 }
                 }
             ]
@@ -718,8 +837,8 @@
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
 			});
@@ -739,8 +858,8 @@
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
 			});
@@ -760,8 +879,8 @@
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
 			});
@@ -781,8 +900,8 @@
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
 			});
@@ -802,8 +921,8 @@
 				autoplaySpeed : 10000,
 				pauseOnHover : true,
 				vertical : false,
-				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 이전 화살표 모양 설정
-				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",		// 다음 화살표 모양 설정
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
 				dotsClass : "slick-dots",
 				draggable : false,
 			});

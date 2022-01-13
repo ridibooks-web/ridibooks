@@ -1,0 +1,59 @@
+.classify {
+    line-height: 48px;
+}
+
+.classify ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classifyline {
+    top: 0;
+    height: 11px;
+    border: 1px solid #D1D5D9;
+    margin: 0 16px;
+}
+
+#centerbox {
+    padding: 0 0 3px 0;
+}
+
+/* 키워드로 검색하기 */
+.keyword {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 0px;
+    overflow-x: scroll;
+}
+
+.keyword::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.keyword ul {
+    display: flex;
+    margin-bottom: 6px;
+    overflow-x: scroll;
+}
+
+.keyword ul::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.keyword ul li {
+    border: 1px solid #B8BFC4;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 29px;
+    font-weight: bold;
+    color: #525A61;
+    padding: 0 10px;
+    margin-right: 5px;
+}
+
+.keyword ul li a {
+    color: #525A61;
+    display: block;
+}
