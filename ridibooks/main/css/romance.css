@@ -126,3 +126,95 @@
         display: none;
     }
 }
+
+/* webtoon */
+/* 단독! 기다리면 무료 웹툰 */
+.single {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 0;
+}
+
+.single .nocenter {
+    padding: 0 0 24px 0;
+}
+
+.single .title {
+    display: flex;
+}
+
+.single .title svg {
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+}
+
+.single .title {
+    padding: 6px 24px;
+}
+
+.singlebox {
+    position: relative;
+    width: 100% !important;
+    margin: 0;
+    padding-top: 24px;
+}
+
+.single_flex {
+    position: relative;
+    width: 100% !important;
+}
+
+.singlebg {
+    background-color: #8C2A41;
+    width: 100% !important;
+    height: 100px;
+}
+
+.single_people {
+    width: 200px;
+    height: 140px;
+    position: absolute;
+    left: 51.6%;
+    bottom: 0;
+    z-index: 2;
+}
+
+.single_bg {
+    width: 440px;
+    height: 100px;
+    position: absolute;
+    left: 38%;
+    top: 0;
+    z-index: 1;
+}
+
+.singletextbox {
+    position: absolute;
+    left: 39%;
+    top: 32%;
+}
+
+.singletext {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: -0.03em;
+}
+
+.singletext p:first-child {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: white;
+}
+
+.singletext p:last-child {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+}
