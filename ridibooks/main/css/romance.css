@@ -23,7 +23,7 @@
 .keyword {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 24px 0px;
+    padding: 24px 24px 0 24px;
     overflow-x: scroll;
 }
 
@@ -33,7 +33,6 @@
 
 .keyword ul {
     display: flex;
-    margin-bottom: 6px;
     overflow-x: scroll;
 }
 
@@ -56,4 +55,74 @@
 .keyword ul li a {
     color: #525A61;
     display: block;
+}
+
+/* banner */
+.romance_banner {
+    margin: 0 auto;
+    width: 100%;
+    padding: 24px 0;
+    max-width: 1000px;
+}
+
+.romance_banner ul {
+    display: flex;
+    justify-content: center;
+}
+
+.romance_banner ul li a img {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 234px;
+}
+
+.romance_banner ul li:last-child {
+    margin: 0;
+}
+
+@media only screen and (max-width: 833px) {
+    .romance_banner ul {
+        flex-wrap: wrap;
+    }
+    .romance_banner ul li {
+        margin-right: 4px;
+        margin-bottom: 1px;
+    }
+}
+
+
+@media only screen and (min-width: 833px) {
+    .romance_banner ul li {
+        margin-right: 8px;
+    }
+}
+
+/* 이 책 어때요? */
+.thisbookbox {
+    padding: 24px 24px 4px 24px;
+}
+
+.thisbook {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.thisbook ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thisbook ul li {
+    margin-bottom: 20px;
+}
+
+.thisbook ul li a img {
+    height: 210px;
+}
+
+@media only screen and (max-width: 500px) {
+    .thisbookbox {
+        display: none;
+    }
 }

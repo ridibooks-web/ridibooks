@@ -82,15 +82,15 @@
     <section>
         <div class="classify">
             <ul>
-                <li class="bluetext"><a href="#">웹소설</a></li>
+                <li class="bluetext"><a href="../main/main_romance_web.html">웹소설</a></li>
                 <li class="line classifyline"></li>
-                <li><a href="#">e북</a></li>
+                <li><a href="../main/main_romance_ebook.html">e북</a></li>
             </ul>
         </div>
 
         <!-- 메인 배너 -->
         <div class="main_slider" id="centerbox">
-            <div id="slider-div" class="center">
+            <div class="center">
                 <div><a href="#"><img src="images/banner/banner_1.jpg" alt="" width="415" height="276"></a></div>
                 <div><a href="#"><img src="images/banner/banner_2.jpg" alt="" width="415" height="276"></a></div>
                 <div><a href="#"><img src="images/banner/banner_3.jpg" alt="" width="415" height="276"></a></div>
@@ -289,7 +289,7 @@
             <div class="main_slider nocenter">
                 <h2 class="title">오늘, 리디의 발견</h2>
                 <div id="slider-div" class="findbook">
-                    <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="겨울을 지날 때" width="140"></a><p class="bookname">겨울을 지날 때</p></div>
+                    <div><a href="#"><img src="images/book/겨울을지날때.webp" alt="겨울을 지날 때" width="140"></a><p class="bookname">우리의 인생이 <br> 겨울을 지날 때</p></div>
                     <div><a href="#"><img src="images/book/다만죽음을곁에.webp" alt="다만 죽음을 곁에 두고 씁니다" width="140"></a><p class="bookname">다만 죽음을 곁에<br>두고 씁니다</p></div>
                     <div><a href="#"><img src="images/book/gg.webp" alt="GG" width="140"></a><p class="bookname">GG</p></div>
                     <div><a href="#"><img src="images/book/인생도사막이다.webp" alt="네가 없으면 인생도 사막이다" width="140"></a><p class="bookname">네가 없으면 <br> 인생도 사막이다</p></div>
@@ -1082,7 +1082,10 @@
         let todayHours = today.getHours();
         let todayMinutes = today.getMinutes();
 
-        $(".timetext").text(todayHours + "시" + todayMinutes + "분");
+        if(todayHours < 10) {todayHours = "0" + todayHours; }
+        if(todayMinutes < 10) {todayMinutes = "0" + todayMinutes; }
+
+        $(".timetext").text(todayHours + "시 " + todayMinutes + "분");
 
 
         /* footer */
