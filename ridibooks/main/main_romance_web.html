@@ -9,7 +9,7 @@
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-   <link rel="stylesheet" href="css/romance.css">
+   <link rel="stylesheet" href="css/rest.css">
 </head>
 <body>
     <!-- header -->   
@@ -1093,22 +1093,22 @@
         /* search */
         function enterkey() {
             if (window.event.keyCode == 13) {
-                location.href = "http://127.0.0.1:5500/main/searchresult.html";
+                location.href = "../main/searchresult.html";
             }
         }
 
         $(".search input").on("click", function() {
             $(".searchbox").css("display", "block");
 
-            let minwidth = window.matchMedia("screen and (min-width: 1000px)");
-
-            if(minwidth) {
+            if(matchMedia("screen and (min-width: 1000px)").matches) {
                 $(".main_logo").css("display", "blcok");
                 $(".loginbtnbox").css("display", "blcok");
             } else {
-                alert("2");
                 $(".main_logo").css("display", "none");
                 $(".loginbtnbox").css("display", "none");
+                $(".main_nav").css("padding", "0px 9px 12px 9px");
+                $(".fig-h1a41g").css("top", "17px");
+                $(".xbtn").css("right", "13px").css("top", "17px");
             }
 
             let inputval = $(".search input").val();
@@ -1128,15 +1128,25 @@
             }
         });
 
-        // $(".xbtn").on("click", function() {
-        //     $(".search input").val("");
-        //     $(".xbtn").css("display", "none");
-        // });
+        $(".xbtn").on("click", function() {
+            $(".search input").val("");
+            $(".xbtn").css("display", "none");
+        });
 
         $(".search input").on("focusout", function() {
             $(".searchbox").css("display", "none");
             $(".search input").val("");
             $(".xbtn").css("display", "none");
+
+            if(matchMedia("screen and (min-width: 1000px)").matches) {
+                true;
+            } else {
+                $(".main_logo").css("display", "block");
+                $(".loginbtnbox").css("display", "block");
+                $(".fig-h1a41g").css("top", "54px");
+                $(".main_nav").css("padding", "16px");
+                $(".xbtn").css("right", "6px").css("top", "6px");
+            }
         });
 
         /* main_menu */
@@ -1193,7 +1203,7 @@
                 {
                 breakpoint: 999,
                 settings: {
-                    arrows: false,
+                    arrows:true,
                     centerMode: true,
                     centerPadding: '5px',
                     slidesToShow: 3
@@ -1202,7 +1212,7 @@
                 {
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     centerMode: true,
                     centerPadding: '5px',
                     slidesToShow: 3
@@ -1213,6 +1223,26 @@
   		})  
 
         /* 슬라이드 */
+        /* 집 앞 서점에 방금 나온 신간! */
+        $(function(){
+			$('.homebook').slick({
+				slide: 'div',
+				infinite : true, 
+				slidesToShow : 6,
+				slidesToScroll : 6,
+				speed : 100,
+				arrows : true,
+				dots : false,
+				autoplay : false,
+				autoplaySpeed : 10000,
+				pauseOnHover : true,
+				vertical : false,
+				prevArrow : "<button type='button' class='slick-prev'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-1r93q4u\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				nextArrow : "<button type='button' class='slick-next'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"14\" viewBox=\"0 0 11 14\" class=\"fig-gnaxy0\"><path fill-rule=\"nonzero\" d=\"M1.78 13.013L7.68 7 1.78.987 2.75 0l6.875 7-6.875 7z\"></path></svg></button>",
+				dotsClass : "slick-dots",
+				draggable : false,
+			});
+  		})
 
         /* 오늘, 리디의 발견 */
         $(function(){

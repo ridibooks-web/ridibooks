@@ -393,7 +393,7 @@ header {
     
     .fig-h1a41g {
         left: 0;
-        top: 6px;
+        top: 6px !important;
     }
 
     .searchbox {
