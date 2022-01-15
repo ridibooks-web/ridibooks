@@ -133,37 +133,61 @@
                     <div class="exceptbox"><input type="checkbox" name="except"></div>
                 </label>
             </div>
+
+            <!-- search_nav -->
             <div class="search_nav">
                 <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li class="search_text"><a href="#">전체 <span>(1,441)</span></a></li>
+                    <li><a href="#">에세이 <span>(187)</span></a></li>
+                    <li><a href="#">성공/삶의의자세 <span>(166</span>)</a></li>
+                    <li><a href="#">인문 <span>(124)</span></a></li>
+                    <li><a href="#">정치/사회 <span>(78)</span></a></li>
+                    <li><a href="#">현대물 <span>(76)</span></a></li>
+                    <li><a href="#">인간관계 <span>(65)</span></a></li>
+                    <li><a href="#">경영일반 <span>(54)</span></a></li>
+                    <li><a href="#">설득/화술/협상 <span>(44)</span></a></li>
+                    <li><a href="#">기독교(개신교) <span>(44)</span></a></li>
+                    <li><a href="#">건강 <span>(42)</span></a></li>
+                    <li><a href="#">판타지물 <span>(40)</span></a></li>
+                    <li><a href="#">해외 만화 <span>(40)</span></a></li>
+                    <li><a href="#">한국소설 <span>(38)</span></a></li>
+                    <li><a href="#">시 <span>(35)</span></a></li>
+                    <li><a href="#">웹툰 <span>(23)</span></a></li>
+                    <li><a href="#">청소년 <span>(22)</span></a></li>
+                    <li><a href="#">경제일반 <span>(22)</span></a></li>
+                    <li><a href="#">현대물 <span>(19)</span></a></li>
+                    <li><a href="#">취업/창업 <span>(16)</span></a></li>
                 </ul>
+                <div class="searchbtn">
+                    <button type="button" class="search_prev"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" aria-label="이전" class="fig-1urvzrc edo2qk02"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></button></button>
+                    <button type="button" class="search_next"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" aria-label="다음" class="fig-y0jrxh edo2qk02"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></button>
+                </div>
             </div>
 
             <!-- book_bottom -->
             <div class="book_bottom">
                 <form action="#">
-                    <section>
+                    <select>
                         <option value="score">인기순</option>
                         <option value="recent">최신순</option>
                         <option value="review_cnt">리뷰 많은순</option>
                         <option value="price">낮은 가격순</option>
                         <option value="similarity">정확도순</option>
-                    </section>
+                    </select>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 10 6" fill="none" class="fig-ffngu0"><path d="M10 0H0l5 6 5-6z" fill="currentColor"></path></svg>
                 </form>
-                <label for="rent">
-                    <input type="checkbox" name="rent">대여
-                </label>
+                <div class="check">
+                    <label for="check">
+                        <input type="checkbox" class="underCheck">
+                        <div class="checkText">
+                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                            <div class="before"></div>
+                            <span>대여</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
 
                 <!-- book_search_listbox --> 
                 <div class="book_search_listbox">
@@ -715,15 +739,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
+
       
         <!-- paginationbox -->
         <div class="paginationbox">
             <ol class="pagination">
-                <li><a href="#">처음</a></li>
-                <li><a href="#">&#60;</a></li>
-                <li><a href="#">1</a></li>
+                <li class="paging_start"><a href="#">처음</a></li>
+                <li class="paging_prev"><a href="#"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-amc6ni"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
+                <li class="paging_blue"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
@@ -731,11 +755,11 @@
                 <li><a href="#">6</a></li>
                 <li><a href="#">7</a></li>
                 <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
+                <li><a hre.f="#">9</a></li>
                 <li><a href="#">10</a></li>
-                <li><a href="#">&#60;</a></li>
-                <li><a href="#">···</a></li>
-                <li><a href="#">마지막</a></li>
+                <li class="paging_next"><a href="#"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-10oqhab"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
+                <li class="nopaging"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" class="fig-12d705e"><path d="M12 17a2 2 0 110 4 2 2 0 010-4zm0-7a2 2 0 110 4 2 2 0 010-4zm0-7a2 2 0 110 4 2 2 0 010-4z" fill="currentColor"></path></svg></li>
+                <li class="paging_end"><a href="#">마지막</a></li>
             </ol>
         </div>
     </section>
@@ -898,6 +922,36 @@
                 $(".exceptbox input").prop("checked", false);
             }
         });
+
+       $(".check").on("click", function() {
+            let inputTag = $(".underCheck");
+
+            if($(inputTag).is(":checked") == false) {
+                $(".before").css("background", "#339CF2").css("borderColor", "#339CF2");
+                $(inputTag).prop("checked", true);
+            } else if($(inputTag).is(":checked") == true) {
+                $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
+                $(inputTag).prop("checked", false);
+            }
+       });
+
+        /* search_nav */
+       $(".search_nav ul li").on("click", function() {
+           $(".search_text").removeClass("search_text");
+           $(this).addClass("search_text");
+       });
+
+       $(".search_next").on("click", function() {
+            $(".search_prev").css("display", "block");
+            $(".search_nav ul li").css("transform", "translateX(-910px)")
+            .css("transition", "transform 0.6s ease");
+       });
+
+       $(".search_prev").on("click", function() {
+            $(".search_prev").css("display", "none");
+            $(".search_nav ul li").css("transform", "translateX(0px)")
+            .css("transition", "transform 0.6s ease");
+       });
 
         /* paginationbox */
 
