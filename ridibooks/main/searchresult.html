@@ -746,7 +746,7 @@
         <div class="paginationbox">
             <ol class="pagination">
                 <li class="paging_start"><a href="#">처음</a></li>
-                <li class="paging_prev"><a href="#"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-amc6ni"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
+                <li class="paging_prev"><a href="#" class="prev" prev="0"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-amc6ni"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
                 <li class="paging_blue"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
@@ -757,7 +757,7 @@
                 <li><a href="#">8</a></li>
                 <li><a hre.f="#">9</a></li>
                 <li><a href="#">10</a></li>
-                <li class="paging_next"><a href="#"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-10oqhab"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
+                <li class="paging_next"><a href="#" class="next" next="11"><svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#9ea7ad" class="fig-10oqhab"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></li>
                 <li class="nopaging"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" class="fig-12d705e"><path d="M12 17a2 2 0 110 4 2 2 0 010-4zm0-7a2 2 0 110 4 2 2 0 010-4zm0-7a2 2 0 110 4 2 2 0 010-4z" fill="currentColor"></path></svg></li>
                 <li class="paging_end"><a href="#">마지막</a></li>
             </ol>
@@ -954,6 +954,125 @@
        });
 
         /* paginationbox */
+       $(".pagination li").on("click", function(e) {
+            e.preventDefault();
+            $(".paging_blue").removeClass("paging_blue");
+
+            $(this).addClass("paging_blue");
+    
+       });
+
+       $(".nopaging").on("click", function() {
+            $(".paging_blue").removeClass("paging_blue");
+       });
+
+       /* next 눌렀을 때 */
+       $(".paging_next").on("click", function() {
+            $(".paging_blue").removeClass("paging_blue");
+
+            let next = $(".paging_next a").attr("next");
+            next = parseInt(next);
+
+            for(let i=0; i<=9; i++) {
+                let nthChild = 3 + i;
+
+                $(".pagination li:nth-child(" + nthChild + ") a").text(next + i);
+            }
+
+            $(".pagination li:nth-child(3)").addClass("paging_blue");
+
+            $(".paging_next a").attr("next", next + 10);
+            $(".paging_prev a").attr("prev", next - 1);
+
+            $(".paging_start").attr("style", "display: block !important");
+            $(".paging_prev").attr("style", "display: block !important");
+
+            if($(".paging_next a").attr("next") === 51) {
+                $(".paging_next").css("display","none");
+                $(".paging_end").css("display","none");
+                $(".nopaging").css("display","none");
+            }
+       });
+
+       /* 마지막 눌렀을 때 */
+       $(".paging_end").on("click", function() {
+            $(".paging_blue").removeClass("paging_blue");
+
+            let next = $(".paging_next a").attr("next");
+            next = parseInt(next);
+
+            next = 51;
+
+            for(let i=0; i<=9; i++) {
+                let nthChild = 3 + i;
+
+                $(".pagination li:nth-child(" + nthChild + ") a").text(next + i);
+            }
+
+            $(".pagination li:nth-child(3)").addClass("paging_blue");
+
+            $(".paging_next").css("display","none");
+            $(".paging_end").css("display","none");
+            $(".nopaging").css("display","none");
+            $(".paging_start").attr("style", "display: block !important");
+            $(".paging_prev").attr("style", "display: block !important");
+
+            $(".paging_prev a").attr("prev", 50);
+       });
+
+       /* prev 눌렀을 때 */
+       $(".paging_prev").on("click", function() {
+            $(".paging_blue").removeClass("paging_blue");
+
+            let prev = $(".paging_prev a").attr("prev");
+            prev = parseInt(prev);
+
+            for(let i=0; i<=9; i++) {
+                let nthChild = 12 - i;
+
+                $(".pagination li:nth-child(" + nthChild + ") a").text(prev - i);
+            }
+
+            $(".pagination li:nth-child(3)").addClass("paging_blue");
+
+            $(".paging_next a").attr("next", prev + 1);
+            $(".paging_prev a").attr("prev", prev - 10);
+
+            if($(".paging_prev a").attr("prev") == 0) {
+                $(".paging_start").attr("style", "display: none !important");
+                $(".paging_prev").attr("style", "display: none !important");
+            } else if($(".paging_prev a").attr("prev") == 40) {
+                $(".paging_next").css("display","block");
+                $(".paging_end").css("display","block");
+                $(".nopaging").css("display","flex");
+            }
+       });
+
+       /* 처음 눌렀을 때 */
+       $(".paging_start").on("click", function() {
+            $(".paging_blue").removeClass("paging_blue");
+
+            prev = 10;
+
+            for(let i=0; i<=9; i++) {
+            let nthChild = 12 - i;
+
+            $(".pagination li:nth-child(" + nthChild + ") a").text(prev - i);
+            }
+
+            $(".pagination li:nth-child(3)").addClass("paging_blue");
+
+            if($(".paging_prev a").attr("prev") != 0) {
+                $(".paging_start").attr("style", "display: none !important");
+                $(".paging_prev").attr("style", "display: none !important");
+                $(".paging_next").css("display","block");
+                $(".paging_end").css("display","block");
+                $(".nopaging").css("display","flex");
+            }
+
+            $(".paging_next a").attr("next", 11);
+
+       });
 
         /* main_menu */
         $(".main_menu li").on("click", function() {

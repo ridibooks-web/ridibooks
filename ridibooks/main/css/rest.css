@@ -697,9 +697,11 @@
     color: #808991;
     font-weight: bold;
     font-size: 13px;
-    line-height: 30px;
-    padding: 0 11.5px;
+    padding: 7.5px 14.5px;
     box-shadow: rgb(206 210 214 / 30%) 0px 1px 1px 0px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .pagination li:nth-child(3) {
@@ -715,6 +717,8 @@
     border: none !important;
     font-size: 12px !important;
     padding: 0 2px !important;
+    box-shadow: none !important;
+    cursor: default !important;
 }
 
 .pagination li:hover, .pagination li:active {
@@ -755,4 +759,20 @@
  .paging_next, .paging_end {
     margin: 0px 2px;
     border-radius: 3px;
+}
+
+.paging_start, .paging_end {
+    padding: 7.5px 8px !important;
+}
+
+.paging_start {
+    display: none !important;
+}
+
+.paging_prev {
+    margin: 0 4px 0 2px;
+    display: none !important;
+}
+.paging_next {
+    margin: 0 2px 0 4px;
 }
