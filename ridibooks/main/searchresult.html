@@ -128,7 +128,7 @@
             <!-- book_search_top -->
             <div class="book_search_top">
                 <h2 class>'<span class="inputval">작별하지않는다</span>' 도서 검색 결과</h2>
-                <label for="except">
+                <label for="except" class="exceptbtn">
                     성인 제외
                     <div class="exceptbox"><input type="checkbox" name="except"></div>
                 </label>
@@ -886,6 +886,18 @@
         });
 
         /* book_search */
+        /* book_search_top */
+        $(".exceptbtn").on("click", function() {
+            if($(".exceptbox input").is(":checked") == false) {
+                $(".exceptbox").css("backgroundColor", "#339CF2");
+                $(".exceptbox input").css("transform", "translateX(17px)");
+                $(".exceptbox input").prop("checked", true);
+            } else {
+                $(".exceptbox").css("backgroundColor", "#b8bfc4");
+                $(".exceptbox input").css("transform", "translateX(0)");
+                $(".exceptbox input").prop("checked", false);
+            }
+        });
 
         /* paginationbox */
 
