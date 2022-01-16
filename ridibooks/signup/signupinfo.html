@@ -389,12 +389,14 @@
 
       $("#email").on("blur", function() {
          let mailVal = $("#email").val();
+         var emailregex = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{1,5}$/;
+
 
          if($("#email").val() == "") {
             $("#redtext_email").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
             $("#mailsvg").css("display", "none");
-            $("#gray_name").css("visibility", "hidden");
+            $("#gray_mail").css("visibility", "hidden");
          } else if(mailVal.indexOf("@") == -1) {
             $("#mailsvg").css("display", "none");
             $("#redtext_email").css("display", "block");
@@ -405,7 +407,7 @@
             .css("transform", "translateY(7px) scale(0.7)")
             .css("transform-origin", "left")
             .css("color", "#e64938");
-         } else {
+         } else if(mailVal) {
             $("#redtext_email").css("display", "none");
             $(this).css("borderColor", "#D6DEEB");
             $("#gray_mail").css("color", "#738096");
@@ -425,7 +427,9 @@
       });
 
       $("#birthYear").on("blur", function() {         
-         if($("#birthYear").val() < 1900 || $("#birthYear").val() > 2021 || $("#birthYear").val() == "") {
+         var num = /[^0-9]/g;
+
+         if($("#birthYear").val() < 1900 || $("#birthYear").val() > 2021 || $("#birthYear").val() == "" || $("#birthYear").val() != num) {
             $("#redtext_bir").css("display", "block");
             $(this).css("borderColor", "#FABAB3");
             $("#birsvg").css("display", "none");
@@ -440,46 +444,12 @@
       /* gender */
       // 남, 여 중 하나의 체크 박스를 클릭했을 때 실행
       $("label.genderBox").on("click", function() {
-         // 남, 여 체크 박스를 불러옴
-         // 체크 박스의 파란색 백그라운드 삭제
+         $(this).prop("checked", false);
+         $("label.genderBox").css("borderColor", "#D6DEEB").css("background", "white");
 
-         // 현재 선택한 체크박스에 파란색 백그라운드 지정
-         
+         $(this).css("borderColor", "#9ea7ad").css("background", "#DBEFFF");
+         $(this).prop("checked", true);
       });
-      // $("label.genderBox_m").on("click", function() {
-      //    let genderTag = $("label input[type=\"checkbox\"]");
-      //    let genderM = genderTag.eq(0);
-      //    let genderW = genderTag.eq(1);
-
-      //    if($(genderM).is(":checked") == false) {
-      //       $("label.genderBox_m").css("borderColor", "#9ea7ad").css("background", "#DBEFFF");
-      //       $(genderM).prop("checked", true);
-      //    } else if($(genderM).is(":checked") == true) {
-      //       $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");
-      //       $(genderM).prop("checked", false);
-      //       $(genderW).prop("checked", false);
-      //       $("label.genderBox_w").css("borderColor", "#D6DEEB").css("background", "white");
-      //    }
-      // });
-
-      // $("label.genderBox_w").on("click", function() {
-      //    let genderTag = $("label input[type=\"checkbox\"]");
-      //    let genderM = genderTag.eq(0);
-      //    let genderW = genderTag.eq(1);
-
-      //    if($(genderW).is(":checked") == false) {
-      //       $("label.genderBox_w").css("borderColor", "#9ea7ad").css("background", "#DBEFFF");
-      //       $(genderW).prop("checked", true);
-      //    } else if($(genderW).is(":checked") == true) {
-      //       $("label.genderBox_w").css("borderColor", "#D6DEEB").css("background", "white");
-      //       $(genderW).prop("checked", false);
-      //       $(genderM).prop("checked", false);
-      //       $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");
-      //    } else if($(genderM).is(":checked") == true) {
-      //       $(genderM).prop("checked", false);
-      //       $("label.genderBox_m").css("borderColor", "#D6DEEB").css("background", "white");            
-      //    }
-      // });
 
       /* 전체 동의 */
       $(".agreeTitle").on("click", function() {
