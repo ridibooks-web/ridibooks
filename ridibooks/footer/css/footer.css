@@ -16,6 +16,129 @@
 }
 
 /* partnercard */
+.partnercard {
+    cursor: default;
+    position: relative;
+    width: 100%;
+}
+
+.partnercardbox {
+    padding: 70px 0 130px 0;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+}
+
+.partnercard_text {
+    text-align: center;
+}
+
+.partnercard .card_h2 {
+    color: #212529;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 40px;
+}
+
+.partnercard .card_h2::after {
+    content: "";
+    border-top: 3px solid #212529;
+    width: 100%;
+    display: block;
+}
+
+.partnercard .card_p {
+    color: #212529;
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.partnercard .cardbox {
+    padding-top: 40px;
+}
+
+.partnercard .cardbox .shinhancard {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 260px;
+    border: 1px solid #d1d5d9;
+    border-radius: 3px;
+}
+
+.shinhancard_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    background-color: #e9f1f9;
+}
+
+._check .shinhancard_img {
+    background-color: #f2ebe8;
+}
+
+.shinhancard_img img {
+    width: 240px;
+    height: 152px;
+    filter: drop-shadow(3px 1px 6px #94a2b8);
+}
+
+.shinhancard_text {
+    padding: 50px 60px;
+}
+
+.shinhancard_text h2 {
+    color: #40474d;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.shinhancard_text ul {
+    padding-top: 9px;
+}
+
+.shinhancard_text ul li {
+    color: #636c73;
+    font-size: 15px;
+    padding: 3px 0;
+}
+
+.shinhancard_text ul li::before {
+    display: inline-block;
+    background-color: #9ea7ad;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 6px;
+    margin-right: 9px;
+    position: relative;
+    top: -3px;
+}
+
+.shinhancard a button {
+    color: #808991;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #d1d5d9;
+    border-radius: 4px;
+    padding: 12px 26px;
+    margin-top: 16px;
+    box-shadow: 2px 2px 5px -4px rgb(0 0 0 / 30%);
+}
+
+.shinhancard a button:hover, .shinhancard a button:active {
+    background-color: #F5F6F7;
+}
+
+.shinhancard a button img {
+    width: 6px;
+    height: 9.8px;
+}
 
 /* center */
 
