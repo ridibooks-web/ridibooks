@@ -143,4 +143,192 @@
 /* center */
 
 
-/* notice */
+/* guide */
+.guide {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 25px 5% 0;
+}
+
+.guide h2, .guide p {
+    color: #303538;
+}
+
+.main_logo {
+    line-height: 60px;
+}
+
+.main_logo ul li a svg {
+    width: 89px;
+    height: 17px;
+}
+
+.guide_top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+}
+
+.breadcrumb {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.breadcrumb li {
+    color:#9ea7ad;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.breadcrumb li a:hover, .breadcrumb li a:active {
+    color: #1f8ce6;
+}
+
+.breadcrumb li::after {
+    content: ">";
+    color:#9ea7ad;
+    padding: 0 2px 0 6px;
+    font-size: 8px;
+    position: relative;
+    top: -1px;
+}
+
+.breadcrumb li:last-child::after {
+    display: none;
+}
+
+.guide_search{
+    position: relative;
+}
+
+.guide_search input {
+    background: white;
+    color: #303538;
+    border-radius: 6px;
+    border: 1px solid #d1d5d9;
+    padding: 11px 20px 11px 40px;
+    font-size: 14px;
+    width: 100%;
+    letter-spacing: -0.06em;
+}
+
+.guide_search input::placeholder {
+    color: #808991;
+}
+
+.guide_search input:focus {
+    outline: none;
+    border-color: #1f8ce6;
+}
+
+.fig-h1a41g { /* 돋보기 */
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    margin: 6px 4px 0px 10px;
+    top: 0;
+}
+
+.guide_bottom {
+    max-width: 833px;
+    margin: 0 auto;
+}
+
+.guide_bottom h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.guide_listbox ul li {
+    border-bottom: 1px solid #e6e8eb;
+    padding: 15px 0;
+}
+
+.guide_listbox ul li a {
+    color: #303538;
+    font-size: 16px;
+}
+
+.guide_listbox ul li a:hover, .guide_listbox ul li a:active {
+    color: #1f8ce6;
+}
+
+.guide_paginationbox {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.guide_paginationbox ol {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.guide_paginationbox ol li {
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+    margin-left: 5px;
+}
+
+.guide_paginationbox ol li:hover, .guide_paginationbox ol li:active {
+    background-color: #f3f3f3;
+}
+
+.guide_paginationbox ol li a {
+    color: #303538;
+    font-size: 13px;
+}
+
+.guide_paginationbox ol li a i {
+    font-size: 2px;
+    color: #5f696f;
+}
+
+.paging_blue {
+    background-color: #1f8ce6 !important;
+}
+
+.paging_blue a {
+    color: #f7fafc !important;
+    font-weight: bold;
+}
+
+.paging_start, .paging_prev {
+    display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .guide_top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .breadcrumb {
+        list-style: none;
+        margin-bottom: 0;
+    }
+    
+    .guide_search input {
+        min-width: 300px;
+    }
+    
+    .fig-h1a41g { /* 돋보기 */
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        margin: 0px 4px 0px 10px;
+    }
+
+    .guide_bottom h2 {
+        margin-bottom: 40px;
+    }
+}
+
