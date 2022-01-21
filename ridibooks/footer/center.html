@@ -53,6 +53,10 @@
         </div>
     </section>
 
+    <div class="chatbot">
+        <img src="../footer/images/chatbot.png">
+    </div>
+
     <!-- footer -->
     <footer>
         <div class="footerbox">
@@ -190,11 +194,9 @@
         /* footer */
         $(".ridiInfo").on("click", function() {
             if($(".content").css("display") == "none") {
-                $(".fig-165hqrc").css("transform", "scale(0.5) rotate(270deg)");
-                $(".content").css("display", "flex");
+                $(".content").attr("style", "display: block !important");
             } else {
-                $(".fig-165hqrc").css("transform", "scale(0.5) rotate(90deg)");
-                $(".content").css("display", "none");
+                $(".content").attr("style", "display: none !important");
             }
         });
     </script>

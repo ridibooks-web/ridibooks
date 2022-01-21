@@ -1,0 +1,182 @@
+/* header */
+header {
+    overflow: hidden;
+}
+
+.main_logo {
+    padding: 0 38px;
+}
+
+.main_logo ul {
+    max-width: 100%;
+}
+
+.main_logo li {
+    padding: 0 8px !important;
+}
+
+#nav_line {
+    padding: 0 !important;
+}
+
+.main_logo li:first-child {
+    padding-left: 0 !important;
+}
+
+.main_logo li:last-child {
+    padding-right: 0 !important;
+}
+
+.main_logo svg {
+    height: 12px;
+}
+
+.center_logo a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.center_logo:hover, .center_logo:active {
+    opacity: 0.7;
+}
+
+
+/* footer */
+footer {
+    background-color: #2f3142 !important;
+    padding: 40px 0 48px 0;
+}
+
+footer a:hover, footer a:active {
+    color: #1f8ce6 !important;
+}
+
+.footerbox {
+    max-width: 1120px !important;
+    padding: 0 !important;
+}
+
+.footer_top ul {
+    position: relative;
+    align-items: flex-end;
+}
+
+.footer_top ul li {
+    font-weight: bold;
+    color: #fff;
+    padding: 0 9px;
+    margin-bottom: 15px;
+}
+
+.footer_top ul li a {
+    font-size: 13px !important;
+}
+
+.footer_top ul li:first-child {
+    padding: 0 9px 0 0;
+}
+
+.footer_top ul li:last-child {
+    margin-bottom: 15px !important;
+}
+
+.footer_top ul li:first-child::before {
+    display: none;
+}
+
+.footer_top ul li::before {
+    display: inline-block;
+    background-color: #b8bfc4;
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 6px;
+    margin-right: 9px;
+    position: relative;
+    top: 13px;
+    left: -10px;
+}
+
+.ridiInfobox {
+    padding-top: 20px;
+}
+
+.ridiInfo:hover, .ridiInfo:active {
+    opacity: 1 !important;
+}
+
+.fig-165hqrc {
+    fill: #fff !important;
+}
+
+.ridiInfobox p {
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.ridiInfobox ul li {
+    font-size: 12px;
+    color: #fff;
+}
+
+.content {
+    display: none;
+}
+
+.footer_bottom {
+    padding-top: 15px;
+    display: block !important;
+}
+
+.law {
+    margin: 12px 0;
+    font-size: 11px;
+}
+
+.law li {
+    padding-right: 12px;
+}
+
+.ridicorp {
+    display: block;
+    font-size: 11px !important;
+}
+
+.ridicorp:hover, .ridicorp:active {
+    color: #1f8ce6;
+}
+
+@media only screen and (min-width: 1000px) {
+    .main_logo svg {
+        height: 13.6px;
+    }
+    .center_logo a {
+        font-size: 17.6px;
+    }
+}    
+
+@media only screen and (min-width: 1120px) {
+    .main_logo {
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    footer {
+        padding: 30px 20px 48px 20px;
+    }
+
+    .footerbox {
+        text-align: center;
+    }
+
+    .footer_top ul {
+        justify-content: center;
+    }
+
+    .law {
+        justify-content: center;
+    }
+}

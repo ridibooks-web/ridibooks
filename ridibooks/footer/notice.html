@@ -93,19 +93,9 @@
             </div>
         </div>
 
-        <!-- paginationbox -->
-        <div class="guide_paginationbox">
-            <ol class="pagination">
-                <li class="paging_start"><a href="#">«</a></li>
-                <li><a href="#">‹</a></li>
-                <li class="paging_blue"><a href="#">1</a></li>
-                <li><a hre.f="#">2</a></li>
-                <li><a href="#">›</a></li>
-                <li class="paging_end"><a href="#">»</a></li>
-            </ol>
+        <div class="chatbot">
+            <img src="../footer/images/chatbot.png">
         </div>
-    </section>
-
 
     <!-- footer -->
     <footer>
@@ -244,11 +234,9 @@
         /* footer */
         $(".ridiInfo").on("click", function() {
             if($(".content").css("display") == "none") {
-                $(".fig-165hqrc").css("transform", "scale(0.5) rotate(270deg)");
-                $(".content").css("display", "flex");
+                $(".content").attr("style", "display: block !important");
             } else {
-                $(".fig-165hqrc").css("transform", "scale(0.5) rotate(90deg)");
-                $(".content").css("display", "none");
+                $(".content").attr("style", "display: none !important");
             }
         });
     </script>

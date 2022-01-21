@@ -163,13 +163,28 @@
 
 
 /* center */
+.notice {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 25px 0 40px 0;
+}
 
+@media only screen and (min-width: 1000px) {
+    .notice {
+        padding: 25px 0 60px 0;
+    }
+    
+}
 
-/* guide */
+/* guide 및 다른 공지사항 */
 .guide {
     max-width: 1120px;
     margin: 0 auto;
-    padding: 25px 5% 0;
+    padding: 25px 38px 0;
+}
+
+.ridibooks_notice, .select_notice, .paper_notice {
+    padding: 25px;
 }
 
 .guide h2, .guide p {
@@ -223,8 +238,6 @@
 }
 
 .breadcrumb li {
-    color:#9ea7ad;
-    font-size: 13px;
     display: inline-block;
 }
 
@@ -243,6 +256,11 @@
 
 .breadcrumb li:last-child::after {
     display: none;
+}
+
+.breadcrumb li a {
+    color:#9ea7ad;
+    font-size: 13px;
 }
 
 .guide_search{
@@ -272,7 +290,7 @@
 .search_svg { /* 돋보기 */
     width: 26px;
     height: 26px;
-    color: #808991;
+    color: #7d8e9e;
     position: absolute;
     margin: 6px 4px 0px 10px;
     top: 0;
@@ -291,12 +309,22 @@
 
 .guide_listbox ul li {
     border-bottom: 1px solid #e6e8eb;
-    padding: 15px 0;
+    padding: 17.2px 0;
+}
+
+.guide_listbox ul li:first-child {
+    border-top: 1px solid #e6e8eb;
 }
 
 .guide_listbox ul li a {
     color: #303538;
     font-size: 16px;
+}
+
+.blue_star {
+    fill: #1f8ce6;
+    position: relative;
+    top: 3px;
 }
 
 .guide_listbox ul li a:hover, .guide_listbox ul li a:active {
@@ -352,12 +380,49 @@
     display: none !important;
 }
 
+.chatbot {
+    position: fixed;
+    right: 24px;
+    bottom: 75px;
+}
+
+.chatbot img {
+    width: 63px;
+    height: 63px;
+    filter: drop-shadow(4px 4px 11px rgb(0 0 0 /10%));
+    animation: chatbot_img ease-in-out 0.2s forwards;
+}
+
+@keyframes chatbot_img {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .guide {
+        padding: 25px 0 0 0;
+    }
+    .ridibooks_notice {
+        padding: 25px 0;
+    }
+    .select_notice {
+        padding: 25px 0 157px 0;
+    }
+    .paper_notice {
+        padding: 25px 0 46px 0;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .guide_top {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 70px;
+        margin-bottom: 85px;
     }
 
     .breadcrumb {
@@ -370,11 +435,11 @@
     }
     
     .search_svg { /* 돋보기 */
-        margin: 6px 4px 0px 6px;
+        margin: 6px 4px 0px 9px;
     }
 
     .guide_bottom h2 {
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 }
 
