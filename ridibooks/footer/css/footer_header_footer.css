@@ -5,6 +5,7 @@ header {
 
 .main_logo {
     padding: 0 38px;
+    white-space: nowrap;
 }
 
 .main_logo ul {
@@ -164,6 +165,10 @@ footer a:hover, footer a:active {
 }
 
 @media only screen and (max-width: 500px) {
+    .main_logo {
+        padding: 0 25px;
+    }
+
     footer {
         padding: 30px 20px 48px 20px;
     }
