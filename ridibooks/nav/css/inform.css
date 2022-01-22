@@ -1,0 +1,11 @@
+.inform {
+    max-width: 952px;
+    margin: 0 auto;
+}
+
+.inform h2 {
+    color: #303538;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 15px 0;
+}
