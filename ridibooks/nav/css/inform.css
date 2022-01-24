@@ -13,6 +13,10 @@
     border-bottom: 1px solid #e6e8eb;
 }
 
+.informbox ul li:hover, .informbox ul li:active {
+    background: #F7FAFC;
+}
+
 .informbox ul li a {
     display: flex;
     justify-content: space-between;

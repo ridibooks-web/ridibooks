@@ -10,6 +10,7 @@
     border-bottom: 1px solid #d1d5d9;
     text-align: center;
     margin-bottom: 35px;
+    cursor: default;
 }
 
 .gift_book h2 {
@@ -43,7 +44,9 @@
 }
 
 .gift_img a {
-    background: linear-gradient(rgba(0 0 0 /20%) 20% rgba(0 0 0 /0%) 30% rgba(0 0 0 /20%) 80%);
+    position: relative;
+    z-index: 2;
+    display: inline-block;
 }
 
 .gift_bookimg {
@@ -61,6 +64,7 @@
 
 .ribbon img {
     width: 82px;
+    z-index: 3;
     position: absolute;
 }
 
@@ -106,6 +110,10 @@
 textarea:hover, textarea:active {
     outline: none;
     border-color: #808991 !important;
+}
+
+.gift_input input:disabled:hover, .gift_input input:disabled:active {
+    border-color: #d1d5d9 !important;
 }
 
 .send, .get, .message, .get_text, .message_text {

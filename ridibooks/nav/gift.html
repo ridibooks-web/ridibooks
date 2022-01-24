@@ -442,6 +442,20 @@
             }
         });
 
+        /* message */
+        $("textarea").on("keydown", function() {
+            let textarea_val = $("textarea").val();
+
+            let textarea_length = textarea_val.length;
+
+            $(".text_length").text(textarea_length);
+
+            if(textarea_length > 150) {
+                $("textarea").val(textarea_val.substring(0, 150));
+            } 
+        });
+
+        /* btn */
         $(".pay_btn button").on("click", function() {
             if($("input").val() == "") {
                 $(".popBox").animate({
@@ -459,6 +473,7 @@
                 location.href = "../nav/pay.html";
             }
         });
+
 
         /* footer */
         $(".ridiInfo").on("click", function() {
