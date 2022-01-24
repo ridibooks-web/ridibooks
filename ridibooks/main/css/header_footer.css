@@ -28,11 +28,10 @@ ul {
     list-style: none;
 }
 
-button, a {
+button {
     cursor: pointer;
+    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
-
-
 
 /* header */
 header {

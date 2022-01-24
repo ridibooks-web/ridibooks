@@ -1,0 +1,373 @@
+.gift {
+    margin-bottom: 60px;
+}
+
+.gift_book {
+    background: url("../images/gift_book_bg_present_hero@2x.png");
+    background-size: 64px 64px;
+    width: 100%;
+    padding: 35px 0;
+    border-bottom: 1px solid #d1d5d9;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.gift_book h2 {
+    color: #333;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.book_text {
+    color: #666;
+    font-size: 13px;
+    margin: 15px 0 20px;
+    line-height: 19px;
+}
+
+.gift_book h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.author {
+    color: #666;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.gift_img {
+    position: relative;
+    display: inline-block;
+}
+
+.gift_img a {
+    background: linear-gradient(rgba(0 0 0 /20%) 20% rgba(0 0 0 /0%) 30% rgba(0 0 0 /20%) 80%);
+}
+
+.gift_bookimg {
+    width: 200px;
+    border: 1px solid #d2d4d7;
+    box-shadow: 0px 2px 12px 2px rgb(0 0 0 / 14%);
+}
+
+.twinkle {
+    position: absolute;
+    top: 18%;
+    right: -110%;
+    width: 643px;
+}
+
+.ribbon img {
+    width: 82px;
+    position: absolute;
+}
+
+.ribbon_left {
+    top: -3px;
+    left: -5.2%;
+}
+
+.ribbon_right {
+    bottom: 2px;
+    right: -5.2%;
+}
+
+/* input */
+.gift_input {
+    margin: 35px 0 60px;
+    width: 800px;
+    margin: 0 auto;
+    border-top: 4px solid #ff5751;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 15%);
+}
+
+.gift_input input, textarea {
+    color: #303538;
+    font-size: 13px;
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #d1d5d9;
+    border-radius: 3px;
+    padding: 8px;
+    width: 168px;
+    outline: none;
+    letter-spacing: -0.03em;
+}
+
+.gift_input input:disabled {
+    border-color: #d1d5d9;
+    background: #f2f4f5;
+    color: #d1d5d9;
+}
+
+.gift_input input:hover, .gift_input input:active,
+textarea:hover, textarea:active {
+    outline: none;
+    border-color: #808991 !important;
+}
+
+.send, .get, .message, .get_text, .message_text {
+    display: flex;
+    align-items: center;
+}
+
+.get_text, .message_text {
+    flex-direction: column;
+}
+
+.sendbox, .getbox, .messagebox {
+    display: block;
+}
+
+.gift_red {
+    color: #ff5751;
+    font-size: 16px;
+    font-weight: bold;
+    width: 220px;
+    text-align: center;
+}
+
+.gift_gray {
+    color: #808991;
+    font-size: 12px;
+    padding-top: 10px;
+    display: block;
+}
+
+.gift_gray::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: #808991;
+    position: relative;
+    top: -2px;
+    margin-right: 4px;
+}
+
+.get ,.message , .pay_btn {
+    border-top: 1px solid #d1d5d9;
+}
+
+.gift i {
+    color: #ff5751;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 보내는 분 */
+.sendbox {
+    padding: 30px 60px 30px 0;
+}
+
+.send input {
+    width: 163px;
+}
+
+/* 선물 받는 분 */
+.get h2 {
+    color: #40474d;
+    font-size: 14px;
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    letter-spacing: -0.08em;
+}
+
+input[type="radio"] {
+    padding: 0;
+    width: auto;
+}
+
+.getbox {
+    padding: 12px 60px 12px 0;
+}
+
+.get_name, .get_way, .get_sms, .get_id, .get_mail {
+    line-height: 60px;
+}
+
+.get_way, .get_name .inputbox {
+    border-bottom: 2px solid #f2f4f5;
+}
+
+.inputbox {
+    width: 395px;
+    display: inline-block;
+}
+
+
+.get_way label {
+    color: #636c73;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.get_sms, .get_mail {
+    display: none;
+}
+
+.get .gift_gray {
+    border-top: 2px solid #f2f4f5;
+    margin-bottom: 15px;
+}
+
+#get_sms {
+    width: 68px;
+}
+
+#get_mail {
+    width: 130px;
+}
+
+input[type="radio"] {
+    width: 1px;
+    height: 1px;
+    left: 1px;
+    position: absolute;
+
+    display: none;
+}
+
+.before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D1D5D9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 34%;
+    cursor: pointer;
+}
+
+.before_check {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 6px solid #0077d9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 34%;
+    cursor: pointer;
+}
+
+.waybox {
+    display: inline-block;
+    position: relative;
+    margin-right: 6px;
+}
+
+
+.input_text {
+    padding-left: 25px;
+}
+
+
+/* 선물 메시지 */
+.messagebox {
+    padding: 30px 60px 30px 0;
+}
+
+textarea {
+    width: 518px;
+    height: 140px;
+    padding: 7px 10px;
+    resize: none;
+    font-weight: normal;
+}
+
+textarea::placeholder {
+    letter-spacing: -0.12em;
+}
+
+.textarea_p {
+    color: #303538;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 4px;
+}
+
+/* 결제하러 가기 */
+.pay_btn {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.pay_btn button {
+    background: #1f8ce6;
+    border: 1px solid #0077D9;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgb(209 213 217 / 30%);
+    padding: 16px 34px;
+    cursor: pointer;
+}
+
+.pay_btn button:hover, .pay_btn button:active {
+    background: #0077D9;
+}
+
+/* 팝업창 */
+.popBox {
+    left: 50%;
+    top: 45px;
+    width: 420px;
+    margin-left: -210px;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    padding: 15px 50px 15px 15px;
+    background: rgba(0,0,0,.9);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+    border-radius: 4px;
+
+    opacity: 0;
+}
+
+.popBox p {
+    color: #f88792;
+    font-size: 13px;
+    line-height: 1.45em;
+    letter-spacing: -0.03em;
+    padding-left: 21px;
+    position: relative;
+    cursor: default;
+}
+
+.pop {
+    fill: #f88792;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+}
+
+.popBox img {
+    width: 16px;
+    height: 16px;
+    position: absolute; 
+    cursor: pointer;  
+    top: 34%;
+    right: 10px; 
+}
+
+.popBox .pinktext {
+    color: #f5948a;
+}
+
+.pop_pink {
+    fill: #f5948a;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+}

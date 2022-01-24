@@ -1,0 +1,13 @@
+body {
+    min-width: 1000px;
+}
+
+.main_nav {
+    position: relative;
+}
+
+@media only screen and (max-width: 320px) {
+    #nav_line, .main_logo ul li:last-child {
+    display: block;
+    }
+}

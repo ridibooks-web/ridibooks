@@ -1,11 +1,64 @@
 .inform {
     max-width: 952px;
     margin: 0 auto;
+    margin-bottom: 24px;
 }
 
 .inform h2 {
+    display: none;
+}
+
+.informbox ul li {
+    padding: 14px 10px;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.informbox ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informbox ul li img {
+    width: 56px;
+    height: 56px;
+}
+
+.inform_textbox {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inform_text {
     color: #303538;
-    font-size: 21px;
-    font-weight: bold;
-    padding: 15px 0;
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.time_text {
+    font-size: 14px;
+    display: block;
+}
+
+.inform_book {
+    width: 56px;
+    height: 78px !important;
+    box-shadow: 3px 2px 5px 0px rgb(0 0 0 / 11%);
+}
+
+.fig-1xqt1sd {
+    margin-left: 15px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .inform h2 {
+        display: block;
+        color: #303538;
+        font-size: 21px;
+        font-weight: bold;
+        padding: 15px 0;
+    }
 }

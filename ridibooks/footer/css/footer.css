@@ -1,4 +1,8 @@
 /* download */
+.min_body {
+    min-width: 1000px;
+}
+
 .viewer {
     width: 100%;
     margin: 20px 0 40px 0;
@@ -13,6 +17,12 @@
 .viewer_img img {
     width: 1000px;
     max-width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+    .min_body #nav_line, .min_body .main_logo ul li:last-child {
+    display: block;
+    }
 }
 
 /* partnercard */
@@ -158,6 +168,12 @@
 @media only screen and (min-width: 1000px) {
     .fig-h1a41g {
         margin: 0px 4px 0px 6px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .card_body #nav_line, .card_body .main_logo ul li:last-child {
+    display: block;
     }
 }
 
