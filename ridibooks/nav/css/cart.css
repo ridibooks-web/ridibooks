@@ -1,4 +1,4 @@
-.cart {
+.cart, .pay {
     max-width: 952px;
     margin: 0 auto;
     padding-top: 30px;
@@ -72,8 +72,9 @@
 
 .cart_list img {
     width: 60px;
-    box-shadow: 1px ​1px 3px 1px rgb(0 0 0 / 18%);
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 18%);
     margin: 20px 0 20px 28px;
+    border: 1px solid #d1d5d9;
 }
 
 .cart_info {
@@ -304,13 +305,137 @@ input[type="checkbox"] {
     cursor: default;
 }
 
-.rentbox i {
-    color: #e6e8eb;
-    font-size: 57px;
+.rentbox svg {
+    width: 55px;
     padding-bottom: 15px;
 }
 
 .rentbox p {
     color: #636c73;
     font-size: 13px;
+}
+
+/* pay */
+/* 왼쪽 */
+.pay h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.pay h2 span {
+    color: #818a92;
+    font-size: 15px;
+}
+
+.pay .cart_list {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.pay .cart_info {
+    padding: 10px 0 15px 0;
+}
+
+.pay .cart_list ul {
+    padding: 0;
+}
+
+.pay .cart_list ul h2 {
+    font-size: 13px;
+    margin: 0;
+}
+
+.pay .cart_list ul p {
+    font-size: 12px;
+}
+
+.pay .cart_list ul img {
+    margin: 15px 0 15px 8px;
+}
+
+.pay .cart_list ul .price {
+    font-size: 13px;
+}
+
+/* 오른쪽 */
+.payway form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.deduction {
+    display: inline-block;
+    background-color: #ebf6ff;
+    color: #66baff;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 2px;
+    line-height: 18px;
+    padding: 0 5px;
+}
+
+.deduction:hover, .deduction:active {
+    color: #66baff !important;
+}
+
+input[type="radio"] {
+    width: 1px;
+    height: 1px;
+    left: 1px;
+    position: absolute;
+
+    display: none;
+}
+
+.before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D1D5D9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 34%;
+    cursor: pointer;
+}
+
+.waybox > span:hover, .waybox > span:active {
+    border-color: #40474d;    
+    color: #40474d;
+}
+
+.before_check {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 6px solid #0077d9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 34%;
+    cursor: pointer;
+}
+
+.waybox {
+    display: inline-block;
+    position: relative;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.waybox img {
+    height: 20px;
+    display: inline-block;
+    flex: 0 0 100px;
+}
+
+.naver_img {
+    height: 20px;
+}
+
+.input_text {
+    padding-left: 25px;
 }

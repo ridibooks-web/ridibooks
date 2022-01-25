@@ -7,7 +7,7 @@
    <title>리디북스</title>
    <link rel="stylesheet" href="../main/css/header_footer.css">
    <link rel="stylesheet" href="../nav/css/min_width.css">
-   <link rel="stylesheet" href="css/inform.css">
+   <link rel="stylesheet" href="css/myridi.css">
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -65,7 +65,63 @@
 
     <!-- section -->
     <section class="myridi">
+        <div class="myridi_menu">
+            <h2>마이리디</h2>
+            <div class="menubox">
+                <div class="home">
+                    <a href="../nav/myridi.html">
+                        <!-- svg들어갈 자리 -->
+                        <p class="menu_title">마이리디 홈</p>
+                    </a>
+                </div>
+                <div class="book">
+                    
+                    <p class="menu_title">책</p>
+                    <ul>
+                        <li><a href="../mainlink/library.html">선호작품</a></li>
+                        <li><a href="">최근 조회한 작품</a></li>
+                        <li><a href="">위시리스트</a></li>
+                        <li><a href="">독서노트</a></li>
+                        <li><a href="">신간알림</a></li>
+                        <li><a href="">이벤트 알림 설정</a></li>
+                    </ul>
+                </div>
+                <div class="pay">
 
+                    <p class="menu_title">구매/혜택</p>
+                    <ul>
+                        <li><a href="">결제 내역</a></li>
+                        <li><a href="">리디캐시</a></li>
+                        <li><a href="">리디포인트</a></li>
+                        <li><a href="../nav/coupon.html">쿠폰</a></li>
+                    </ul>
+                </div>
+                <div class="individual">
+
+                    <p class="menu_title">개인</p>
+                    <ul>
+                        <li><a href="../footer/center.html">1:1 문의</a></li>
+                        <li><a href="">내 기기 관리</a></li>
+                        <li><a href="">내 리뷰 관리</a></li>
+                        <li><a href="../nav/changeinfo_before.html">정보 변경</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- changeinfo_before -->
+        <div class="changeinfo_before">
+            <h2>정보 변경</h2>
+            <div class="info_before">
+                <p>보안을 위해 비밀번호를 한번 더 입력해 주세요.</p>
+                <form action="#">
+                    <label for="password">
+                        <input type="password" name="password" id="password">
+                    </label>
+                </form>
+                <a href="#"><button type="submit" class="pw_btn">확인</button></a>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -261,6 +317,14 @@
         $(".main_menu li").on("click", function() {
             $(".underline").removeClass("underline");
             $(this).addClass("underline");
+        });
+
+        /* input */
+        $("input").on("focus", function() {
+            $(this).css("borderColor", "#1f8ce6");
+        });
+        $("input").on("blur", function() {
+            $(this).css("borderColor", "#d1d5d9");
         });
 
         /* footer */

@@ -1,5 +1,6 @@
 .gift {
     margin-bottom: 60px;
+    cursor: default;
 }
 
 .gift_book {
@@ -207,7 +208,6 @@ input[type="radio"] {
     display: inline-block;
 }
 
-
 .get_way label {
     color: #636c73;
     font-size: 13px;
@@ -251,6 +251,11 @@ input[type="radio"] {
     left: 0;
     top: 34%;
     cursor: pointer;
+}
+
+.waybox > span:hover, .waybox > span:active {
+    border-color: #40474d;    
+    color: #40474d;
 }
 
 .before_check {

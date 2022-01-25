@@ -1,0 +1,64 @@
+.myridi {
+    max-width: 952px;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.myridi_menu {
+    width: 130px;
+    margin-right: 102px;
+}
+
+/* changeinfo_before */
+
+.changeinfo_before h2 {
+    font-size: 21px;
+    color: #333;
+}
+
+.info_before p {
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 25px 0 15px 0;
+}
+
+.changeinfo_before form {
+    display: inline-block;
+}
+
+.changeinfo_before input {
+    color: #303538;
+    font-size: 13px;
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #d1d5d9;
+    border-radius: 3px;
+    width: 220px;
+    padding: 6.5px 10px;
+    outline: none;
+    letter-spacing: 0.4em;
+}
+
+.changeinfo_before input:hover, .changeinfo_before input:active {
+    outline: none;
+    border-color: #808991 !important;
+}
+
+.pw_btn {
+    background: #1f8ce6;
+    border: 1px solid #0077D9;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgb(209 213 217 / 30%);
+    padding: 7px 18px;
+    cursor: pointer;
+}
+
+.pw_btn:hover, .pw_btn:active {
+    background: #0077D9;
+}

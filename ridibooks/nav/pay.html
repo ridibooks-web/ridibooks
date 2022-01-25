@@ -6,9 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>주문/결제 - 리디북스</title>
    <link rel="stylesheet" href="../main/css/header_footer.css">
-   <link rel="stylesheet" href="../nav/css/min_width.css">
-   <link rel="stylesheet" href="css/inform.css">
+   <link rel="stylesheet" href="css/cart.css">
+   <link rel="stylesheet" href="css/min_width.css">
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
 </head>
 <body>
     <!-- header -->   
@@ -64,8 +65,124 @@
     </header>
 
     <!-- section -->
-    <section>
+    <section class="pay">
+        <div class="cartbox">
+            <!-- 왼쪽 -->
+            <div class="cart_list">
+                <h2>주문 목록 <span>3</span></h2>
+                <ul>
+                    <li>
+                    <a href="../mainlink/bookdetail.html"><img src="../main/images/book/일의기쁨과슬픔.webp" alt="일의 기쁨과 슬픔"></a>
+                    <div class="cart_info">
+                        <a href="../mainlink/bookdetail.html"><h2>일의 기쁨과 슬픔</h2></a>
+                        <a href="../mainlink/authorprofile.html"><p class="author">장류진</p></a>
+                        <div class="pricebox">
+                            <span class="price_minus">-</span><p class="price">9,800원</p>
+                        </div>
+                    </div>
+                    </li>
 
+                    <li>
+                    <a href="../mainlink/bookdetail.html"><img src="../main/images/book/행복일거야.webp" alt="이 미로의 끝은 행복일 거야"></a>
+                    <div class="cart_info">
+                        <a href="../mainlink/bookdetail.html"><h2>이 미로의 끝은 행복일 거야</h2></a>
+                        <a href="../mainlink/authorprofile.html"><p class="author">나란</p></a>
+                        <div class="pricebox">
+                            <span class="price_red">10%<i class="fas fa-long-arrow-alt-down"></i></span><p class="price">9,450원</p>
+                        </div>
+                    </div>
+                    </li> 
+
+                    <li>
+                    <a href="../mainlink/bookdetail.html"><img src="../main/images/book/밝은밤.webp" alt="밝은 밤"></a>
+                    <div class="cart_info">
+                        <a href="../mainlink/bookdetail.html"><h2>밝은 밤</h2></a>
+                        <a href="../mainlink/authorprofile.html"><p class="author">최은영</p></a>
+                        <div class="pricebox">
+                            <span class="price_minus">-</span><p class="price">10,200원</p>
+                        </div>
+                    </div>
+                    </li> 
+                </ul>
+            </div>
+
+            <!-- 오른쪽 -->
+            <div class="cart_right">
+                <h2>결제 정보</h2>
+                <div class="amountbox">
+                    <ul>
+                        <li><p class="title">총 상품 금액</p><p class="value_big">30,500원</p></li>
+                        <li><p class="title">할인 쿠폰</p><p class="value">0개</p></li>
+                        <li><p class="title">포인트 상품권</p><p class="value">0개</p></li>
+                        <li><p class="title">리디포인트</p><p class="value">0원</p></li>
+                        <li><p class="title">리디캐시 <span class="questionMark"></span></p><p class="value">0원</p></li>
+                    </ul>
+                    <p class="amount skyblue"><span class="title">총 결제 금액<span class="value">29,450</span>원</span></p>
+                </div>
+                <div class="payway">
+                    <p class="title">결제 수단</p>
+                    <form action="#">
+                        <label for="way">
+                            <div class="waybox">
+                                <span class="before_check" id="naverpay"></span><input type="radio" name="way" id="way_naverpay" value="naverpay"><img src="../nav/images/naverpay.svg" class="naver_img" alt="naverpay"><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">
+                                <span class="before" id="kakaopay"></span><input type="radio" name="way" id="way_kakaopay" value="kakaopay"><img src="../nav/images/kakaopay.svg" class="kakao_img" alt="kakaopay"><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="samsungpay"></span><input type="radio" name="way" id="way_samsungpay" value="samsungpay"><img src="../nav/images/samsungpay.svg" class="samsung_img" alt="samsungpay"><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="payco"></span><input type="radio" name="way" id="way_payco" value="payco"><img src="../nav/images/payco.svg" class="payco_img" alt="payco"><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="card"></span><input type="radio" name="way" id="way_card" value="card"><span class="input_text"></span>신용카드</span><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="phone"></span><input type="radio" name="way" id="way_phone" value="phone"><span class="input_text"></span>휴대폰</span><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="transfer"></span><input type="radio" name="way" id="way_transfer" value="transfer"><span class="input_text"></span>계좌이체</span><span class="deduction">소득공제</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="culture"></span><input type="radio" name="way" id="way_culture" value="culture"><span class="input_text"></span>컬쳐랜드문화상품권</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="book"></span><input type="radio" name="way" id="way_book" value="book"><span class="input_text"></span>도서문화상품권</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="happy"></span><input type="radio" name="way" id="way_happy" value="happy"><span class="input_text"></span>해피머니(모바일팝)</span>
+                            </div>
+                            <div class="waybox">  
+                                <span class="before" id="abroad"></span><input type="radio" name="way" id="way_abroad" value="abroad"><span class="input_text"></span>해외 발행 신용카드</span>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+                <span class="pay_gray"><span class="deduction">소득공제</span>표시된 결제 수단으로 결제 시 문화비 소득공제를 받을 수 있습니다.</span>
+                <a href="../quickmenu/event_detail.html"><img src="images/pg_promotion_cart_pc_banner.jpg" alt="2만 원 넘기면 혜택을! 네이버페이 결제 시 1,000 N포인트"></a>
+
+                <h2>구매 동의</h2>
+                <div class="check">
+                    <label for="check">
+                        <input type="checkbox" class="underCheck">
+                        <div class="checkText">
+                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                            <div class="before"></div>
+                            <span>상품, 가격, 할인 정보, 유의 사항 등을 확인하였으며 구매에 동의합니다.</span>
+                        </div>
+                    </label>
+                </div>
+                <a href="#"><button type="button">결제하기</button></a>
+                <span class="pay_gray">결제 취소는 결제일로부터 7일 이내에만 할 수 있습니다.</span>
+                <span class="pay_gray">다운로드하거나 (다운로드 시작 포함) 스트리밍으로 이용한 책은 구매 취소하거나 환불받을 수 없습니다.</span>
+                <span class="pay_gray">문화비 소득공제는 주문 도서와 결제 수단에 따라 적용됩니다. <a href="https://help.ridibooks.com/hc/ko/sections/360002014333">자세히 알아보기<svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="4px" height="7px" fill="#9ea7ad" class="fig-1xqt1sd"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg> </a></span>
+                
+                <div class="ridicash">
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -261,6 +378,43 @@
         $(".main_menu li").on("click", function() {
             $(".underline").removeClass("underline");
             $(this).addClass("underline");
+        });
+
+        /* section */
+        function checkBefore() {
+            let inputTag = $("input[type=\"checkbox\"]");
+
+            if($(inputTag).is(":checked") == false) {
+                $(".before").css("background", "#1f8ce6").css("borderColor", "#0077D9");
+                $(inputTag).prop("checked", true);
+            } else if($(inputTag).is(":checked") == true) {
+                $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
+                $(inputTag).prop("checked", false);
+            }
+       }
+
+       $(".before").on("click", function() {
+            checkBefore();
+       });
+
+       $(".fig-17fh37n").on("click", function() {
+            checkBefore();
+       });
+
+        /* payway */
+        $(".before").on("click", function() {
+            $(".before_check").removeClass("before_check");
+            $(".waybox span:first-child").attr("class", "before");
+
+            $(this).attr("class", "before_check");
+            $(".waybox span:last-child").css("color", "#303538");
+
+            let input = $(this).next();
+            input.prop("checked", true);
+
+            $(".before").not($(this)).addClass("class", "before");
+            notinput = $(".before").not($(this)).next();
+            notinput.prop("checked", false);
         });
 
         /* footer */

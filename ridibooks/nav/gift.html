@@ -110,13 +110,13 @@
                                 <form action="#">
                                     <label for="way">
                                         <div class="waybox">
-                                            <span class="before_check" id="id"></span><input type="radio" name="way" id="way_id" value="id"><span class="input_text">리디북스 아이디</span>
+                                            <span class="before before_check" id="id"></span><input type="radio" name="way" id="way_id" value="id"><span class="input_text">리디북스 아이디</span>
                                         </div>
                                         <div class="waybox">
-                                            <span class="before" id="sms"></span><input type="radio" name="way" id="way_sms" value="sms"><span class="input_text text_sms"></span>무료 SMS</span>
+                                            <span class="before" id="sms"></span><input type="radio" name="way" id="way_sms" value="sms"><span class="input_text text_sms">무료 SMS</span>
                                         </div>
                                         <div class="waybox">  
-                                            <span class="before" id="mail"></span><input type="radio" name="way" id="way_mail" value="mail"><span class="input_text text_mail"></span>이메일</span>
+                                            <span class="before" id="mail"></span><input type="radio" name="way" id="way_mail" value="mail"><span class="input_text text_mail">이메일</span>
                                         </div>
                                     </label>
                                 </form>
@@ -395,7 +395,6 @@
         });
 
         /* section */
-
         $(".gift_input input").on("focus", function() {
             $(this).css("borderColor", "#1f8ce6");
         });
@@ -417,6 +416,7 @@
 
             $(this).attr("class", "before_check");
 
+
             let input = $(this).next();
             input.prop("checked", true);
 
@@ -428,14 +428,17 @@
                 $(".get_id").css("display", "block");
                 $(".get_sms").css("display", "none");
                 $(".get_mail").css("display", "none");
+                $("#get_name").prop("disabled", true);
             } else if($("#sms").attr("class") == "before_check") {
                 $(".get_id").css("display", "none");
                 $(".get_sms").css("display", "block");
                 $(".get_mail").css("display", "none");
+                $("#get_name").prop("disabled", false);
             } else if($("#mail").attr("class") == "before_check"){
                 $(".get_id").css("display", "none");
                 $(".get_sms").css("display", "none");
                 $(".get_mail").css("display", "block");
+                $("#get_name").prop("disabled", false);
             }
         });
 
