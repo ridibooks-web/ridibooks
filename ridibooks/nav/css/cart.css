@@ -19,6 +19,10 @@
 }
 
 /* 왼쪽 */
+.cart .rentbox {
+    display: none;
+}
+
 .cart_left {
     width: 618px;
     border: 1px solid #d1d5d9;
@@ -193,7 +197,7 @@ input[type="checkbox"] {
     border-radius: 2px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -1px;
 }
 
 .check svg, .cart_list ul svg {
@@ -378,7 +382,7 @@ input[type="checkbox"] {
     color: #66baff !important;
 }
 
-input[type="radio"] {
+.pay input[type="radio"] {
     width: 1px;
     height: 1px;
     left: 1px;
@@ -387,7 +391,7 @@ input[type="radio"] {
     display: none;
 }
 
-.before {
+.pay .before {
     display: block;
     width: 18px;
     height: 18px;
@@ -400,12 +404,12 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.waybox > span:hover, .waybox > span:active {
+.pay .waybox > span:hover, .waybox > span:active {
     border-color: #40474d;    
     color: #40474d;
 }
 
-.before_check {
+.pay .before_check {
     display: block;
     width: 18px;
     height: 18px;
@@ -418,7 +422,7 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.waybox {
+.pay .waybox {
     display: inline-block;
     position: relative;
     margin-right: 6px;
@@ -426,7 +430,7 @@ input[type="radio"] {
     align-items: center;
 }
 
-.waybox img {
+.pay .waybox img {
     height: 20px;
     display: inline-block;
     flex: 0 0 100px;

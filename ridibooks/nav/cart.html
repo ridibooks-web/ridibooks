@@ -74,18 +74,37 @@
                     <li><a href="../nav/cart.html">구매 가능 <span>3</span></a></li>
                     <li class="gray_bg"><a href="../nav/cart_rent.html">대여 가능</a></li>
                 </ul>
+                <div class="rentbox">
+                    <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                        y="0px" viewBox="0 0 58.35 63.2" style="enable-background:new 0 0 58.35 63.2;" xml:space="preserve">
+                    <style type="text/css">
+                    .st0{fill:#E6E8EB;}
+                    </style>
+                    <g>
+                    <path class="st0" d="M15.55,62.6c-3.86,0-7-3.14-7-7s3.14-7,7-7s7,3.14,7,7S19.41,62.6,15.55,62.6z M15.55,52.6c-1.65,0-3,1.35-3,3
+                        s1.35,3,3,3s3-1.35,3-3S17.21,52.6,15.55,52.6z"/>
+                    <path class="st0" d="M44.55,62.6c-3.86,0-7-3.14-7-7s3.14-7,7-7s7,3.14,7,7S48.41,62.6,44.55,62.6z M44.55,52.6c-1.65,0-3,1.35-3,3
+                        s1.35,3,3,3s3-1.35,3-3S46.21,52.6,44.55,52.6z"/>
+                    <path class="st0" d="M45.15,43.6H12.5c-2.18,0-3.95-1.77-3.95-3.95V13.6H4.5c-2.18,0-3.95-1.77-3.95-3.95V4.55
+                        c0-2.18,1.77-3.95,3.95-3.95h10.11c2.18,0,3.95,1.77,3.95,3.95V9.6h35.3c1.27,0,2.46,0.61,3.2,1.64c0.74,1.03,0.94,2.36,0.54,3.56
+                        l-8.7,26.11C48.36,42.51,46.85,43.6,45.15,43.6z M8.66,9.6c1.05,0,2.03,0.41,2.77,1.15s1.14,1.73,1.13,2.78l0,26.12l32.6-0.05
+                        l8.63-26H18.36c-1.01,0-1.96-0.4-2.67-1.12c-0.74-0.75-1.15-1.8-1.13-2.88V4.55L4.5,4.6l0.05,5.05L8.66,9.6z"/>
+                    </g>
+                    </svg>
+                    <p>카트에 담긴 책이 없습니다.</p>
+                </div>
                 <div class="check">
                     <label for="check">
-                        <input type="checkbox" class="underCheck">
-                        <div class="checkText">
+                        <input type="checkbox" class="underCheck" id="all_check">
+                        <div class="checkText" id="all_text">
                             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
-                            <div class="before"></div>
+                            <div class="before" id="all_before"></div>
                             <span>전체 선택</span>
                         </div>
                     </label>
                     <div class="cart_btn">
                         <button class="gray_btn select_gray" type="button">선택 위시리스트로 이동</button>
-                        <button class="gray_btn select_gray" type="button">선택 삭제</button>
+                        <button class="gray_btn select_gray" id="select_btn"  type="button">선택 삭제</button>
                     </div>
                 </div>
 
@@ -105,7 +124,7 @@
                             <a href="../mainlink/authorprofile.html"><p class="author">장류진</p></a>
                             <div class="cart_btn">
                                 <button class="gray_btn" type="button">위시리스트로 이동</button>
-                                <button class="gray_btn" type="button">삭제</button>
+                                <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <div class="pricebox">
                                 <span class="price_minus">-</span><p class="price">9,800원</p>
@@ -127,7 +146,7 @@
                             <a href="../mainlink/authorprofile.html"><p class="author">나란</p></a>
                             <div class="cart_btn">
                                 <button class="gray_btn" type="button">위시리스트로 이동</button>
-                                <button class="gray_btn" type="button">삭제</button>
+                                <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <p class="price_sale">10,500원</p>
                             <div class="pricebox">
@@ -150,7 +169,7 @@
                             <a href="../mainlink/authorprofile.html"><p class="author">최은영</p></a>
                             <div class="cart_btn">
                                 <button class="gray_btn" type="button">위시리스트로 이동</button>
-                                <button class="gray_btn" type="button">삭제</button>
+                                <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <div class="pricebox">
                                 <span class="price_minus">-</span><p class="price">10,200원</p>
@@ -162,16 +181,16 @@
 
                 <div class="check">
                     <label for="check">
-                        <input type="checkbox" class="underCheck">
-                        <div class="checkText">
+                        <input type="checkbox" class="underCheck" id="all_check">
+                        <div class="checkText" id="all_text2">
                             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
-                            <div class="before"></div>
+                            <div class="before" id="all_before"></div>
                             <span>전체 선택</span>
                         </div>
                     </label>
                     <div class="cart_btn">
                         <button class="gray_btn select_gray" type="button">선택 위시리스트로 이동</button>
-                        <button class="gray_btn select_gray" type="button">선택 삭제</button>
+                        <button class="gray_btn select_gray" id="select_btn2" type="button">선택 삭제</button>
                     </div>
                 </div>
             </div>
@@ -319,66 +338,6 @@
             }
         });
 
-        /* section */
-        /* writer_search */
-        $(".writer_search button").on("click", function() {
-            if($(".writer_search button").attr("class") == "hidebtn") {
-                $(".hide").css("display", "block");
-                $(".fig-eex5gy").css("transform", "rotate(180deg)");
-                $(".writer_search button").removeClass("hidebtn");
-                $(".hidetext").text("접기");
-            } else {
-                $(".hide").css("display", "none");
-                $(".fig-eex5gy").css("transform", "rotate(0deg)");
-                $(".writer_search button").addClass("hidebtn");
-                $(".hidetext").text("3명 더 보기");
-            }
-        });
-
-        /* book_search */
-        /* book_search_top */
-        $(".exceptbtn").on("click", function() {
-            if($(".exceptbox input").is(":checked") == false) {
-                $(".exceptbox").css("backgroundColor", "#339CF2");
-                $(".exceptbox input").css("transform", "translateX(17px)");
-                $(".exceptbox input").prop("checked", true);
-            } else {
-                $(".exceptbox").css("backgroundColor", "#b8bfc4");
-                $(".exceptbox input").css("transform", "translateX(0)");
-                $(".exceptbox input").prop("checked", false);
-            }
-        });
-
-       $(".check").on("click", function() {
-            let inputTag = $(".underCheck");
-
-            if($(inputTag).is(":checked") == false) {
-                $(".before").css("background", "#339CF2").css("borderColor", "#339CF2");
-                $(inputTag).prop("checked", true);
-            } else if($(inputTag).is(":checked") == true) {
-                $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
-                $(inputTag).prop("checked", false);
-            }
-       });
-
-        /* search_nav */
-       $(".search_nav ul li").on("click", function() {
-           $(".search_text").removeClass("search_text");
-           $(this).addClass("search_text");
-       });
-
-       $(".search_next").on("click", function() {
-            $(".search_prev").css("display", "block");
-            $(".search_nav ul li").css("transform", "translateX(-910px)")
-            .css("transition", "transform 0.6s ease");
-       });
-
-       $(".search_prev").on("click", function() {
-            $(".search_prev").css("display", "none");
-            $(".search_nav ul li").css("transform", "translateX(0px)")
-            .css("transition", "transform 0.6s ease");
-       });
-
         /* main_menu */
         $(".main_menu li").on("click", function() {
             $(".underline").removeClass("underline");
@@ -386,26 +345,108 @@
         });
 
         /* section */
-        /* 왼쪽 체크박스 */
-        function checkBefore() {
+        /* 전체선택 */
+        function allTag() {
             let inputTag = $("input[type=\"checkbox\"]");
 
-            if($(inputTag).is(":checked") == false) {
+            if($("#all_check").is(":checked") == false) {
                 $(".before").css("background", "#1f8ce6").css("borderColor", "#0077D9");
                 $(inputTag).prop("checked", true);
-            } else if($(inputTag).is(":checked") == true) {
+            } else if($("#all_check").is(":checked") == true) {
                 $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
                 $(inputTag).prop("checked", false);
+            } else if($(".before").css("background") == "#fff") {
+                $("#all_before").css("background", "#1f8ce6").css("borderColor", "#0077D9");
             }
-       }
+        }
 
+        $("#all_text").on("click", function() {
+            allTag();
+        });
+
+        $("#all_text .before").on("click", function() {
+            allTag();
+        });
+
+        $("#all_text .fig-17fh37n").on("click", function() {
+            allTag();
+        });
+
+        $("#all_text2 ").on("click", function() {
+            allTag();
+        });
+
+        $("#all_text2 .before").on("click", function() {
+            allTag();
+        });
+
+        $("#all_text2 .fig-17fh37n").on("click", function() {
+            allTag();
+        });
+
+       /* 선택 */
        $(".before").on("click", function() {
-            checkBefore();
+        let inputTag = $("input[type=\"checkbox\"]");
+        let beforeTag = $(this).nextAll(".before");
+
+        if($(inputTag).is(":checked") == false) {
+            $(this).css("background", "#1f8ce6").css("borderColor", "#0077D9");
+            $(inputTag).prop("checked", true);
+        } else if($(inputTag).is(":checked") == true) {
+            $(this).css("background", "#fff").css("borderColor", "#D1D5D9");
+            $(inputTag).prop("checked", false);
+        }
        });
 
        $(".fig-17fh37n").on("click", function() {
-            checkBefore();
+        let inputTag = $("input[type=\"checkbox\"]");
+        let beforeTag = $(this).nextAll(".before");
+
+        if($(inputTag).is(":checked") == false) {
+            $(beforeTag).css("background", "#1f8ce6").css("borderColor", "#0077D9");
+            $(inputTag).prop("checked", true);
+        } else if($(inputTag).is(":checked") == true) {
+            $(beforeTag).css("background", "#fff").css("borderColor", "#D1D5D9");
+            $(inputTag).prop("checked", false);
+        }
        });
+
+       /* 선택 삭제 */
+       $("#select_btn").on("click", function() {
+            let inputTag = $("input[type=\"checkbox\"]");
+
+            let check_li = $(inputTag).prop("checked");
+
+            if(check_li) {
+                alert("선택한 책을 삭제하시겠습니까?");
+                
+                if(inputTag) {
+                    $(check_li).parents("li").css("display", "none");
+                }
+
+            }
+       });
+
+       /* 삭제 */
+       $(".delete_btn").on("click", function() {
+            let inputTag = $("input[type=\"checkbox\"]");
+
+            if($(inputTag).is(":checked") == true) {
+                alert("책을 삭제하시겠습니까?");
+
+                $(this).parents("li").css("display", "none");
+            }
+       });
+
+       if($(".cart_list li").css("display") == "none") {
+            $(".check").css("display", "none");
+            $(".cart_list").css("display", "none");
+            $(".rentbox").css("display", "block");
+       } else {
+            $(".check").css("display", "flex");
+            $(".cart_list").css("display", "block");
+            $(".rentbox").css("display", "none");  
+       }
 
         /* footer */
         $(".ridiInfo").on("click", function() {
