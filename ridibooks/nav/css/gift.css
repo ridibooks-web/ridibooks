@@ -253,8 +253,7 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.waybox > span:hover, .waybox > span:active {
-    border-color: #40474d;    
+.waybox > span:hover, .waybox > span:active { 
     color: #40474d;
 }
 

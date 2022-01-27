@@ -303,7 +303,10 @@ input[type="checkbox"] {
 }
 
 /* cart_rent */
-.rentbox {
+
+
+.rent .rentbox {
+    display: block;
     text-align: center;
     padding: 160px 0;
     cursor: default;
