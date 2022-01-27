@@ -158,6 +158,7 @@
     background-color: #f2f4f5;
 }
 
+
 /* 체크박스 */
 .checkText {
     position: relative;
@@ -303,10 +304,12 @@ input[type="checkbox"] {
 }
 
 /* cart_rent */
-
-
 .rent .rentbox {
     display: block;
+}
+
+
+.rentbox {
     text-align: center;
     padding: 160px 0;
     cursor: default;
@@ -445,4 +448,50 @@ input[type="checkbox"] {
 
 .input_text {
     padding-left: 25px;
+}
+
+
+/* 팝업창 */
+.popBox {
+    left: 50%;
+    top: 45px;
+    width: 420px;
+    margin-left: -210px;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    padding: 15px 50px 15px 15px;
+    background: rgba(0,0,0,.9);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+    border-radius: 4px;
+
+    opacity: 0;
+}
+
+.popBox p {
+    color: #f5948a;
+    font-size: 13px;
+    line-height: 1.45em;
+    letter-spacing: -.03em;
+    padding-left: 21px;
+    position: relative;
+    cursor: default;
+    font-weight: 400;
+}
+
+.pop {
+    fill: #f5948a;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+}
+
+.popBox img {
+    width: 16px;
+    height: 16px;
+    position: absolute; 
+    cursor: pointer;  
+    top: 34%;
+    right: 10px; 
 }

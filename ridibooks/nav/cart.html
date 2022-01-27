@@ -103,7 +103,7 @@
                         </div>
                     </label>
                     <div class="cart_btn">
-                        <button class="gray_btn select_gray" type="button">선택 위시리스트로 이동</button>
+                        <button class="gray_btn select_gray" id="selectwish_btn" type="button">선택 위시리스트로 이동</button>
                         <button class="gray_btn select_gray" id="select_btn"  type="button">선택 삭제</button>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                             <a href="../mainlink/bookdetail.html"><h2>일의 기쁨과 슬픔</h2></a>
                             <a href="../mainlink/authorprofile.html"><p class="author">장류진</p></a>
                             <div class="cart_btn">
-                                <button class="gray_btn" type="button">위시리스트로 이동</button>
+                                <button class="gray_btn wish_btn" type="button">위시리스트로 이동</button>
                                 <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <div class="pricebox">
@@ -145,7 +145,7 @@
                             <a href="../mainlink/bookdetail.html"><h2>이 미로의 끝은 행복일 거야</h2></a>
                             <a href="../mainlink/authorprofile.html"><p class="author">나란</p></a>
                             <div class="cart_btn">
-                                <button class="gray_btn" type="button">위시리스트로 이동</button>
+                                <button class="gray_btn wish_btn" type="button">위시리스트로 이동</button>
                                 <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <p class="price_sale">10,500원</p>
@@ -168,7 +168,7 @@
                             <a href="../mainlink/bookdetail.html"><h2>밝은 밤</h2></a>
                             <a href="../mainlink/authorprofile.html"><p class="author">최은영</p></a>
                             <div class="cart_btn">
-                                <button class="gray_btn" type="button">위시리스트로 이동</button>
+                                <button class="gray_btn wish_btn" type="button">위시리스트로 이동</button>
                                 <button class="gray_btn delete_btn" type="button">삭제</button>
                             </div>
                             <div class="pricebox">
@@ -189,7 +189,7 @@
                         </div>
                     </label>
                     <div class="cart_btn">
-                        <button class="gray_btn select_gray" type="button">선택 위시리스트로 이동</button>
+                        <button class="gray_btn select_gray" id="selectwish_btn2" type="button">선택 위시리스트로 이동</button>
                         <button class="gray_btn select_gray" id="select_btn2" type="button">선택 삭제</button>
                     </div>
                 </div>
@@ -209,6 +209,12 @@
         </div>
     </section>
 
+    <div class="popBox">
+        <svg viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" class="pop" id=""><path d="M24.1.9C10.9.9.1 11.7.1 24.9s10.8 24 24 24 24-10.8 24-24-10.8-24-24-24zm0 40.5c-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8 0 2-1.7 3.8-3.8 3.8zm3.8-16.5c0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8V12.3c0-2.1 1.7-3.8 3.8-3.8 2.1 0 3.8 1.7 3.8 3.8v12.6z"></path></svg>
+        <p>이동할 책을 선택해주세요.</p>
+        <img src="../signup/images/다운로드.svg">
+    </div>
+    
     <!-- footer -->
     <footer>
         <div class="footerbox">
@@ -384,10 +390,11 @@
             allTag();
         });
 
-       /* 선택 */
-       $(".before").on("click", function() {
-        let inputTag = $("input[type=\"checkbox\"]");
+        /* 선택 */
+        $(".before").on("click", function() {
         let beforeTag = $(this).nextAll(".before");
+        let input_text = $(this).parent();
+        let inputTag = input_text.prev();
 
         if($(inputTag).is(":checked") == false) {
             $(this).css("background", "#1f8ce6").css("borderColor", "#0077D9");
@@ -396,11 +403,12 @@
             $(this).css("background", "#fff").css("borderColor", "#D1D5D9");
             $(inputTag).prop("checked", false);
         }
-       });
+        });
 
-       $(".fig-17fh37n").on("click", function() {
-        let inputTag = $("input[type=\"checkbox\"]");
+        $(".fig-17fh37n").on("click", function() {
         let beforeTag = $(this).nextAll(".before");
+        let input_text = $(this).parent();
+        let inputTag = input_text.prev();
 
         if($(inputTag).is(":checked") == false) {
             $(beforeTag).css("background", "#1f8ce6").css("borderColor", "#0077D9");
@@ -409,44 +417,109 @@
             $(beforeTag).css("background", "#fff").css("borderColor", "#D1D5D9");
             $(inputTag).prop("checked", false);
         }
-       });
+        });
 
-       /* 선택 삭제 */
-       $("#select_btn").on("click", function() {
-            let inputTag = $("input[type=\"checkbox\"]");
+        function rentbox() {
+            if($(".cart_list li").css("display") == "none") {
+                $(".check").css("display", "none");
+                $(".cart_list").css("display", "none");
+                $(".rentbox").css("display", "block");
+            } else {
+                    $(".check").css("display", "flex");
+                    $(".cart_list").css("display", "block");
+                    $(".rentbox").css("display", "none");  
+            }
+        }
 
-            let check_li = $(inputTag).prop("checked");
+        /* 선택 삭제 */
+        $("#select_btn").on("click", function() {
+            let inputTag_check = $("input[type=\"checkbox\"]:checked");
 
-            if(check_li) {
+            if(inputTag_check) {
                 alert("선택한 책을 삭제하시겠습니까?");
                 
-                if(inputTag) {
-                    $(check_li).parents("li").css("display", "none");
-                }
-
+                $(inputTag_check).parents("li").css("display", "none");
             }
-       });
 
-       /* 삭제 */
-       $(".delete_btn").on("click", function() {
+            rentbox();
+        });
+
+        $("#select_btn2").on("click", function() {
+            let inputTag_check = $("input[type=\"checkbox\"]:checked");
+
+            if(inputTag_check) {
+                alert("선택한 책을 삭제하시겠습니까?");
+                
+                $(inputTag_check).parents("li").css("display", "none");
+            }
+
+            rentbox();
+        });
+
+        /* 선택 위시리스트 이동 */
+        $("#selectwish_btn").on("click", function() {
+            let inputTag = $("input[type=\"checkbox\"]");
+            let inputTag_check = $("input[type=\"checkbox\"]:checked");
+
+            if(inputTag_check == false) {
+                $(".popBox").animate({
+                opacity: "1",
+                marginTop : "30px"
+                }, 300);
+
+                setTimeout(function() {
+                $(".popBox").animate({
+                opacity: "0",
+                marginTop: "0px"
+                }, 300)     
+                }, 2000);
+
+
+            } else if(inputTag_check) {
+                $(inputTag_check).parents("li").css("display", "none");
+
+                $(".popbox p").text("위시리스트로 이동했습니다.");
+
+                $(".popBox").animate({
+                opacity: "1",
+                marginTop : "30px"
+                }, 300);
+
+                setTimeout(function() {
+                $(".popBox").animate({
+                opacity: "0",
+                marginTop: "0px"
+                }, 300)     
+                }, 2000);
+
+                rentbox();
+            }
+        });
+
+        /* 삭제 및 위시리스트 이동*/
+        $(".delete_btn").on("click", function() {
+            let inputTag_check = $("input[type=\"checkbox\"]:checked");
+
+            if(inputTag_check) {
+                alert("선택한 책을 삭제하시겠습니까?");
+                
+                $(inputTag_check).parents("li").css("display", "none");
+            }
+
+            rentbox();
+        });
+
+        $(".wish_btn").on("click", function() {
             let inputTag = $("input[type=\"checkbox\"]");
 
             if($(inputTag).is(":checked") == true) {
-                alert("책을 삭제하시겠습니까?");
+                // 위시리스트로 이동했습니다.위시리스트 보기
 
                 $(this).parents("li").css("display", "none");
             }
-       });
-
-       if($(".cart_list li").css("display") == "none") {
-            $(".check").css("display", "none");
-            $(".cart_list").css("display", "none");
-            $(".rentbox").css("display", "block");
-       } else {
-            $(".check").css("display", "flex");
-            $(".cart_list").css("display", "block");
-            $(".rentbox").css("display", "none");  
-       }
+            
+            rentbox();
+        });
 
         /* footer */
         $(".ridiInfo").on("click", function() {
