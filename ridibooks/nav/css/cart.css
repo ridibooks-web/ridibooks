@@ -373,7 +373,28 @@ input[type="checkbox"] {
     flex-direction: column;
 }
 
-.deduction {
+.pay .amountbox {
+    padding: 0;
+}
+
+.pay .amountbox ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 14px;
+}
+
+.total {
+    padding: 12px 15px;
+}
+
+.value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #abb3ba;
+}
+
+.deduction { /* 소득공제 */
     display: inline-block;
     background-color: #ebf6ff;
     color: #66baff;
