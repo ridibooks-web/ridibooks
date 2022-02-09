@@ -115,9 +115,9 @@
                         <li><p class="title">할인 쿠폰</p><p class="value">0개</p></li>
                         <li><p class="title">포인트 상품권</p><p class="value">0개</p></li>
                         <li><p class="title">리디포인트</p><p class="value">0원</p></li>
-                        <li><p class="title">리디캐시 <span class="questionMark"></span></p><p class="value">0원</p></li>
+                        <li><p class="title">리디캐시<span class="questionMark">?</span></p><p class="value">0원</p></li>
                     </ul>
-                    <p class="amount skyblue"><span class="title">총 결제 금액<span class="value">29,450</span>원</span></p>
+                    <p class="amount skyblue"><span class="title skypay">총 결제 금액<span class="value">29,450</span>원</span></p>
                 </div>
                 <div class="payway">
                     <p class="title">결제 수단</p>
@@ -159,10 +159,11 @@
                         </label>
                     </form>
                 </div>
-                <span class="pay_gray"><span class="deduction">소득공제</span>표시된 결제 수단으로 결제 시 문화비 소득공제를 받을 수 있습니다.</span>
-                <a href="../quickmenu/event_detail.html"><img src="images/pg_promotion_cart_pc_banner.jpg" alt="2만 원 넘기면 혜택을! 네이버페이 결제 시 1,000 N포인트"></a>
+                <div class="detext">
+                    <span class="pay_gray"><span class="deduction">소득공제</span>표시된 결제 수단으로 결제 시 문화비 소득공제를 받을 수 있습니다.</span>
+                </div>
 
-                <h2>구매 동의</h2>
+                <h2 class="agree">구매 동의</h2>
                 <div class="check">
                     <label for="check">
                         <input type="checkbox" class="underCheck">
@@ -176,7 +177,7 @@
                 <a href="#"><button type="button">결제하기</button></a>
                 <span class="pay_gray">결제 취소는 결제일로부터 7일 이내에만 할 수 있습니다.</span>
                 <span class="pay_gray">다운로드하거나 (다운로드 시작 포함) 스트리밍으로 이용한 책은 구매 취소하거나 환불받을 수 없습니다.</span>
-                <span class="pay_gray">문화비 소득공제는 주문 도서와 결제 수단에 따라 적용됩니다. <a href="https://help.ridibooks.com/hc/ko/sections/360002014333">자세히 알아보기<svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="4px" height="7px" fill="#9ea7ad" class="fig-1xqt1sd"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg> </a></span>
+                <span class="pay_gray">문화비 소득공제는 주문 도서와 결제 수단에 따라 적용됩니다. <a href="https://help.ridibooks.com/hc/ko/sections/360002014333">자세히 알아보기<svg viewBox="0 0 22 37" xmlns="http://www.w3.org/2000/svg" width="4px" height="7px" fill="#9ea7ad" class="fig-1xqt1sd"><path d="M3.5.5c.3 0 .6.1.9.3l16.8 16.8c.3.3.3.4.3.9 0 .3-.2.6-.3.9L4.4 36.2c-.3.3-.5.3-.9.3s-.6-.2-.9-.3L.8 34.4c-.1-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L15 18.3.8 4.4c-.2-.3-.3-.6-.3-.9 0-.3.1-.6.3-.9L2.6.8c.3-.2.6-.3.9-.3z"></path></svg></a></span>
                 
                 <div class="ridicash">
                     <div class="ridicashbox">
@@ -186,20 +187,26 @@
                             충전 금액에 따라 최대 5% 보너스 적립까지!
                         </p>
                         <table>
-                            <th>리디캐시 충전 금액</th>
-                            <th>보너스 리디포인트</th>
-                            <tr>
-                                <td>2,000원 ~ 20,000원</td>
-                                <td>3%</td>
-                            </tr>
-                            <tr>
-                                <td>30,000원 ~ 70,000원</td>
-                                <td>4%</td>
-                            </tr>
-                            <tr>
-                                <td>100,000원 ~ 500,000원</td>
-                                <td>5%</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>리디캐시 충전 금액</th>
+                                    <th>보너스 리디포인트</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2,000원 ~ 20,000원</td>
+                                    <td>3%</td>
+                                </tr>
+                                <tr>
+                                    <td>30,000원 ~ 70,000원</td>
+                                    <td>4%</td>
+                                </tr>
+                                <tr>
+                                    <td>100,000원 ~ 500,000원</td>
+                                    <td>5%</td>
+                                </tr>
+                            </tbody>
                         </table>
                         <a href="../nav/myridi.html"><button type="button">리디캐시 충전</button></a>
                     </div>

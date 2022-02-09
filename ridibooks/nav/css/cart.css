@@ -373,6 +373,10 @@ input[type="checkbox"] {
     flex-direction: column;
 }
 
+.pay button {
+    padding: 14.5px 34px;
+}
+
 .pay .amountbox {
     padding: 0;
 }
@@ -382,6 +386,15 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: space-between;
     padding: 15px 14px;
+    border-bottom: 1px solid #d9e2eb;
+}
+
+.pay .amountbox ul li:last-child {
+    border: 0px;
+}
+
+.pay .title {
+    color: #545f6f;
 }
 
 .total {
@@ -394,6 +407,92 @@ input[type="checkbox"] {
     color: #abb3ba;
 }
 
+.questionMark {
+    font-size: 12px;
+    font-weight: 700;
+    color: #818a92;
+    border: 1px solid #ced2d6;
+    border-radius: 3px;
+    background: #fff;
+    padding: 2px 4.5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.pay .skyblue {
+    margin: 0;
+}
+
+.pay .skyblue .value {
+    padding-left: 4px;
+}
+
+.pay .amount {
+    justify-content: center;
+}
+
+.pay .skypay {
+    color: #59667a;
+    font-size: 14px;
+}
+
+.payway {
+    padding: 14px 16px 20px 16px;
+    margin-top: -1px;
+    border: 1px solid #87b4e9;
+}
+
+.payway .title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #545f6f;
+    margin-bottom: 5px;
+}
+
+.detext {
+    margin-top: 15px;
+}
+
+.agree {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.pay .check {
+    padding: 0;
+    font-size: 14px;
+    color: #40474d;
+}
+
+.cart_right button {
+    margin: 15px 0;
+}
+
+.pay_gray {
+    color: #808991;
+    font-size: 13px;
+    margin-bottom: 7px;
+    padding-left: 9px;
+}
+
+.pay_gray a {
+    font-weight: bold;
+}
+
+.pay_gray svg {
+    margin-left: 4px;
+}
+
+.pay_gray::before {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #D1D5D9;
+    content: "";
+    position: relative;
+    top: 13px;
+}
+
 .deduction { /* 소득공제 */
     display: inline-block;
     background-color: #ebf6ff;
@@ -403,6 +502,7 @@ input[type="checkbox"] {
     border-radius: 2px;
     line-height: 18px;
     padding: 0 5px;
+    margin-right: 5px;
 }
 
 .deduction:hover, .deduction:active {
@@ -471,6 +571,86 @@ input[type="checkbox"] {
     padding-left: 25px;
 }
 
+.ridicash {
+    margin-top: 20px;
+    border: 3px solid #f4f4f4;
+    padding: 20px 17px;
+}
+
+.ridicashbox h2 {
+    color: #636c73;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ridicashbox h2 i {
+    color: #abb3ba;
+    margin-right: 3px;
+}
+
+.ridicashbox p {
+    color: #666;
+    font-size: 13px;
+}
+
+.ridicashbox table {
+    margin-top: 14px;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.03em;
+    border-collapse: collapse;
+}
+
+.ridicashbox thead {
+    background-color: #f5fafe;
+}
+
+.ridicashbox thead tr th {
+    line-height: 29px;
+    font-weight: bold;
+}
+
+.ridicashbox thead tr th:first-child {
+    color: #636c73;
+}
+
+.ridicashbox thead tr th:last-child {
+    color: #3e79b5;
+    padding: 0 7px;
+}
+
+.ridicashbox tr, .ridicashbox th, .ridicashbox td {
+    border: 1px solid #dbe5ee;
+}
+
+.ridicashbox tbody tr td {
+    padding: 4px 0;
+}
+
+.ridicashbox tbody tr td:first-child {
+    color: #636c73;
+}
+
+.ridicashbox tbody tr td:last-child {
+    color: #3e79b5;
+    font-weight: bold;
+}
+
+.ridicashbox button {
+    background-color: #fff;
+    border: 1px solid #d1d5d9;
+    color: #808991;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 12px 26px;
+    box-shadow: 0 1px 1px 0 rgb(209 213 217 / 30%);
+}
+
+.ridicashbox button:hover, .ridicashbox button:active {
+    background-color: #f2f4f5;
+}
 
 /* 팝업창 */
 .popBox {
