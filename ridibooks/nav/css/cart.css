@@ -339,7 +339,7 @@ input[type="checkbox"] {
 
 .pay .cart_list {
     width: 100%;
-    padding-right: 50px;
+    flex: 0 0 564px;
 }
 
 .pay .cart_info {
@@ -368,6 +368,10 @@ input[type="checkbox"] {
 }
 
 /* 오른쪽 */
+.pay .cart_right {
+    width: 308px;
+}
+
 .payway form label {
     display: flex;
     flex-direction: column;
@@ -473,6 +477,7 @@ input[type="checkbox"] {
     font-size: 13px;
     margin-bottom: 7px;
     padding-left: 9px;
+    display: inline-block;
 }
 
 .pay_gray a {
@@ -484,13 +489,14 @@ input[type="checkbox"] {
 }
 
 .pay_gray::before {
-    display: block;
+    display: inline-block;
     width: 4px;
     height: 4px;
     background: #D1D5D9;
     content: "";
     position: relative;
-    top: 13px;
+    top: -2px;
+    left: -7px;
 }
 
 .deduction { /* 소득공제 */
@@ -509,66 +515,67 @@ input[type="checkbox"] {
     color: #66baff !important;
 }
 
-.pay input[type="radio"] {
-    width: 1px;
-    height: 1px;
-    left: 1px;
-    position: absolute;
-
-    display: none;
-}
-
-.pay .before {
-    display: block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #D1D5D9;
-    background: #fff;
-    border-radius: 50px;
-    position: absolute;
-    left: 0;
-    top: 34%;
-    cursor: pointer;
-}
-
-.pay .waybox > span:hover, .waybox > span:active {
-    border-color: #40474d;    
-    color: #40474d;
-}
-
-.pay .before_check {
-    display: block;
-    width: 18px;
-    height: 18px;
-    border: 6px solid #0077d9;
-    background: #fff;
-    border-radius: 50px;
-    position: absolute;
-    left: 0;
-    top: 34%;
-    cursor: pointer;
-}
-
 .pay .waybox {
-    display: inline-block;
     position: relative;
     margin-right: 6px;
     display: flex;
     align-items: center;
-}
-
-.pay .waybox img {
+    margin-top: 8px;
+    color: #636c73;
+    font-size: 13px;
+    font-weight: bold;
     height: 20px;
-    display: inline-block;
-    flex: 0 0 100px;
+    cursor: pointer;
 }
 
-.naver_img {
+.pay .waybox .payimg {
+    margin-left: 25px;
+}
+
+.naver {
+    background: url("../images/naverpay.svg") center center no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+    display: block;
+    width: 79px;
     height: 20px;
 }
 
-.input_text {
+.kakao {
+    background: url("../images/kakaopay.svg") center center no-repeat;
+    background-color: #ffeb00;
+    background-size: 36px 11px;
+    pointer-events: none;
+    display: block;
+    width: 48px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.smasung {
+    background: url("../images/samsungpay.svg") center center no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+    display: block;
+    width: 84px;
+    height: 22px;
+}
+
+.payco {
+    background: url("../images/payco.svg") center center no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+    display: block;
+    width: 48px;
+    height: 20px;
+}
+
+.pay .waybox .input_text {
     padding-left: 25px;
+}
+
+.pay .waybox .deduction {
+    margin-left: 10px;
 }
 
 .ridicash {
@@ -650,6 +657,99 @@ input[type="checkbox"] {
 
 .ridicashbox button:hover, .ridicashbox button:active {
     background-color: #f2f4f5;
+}
+
+/* checkbox */
+.pay .checkText {
+    position: relative;
+    cursor: pointer;
+}
+
+.pay .check {
+    color: #303538;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pay .check span {
+    display: block;
+    margin-right: 10px;
+    padding: 0px 0px 0px 26px;
+    letter-spacing: -0.39px;
+}
+
+.pay  input[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+    left: 1px;
+    position: absolute;
+
+    display: none;
+}
+
+.pay .before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D1D5D9;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.pay .check svg {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 11;
+    left: 4px;
+    top: 8px;
+}
+
+/* radio */
+input[type="radio"] {
+    width: 1px;
+    height: 1px;
+    left: 1px;
+    position: absolute;
+
+    display: none;
+}
+
+.waybox .before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D1D5D9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    cursor: pointer;
+}
+
+.waybox > span:hover, .waybox > span:active { 
+    color: #40474d;
+}
+
+.waybox .before_check {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 6px solid #0077d9;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    cursor: pointer;
+}
+
+.input_text {
+    padding-left: 25px;
 }
 
 /* 팝업창 */

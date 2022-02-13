@@ -7,8 +7,9 @@
    <title>리디북스</title>
    <link rel="stylesheet" href="../main/css/header_footer.css">
    <link rel="stylesheet" href="../nav/css/min_width.css">
-   <link rel="stylesheet" href="css/inform.css">
+   <link rel="stylesheet" href="css/myridi.css">
    <link rel="shortcut icon" href="/signup/images/favicon.ico" type="image/x-icon">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- header -->   
@@ -65,7 +66,171 @@
 
     <!-- section -->
     <section class="myridi">
+        <!-- menu -->
+        <div class="myridi_menu">
+            <h2>마이리디</h2>
+            <div class="menubox">
+                <div class="menu_text home">
+                    <a href="../nav/myridi.html">
+                        <i class="fa-solid fa-house"></i>
+                        <p class="menu_title">마이리디 홈</p>
+                    </a>
+                </div>
+                <div class="menu_text book">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p class="menu_title">책</p>
+                    <ul>
+                        <li><a href="#">선호작품</a></li>
+                        <li><a href="">최근 조회한 작품</a></li>
+                        <li><a href="">위시리스트</a></li>
+                        <li><a href="">독서노트</a></li>
+                        <li><a href="">신간알림</a></li>
+                        <li><a href="">이벤트 알림 설정</a></li>
+                    </ul>
+                </div>
+                <div class="menu_text pay">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p class="menu_title">구매/혜택</p>
+                    <ul>
+                        <li><a href="">결제 내역</a></li>
+                        <li><a href="">리디캐시</a></li>
+                        <li><a href="">리디포인트</a></li>
+                        <li><a href="#">쿠폰</a></li>
+                    </ul>
+                </div>
+                <div class="menu_text individual">
+                    <i class="fa-solid fa-user"></i>
+                    <p class="menu_title">개인</p>
+                    <ul>
+                        <li><a href="../footer/center.html">1:1 문의</a></li>
+                        <li><a href="">내 기기 관리</a></li>
+                        <li><a href="">내 리뷰 관리</a></li>
+                        <li><a href="../nav/changeinfo_before.html">정보 변경</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <!-- right -->
+        <div class="right withdrawbox">
+            <h2>회원 탈퇴</h2>
+            <div class="with_text">
+                <div class="text first">
+                    <h3 class="blue">"다음 사항을 꼭 확인해주세요."</h3>
+                    <p class="gray">회원 탈퇴 관련하여 자주 묻는 질문 (FAQ)</p>
+                    <p class="lightgray light_q">Q: 아직 사용하지 않은 리디캐시와 포인트는 어떻게 되나요?</p>
+                    <p class="lightgray light_a">A: 즉시 소멸되어 환불받을 수 없습니다.</p>
+                    <P class="red">
+                        잔여 리디캐시: 0원 <br>
+                        잔여 리디포인트: 0원
+                    </P>
+    
+                    <p class="lightgray light_q">Q: 탈퇴한 계정의 아이디나 이메일로 다시 가입할 수 있나요?</p>
+                    <p class="lightgray light_a">A: 탈퇴가 완료되면 편법 이용행위를 방지하기 위하여 아이디 및 이메일주소를 암호화하여 보관합니다. <br>
+                        아이디는 영구적으로 재사용 할 수 없으며, 이메일은 탈퇴 후 30일이 경과하면 다시 사용할 수 있습니다.
+                    </p>
+    
+                    <p class="lightgray light_q">Q: 기기에 다운로드한 책은 계속 이용할 수 있나요?</p>
+                    <p class="lightgray light_a">A: 더 이상 이용할 수 없게 됩니다.</p>
+    
+                    <p class="lightgray light_q">Q: 구독 중인 리디셀렉트는 계속 이용할 수 있나요?</p>
+                    <p class="lightgray light_a">A: 리디셀렉트 구독이 자동 해지됩니다.</p>
+                </div>
+
+                <div class="tedt second">
+                    <h3 class="blue">"탈퇴하려는 이유는 무엇인가요?"</h3>
+                    <div class="check">
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>원하는 책이 부족해서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>회원 혜택이 부족해서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>시스템 오류가 잦아서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>불만, 불편 사항에 대한 응대가 늦어서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>자주 사용하지 않아서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>개인 정보 및 보안이 우려되어서</span>
+                            </div>
+                        </label>
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before second_btn"></div>
+                                <span>기타</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text third">
+                    <h3 class="blue">"본인 확인을 위해 비밀번호를 입력해주세요."</h3>
+                    <form action="#">
+                        <label for="password">
+                            <input type="password" name="password" id="password" placeholder="비밀번호 입력">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="text fourth">
+                    <p>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span class="fourth_text">탈퇴가 완료된 계정은 다시 복구할 수 없습니다.</span>
+                    </p>
+                    <div class="check fourthcheck">
+                        <label for="check">
+                            <input type="checkbox" class="underCheck">
+                            <div class="checkText">
+                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
+                                <div class="before fourth_btn"></div>
+                                <span>위 내용을 이해했으며, 모두 동의합니다.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text btnbox">
+                    <a href="../main/main.html"><button type="button" class="whitebtn">취소</button></a>
+                    <a href="../main/main.html"><button type="button" class="bluebtn">회원탈퇴</button></a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -198,47 +363,6 @@
         });
 
         /* section */
-        /* writer_search */
-        $(".writer_search button").on("click", function() {
-            if($(".writer_search button").attr("class") == "hidebtn") {
-                $(".hide").css("display", "block");
-                $(".fig-eex5gy").css("transform", "rotate(180deg)");
-                $(".writer_search button").removeClass("hidebtn");
-                $(".hidetext").text("접기");
-            } else {
-                $(".hide").css("display", "none");
-                $(".fig-eex5gy").css("transform", "rotate(0deg)");
-                $(".writer_search button").addClass("hidebtn");
-                $(".hidetext").text("3명 더 보기");
-            }
-        });
-
-        /* book_search */
-        /* book_search_top */
-        $(".exceptbtn").on("click", function() {
-            if($(".exceptbox input").is(":checked") == false) {
-                $(".exceptbox").css("backgroundColor", "#339CF2");
-                $(".exceptbox input").css("transform", "translateX(17px)");
-                $(".exceptbox input").prop("checked", true);
-            } else {
-                $(".exceptbox").css("backgroundColor", "#b8bfc4");
-                $(".exceptbox input").css("transform", "translateX(0)");
-                $(".exceptbox input").prop("checked", false);
-            }
-        });
-
-       $(".check").on("click", function() {
-            let inputTag = $(".underCheck");
-
-            if($(inputTag).is(":checked") == false) {
-                $(".before").css("background", "#339CF2").css("borderColor", "#339CF2");
-                $(inputTag).prop("checked", true);
-            } else if($(inputTag).is(":checked") == true) {
-                $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
-                $(inputTag).prop("checked", false);
-            }
-       });
-
         /* search_nav */
        $(".search_nav ul li").on("click", function() {
            $(".search_text").removeClass("search_text");
@@ -262,6 +386,63 @@
             $(".underline").removeClass("underline");
             $(this).addClass("underline");
         });
+
+        $("input").on("focus", function() {
+            $(this).css("borderColor", "#1f8ce6");
+        });
+        $("input").on("blur", function() {
+            $(this).css("borderColor", "#d1d5d9");
+        });
+
+        /* 탈퇴 이유 */
+        $(".second_btn").on("click", function() {
+        let beforeTag = $(this).nextAll(".second_btn");
+        let input_text = $(this).parent();
+        let inputTag = input_text.prev();
+
+        if($(inputTag).is(":checked") == false) {
+            $(this).css("background", "#1f8ce6").css("borderColor", "#0077D9");
+            $(inputTag).prop("checked", true);
+        } else if($(inputTag).is(":checked") == true) {
+            $(this).css("background", "#fff").css("borderColor", "#D1D5D9");
+            $(inputTag).prop("checked", false);
+        }
+        });
+
+        $(".second .fig-17fh37n").on("click", function() {
+        let beforeTag = $(this).nextAll(".before");
+        let input_text = $(this).parent();
+        let inputTag = input_text.prev();
+
+        if($(inputTag).is(":checked") == false) {
+            $(beforeTag).css("background", "#1f8ce6").css("borderColor", "#0077D9");
+            $(inputTag).prop("checked", true);
+        } else if($(inputTag).is(":checked") == true) {
+            $(beforeTag).css("background", "#fff").css("borderColor", "#D1D5D9");
+            $(inputTag).prop("checked", false);
+        }
+        });
+
+        /* 동의 */
+       function checkBefore_four() {
+            let inputTag = $(".fourthcheck input");
+
+            if($(inputTag).is(":checked") == false) {
+                $(".fourth_btn").css("background", "#1f8ce6").css("borderColor", "#0077D9");
+                $(inputTag).prop("checked", true);
+            } else if($(inputTag).is(":checked") == true) {
+                $(".fourth_btn").css("background", "#fff").css("borderColor", "#D1D5D9");
+                $(inputTag).prop("checked", false);
+            }
+       }
+
+       $(".fourth_btn").on("click", function() {
+            checkBefore_four();
+       });
+
+       $(".fourthcheck .fig-17fh37n").on("click", function() {
+            checkBefore_four();
+       });
 
         /* footer */
         $(".ridiInfo").on("click", function() {

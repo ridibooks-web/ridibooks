@@ -329,47 +329,6 @@
         });
 
         /* section */
-        /* writer_search */
-        $(".writer_search button").on("click", function() {
-            if($(".writer_search button").attr("class") == "hidebtn") {
-                $(".hide").css("display", "block");
-                $(".fig-eex5gy").css("transform", "rotate(180deg)");
-                $(".writer_search button").removeClass("hidebtn");
-                $(".hidetext").text("접기");
-            } else {
-                $(".hide").css("display", "none");
-                $(".fig-eex5gy").css("transform", "rotate(0deg)");
-                $(".writer_search button").addClass("hidebtn");
-                $(".hidetext").text("3명 더 보기");
-            }
-        });
-
-        /* book_search */
-        /* book_search_top */
-        $(".exceptbtn").on("click", function() {
-            if($(".exceptbox input").is(":checked") == false) {
-                $(".exceptbox").css("backgroundColor", "#339CF2");
-                $(".exceptbox input").css("transform", "translateX(17px)");
-                $(".exceptbox input").prop("checked", true);
-            } else {
-                $(".exceptbox").css("backgroundColor", "#b8bfc4");
-                $(".exceptbox input").css("transform", "translateX(0)");
-                $(".exceptbox input").prop("checked", false);
-            }
-        });
-
-       $(".check").on("click", function() {
-            let inputTag = $(".underCheck");
-
-            if($(inputTag).is(":checked") == false) {
-                $(".before").css("background", "#339CF2").css("borderColor", "#339CF2");
-                $(inputTag).prop("checked", true);
-            } else if($(inputTag).is(":checked") == true) {
-                $(".before").css("background", "#fff").css("borderColor", "#D1D5D9");
-                $(inputTag).prop("checked", false);
-            }
-       });
-
         /* search_nav */
        $(".search_nav ul li").on("click", function() {
            $(".search_text").removeClass("search_text");
@@ -473,7 +432,6 @@
                 location.href = "../nav/pay.html";
             }
         });
-
 
         /* footer */
         $(".ridiInfo").on("click", function() {
