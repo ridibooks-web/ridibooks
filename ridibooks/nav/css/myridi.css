@@ -9,6 +9,7 @@
 .myridi_menu {
     width: 130px;
     margin-right: 102px;
+    padding-bottom: 320px;
 }
 
 .menubox i {
@@ -44,7 +45,7 @@
     color: #636c73;
 }
 
-.menu_blue {
+.menu_blue p, .menu_blue i {
     color: #1f8ce6;
 }
 
@@ -153,9 +154,191 @@
     top: 8px;
 }
 
-
 /* myridi */
+.loginbox {
+    max-width: 717px;
+    border: 2px solid #636c73;
+    width: 100%;
+    display: flex;
+}
 
+.logout {
+    max-width: 150px;
+    padding: 24px 20px 20px 20px;
+    background: #ebf6ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logout h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.logout p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #808991;
+    padding-bottom: 47px;
+}
+
+.logout button {
+    width: 64px;
+    padding: 7px 0;
+    border: 2px solid #d6deeb;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #636c73;
+    text-align: center;
+    background: #ebf6ff;
+}
+
+.logout button:hover, .logout button:active {
+    background: #dfeef8;
+    border-color: #b3c2d1;
+}
+
+.pointbox {
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.pointbox a {
+    flex: 0 0 172px;
+    padding: 28px 0;
+}
+
+.pointbox a svg {
+    height: 20px;
+}
+
+.boxtitle {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 7px
+}
+
+.boxbluetext {
+    color: #1f8ce6;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+.boxbluetext span {
+    font-size: 28px;
+    padding-right: 2px
+}
+
+.boxtext {
+    color: #636c73;
+    font-size: 13px;
+    line-height: 1.3em;
+    margin-top: 23px;
+}
+
+.boxtext span {
+    color: #212529;
+    font-weight: bold;
+}
+
+.boxtext:hover, .boxtext:active {
+    color: #0077d9;
+}
+
+.pointtext:hover, .pointtext:active {
+    color: #636c73 !important;
+}
+
+.boxtext i {
+    color: #0077d9;
+    font-size: 1px;
+    margin-left: 1px;
+}
+
+.inquirybox {
+    margin-top: 40px;
+}
+
+.in_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.in_title h2 {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    padding: 5px 14px 6px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.titleline {
+    display: block;
+    width: 85%;
+    height: 2px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+
+.in_title button {
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 86px;
+    padding: 6px 0px;
+    border: 1px solid #303538;
+    background: #303538;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.in_title button:hover, .in_title button:active {
+    background: #666;
+}
+
+.in_title button i {
+    font-size: 1px;
+}
+
+.in_book {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.in_book img {
+    height: 167px;
+    width: auto;
+    box-shadow: -1px 8px 8px -4px rgb(0 0 0 / 19%);
+}
+
+.in_book .bookname {
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-top: 10px;
+}
+
+.in_book .graytext {
+    color: #666;
+    font-size: 12px;
+    margin-top: 3px;
+}
 
 /* withdraw */
 .with_text {
@@ -275,6 +458,10 @@
 
 .fourthcheck .checkText {
     margin-top: 0 !important;
+}
+
+.fourthcheck .fig-17fh37n {
+    left: 31.4% !important;
 }
 
 .fourth_btn {
