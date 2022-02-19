@@ -1,9 +1,13 @@
+body {
+    letter-spacing: -0.03em;
+}
+
 .myridi {
     max-width: 952px;
     margin: 0 auto;
     margin-bottom: 100px;
     display: flex;
-    padding: 30px 24px 0 24px;
+    padding-top: 30px;
 }
 
 .myridi_menu {
@@ -104,8 +108,203 @@
     background: #0077D9;
 }
 
-
 /* changeinfo */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid #e6e8eb;
+    width: 100%;
+    margin-top: 20px;
+}
+
+tr {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #e6e8eb;
+    width: 100%;
+}
+
+th {
+    background: #f2f4f5;
+    font-weight: bold;
+    color: #808991;
+    width: 130px;
+    padding: 10px 14px;
+    line-height: 28px;
+    font-size: 13px;
+    text-align: right;
+}
+
+td {
+    padding: 10px 14px;
+}
+
+.blacktext {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+.changeinfo .graytext {
+    font-size: 13px;
+    font-weight: bold;
+    color: #636c73;
+}
+
+.pay_gray {
+    color: #666;
+    font-size: 13px;
+    padding: 8px 0 0 10px;
+    display: block;
+}
+
+.pay_gray::before {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #9ea7ad;
+    content: "";
+    position: relative;
+    top: -2px;
+    left: -7px;
+}
+
+.name td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name a {
+    color: #808991;
+    font-size: 13px;
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #d1d5d9;
+    border-radius: 4px;;
+    box-shadow: 0 1px 1px 0 rgb(209 213 217 / 30%);
+    padding: 8px 18px;
+}
+
+.name a:hover, .name a:active {
+    background: #f2f4f5;
+}
+
+.certification {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #41474b;
+    background: #effae6;
+    border-radius: 3px;
+    padding: 6px 10px 7px 7px;
+    width: 230px
+}
+
+.email td {
+    display: flex;
+    flex-direction: column;
+}
+
+.email i {
+    color: #5FCE0C;
+    font-size: 13px;
+    position: relative;
+    top: 1px;
+}
+
+.refuse {
+    color: #b8bfc4;
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+.changeinfo a button {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    background: #7d8e9e;
+    border: 1px solid #636c73;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgb(125 142 158 / 30%);
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.pw button, .marketing button {
+    padding: 8px 18px !important;
+}
+
+.changeinfo a button:hover, .changeinfo a button:active {
+    background: #636c73;
+}
+
+.changeinfo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.changeinfo input {
+    border: 1px solid #d1d5d9;
+    border-radius: 4px;
+    background: #fff;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2em;
+    color: #303538;
+    outline: none;
+    width: 220px;
+}
+
+.pw .graytext {
+    padding-top: 18px;
+}
+
+.changeinfo input::placeholder {
+    color: #9ea7ad;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.changeinfo input:hover, .changeinfo input:active {
+    outline: none;
+    border-color: #808991;
+}
+
+.changeinfo input[name="newpassword"], .changeinfo input[name="newpasswordre"] {
+    margin-top: 10px;
+}
+
+.marketing .graytext {
+    padding-left: 26px;
+}
+
+.firstcheck {
+    margin-top: 0px !important;
+}
+
+.marketing .checkText {
+    margin-top: 10px;
+    cursor: default;
+}
+
+.changeinfo input[type="email"] {
+    margin-left: 7px;
+}
+
+.changeinfo input[type="email"]::placeholder {
+    color: #636c73;
+    font-size: 12.5px;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+}
+
+.mark_gray {
+    color: #666;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
 .marketing .checkText {
     position: relative;
     cursor: pointer;
@@ -142,7 +341,7 @@
     border-radius: 2px;
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 2px;
 }
 
 .marketing .fig-17fh37n {
@@ -151,7 +350,15 @@
     position: absolute;
     z-index: 11;
     left: 4px;
+    top: 6px;
+}
+
+.firstcheck .before {
     top: 8px;
+}
+
+.firstcheck .fig-17fh37n {
+    top: 12px;
 }
 
 /* myridi */
