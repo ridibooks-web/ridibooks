@@ -118,27 +118,27 @@
                 <tr class="name">
                     <th>이름</th>
                     <td>
-                        <p>서지우</p>
+                        <p class="blacktext">서지우</p>
                         <a href="../nav/withdraw.html">회원 탈퇴</a>
                     </td>
                 </tr>
                 <tr class="id">
                     <th>아이디</th>
                     <td>
-                        <p>jai122667</p>
+                        <p class="blacktext">jai122667</p>
                     </td>
                 </tr>
                 <tr class="email">
                     <th>이메일</th>
                     <td>
                         <label for="email">
-                            <input type="email" name="email" id="email">jai122667@naver.com
+                            <span class="blacktext">jai122667@naver.com</span>
                         </label>
-                        <span>
+                        <span class="certification">
                             <i class="fa-solid fa-check"></i>
                             인증된 이메일 주소입니다.
                         </span>
-                        <a href="../nav/withdraw.html"><button>이메일 변경</button></a>
+                        <a href="#"><button>이메일 변경</button></a>
                     </td>
                 </tr>
                 <tr class="pw">
@@ -155,12 +155,12 @@
                                 <input type="password" name="newpasswordre" id="newpasswordre" placeholder="새 비밀번호 확인">
                             </label>
                         </form>
-                        <p>비밀번호 변경시 유의사항</p>
+                        <p class="graytext">비밀번호 변경시 유의사항</p>
                         <span class="pay_gray">8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력해주세요.</span>
                         <span class="pay_gray">연속된 3자 이상의 같은 문자는 제한합니다.</span>
                         <span class="pay_gray">ID와 같은 비밀번호는 사용할 수 없습니다.</span>
 
-                        <a href="../nav/withdraw.html"><button>비밀번호 변경</button></a>
+                        <a href="#"><button>비밀번호 변경</button></a>
                     </td>
                 </tr>
                 <tr class="marketing">
@@ -168,10 +168,10 @@
                     <td>
                         <label for="check">
                             <input type="checkbox" class="underCheck">
-                            <div class="checkText">
+                            <div class="checkText firstcheck">
                                 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
                                 <div class="before change_btn"></div>
-                                <span>이메일 구독</span><input type="email"><span class="refuse">(거부일: 2018.09.23.)</span>
+                                <span class="graytext">이메일 구독</span><input type="email" placeholder="구독하실 이메일주소를 입력해 주세요"><span class="refuse">(거부일: 2018.09.23.)</span>
                             </div>
                         </label>
                         <label for="check">
@@ -179,7 +179,7 @@
                             <div class="checkText">
                                 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
                                 <div class="before change_btn"></div>
-                                <span>앱 푸신 수신</span><span class="refuse">(거부일: 2018.09.23.)</span>
+                                <span class="graytext">앱 푸신 수신</span><span class="refuse">(거부일: 2018.09.23.)</span>
                             </div>
                         </label>
                         <label for="check">
@@ -187,11 +187,11 @@
                             <div class="checkText">
                                 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="fig-17fh37n"><path d="M47.4 6.7c.4-.6.6-1.4.6-2.2C48 2 45.8 0 43.1 0c-1.6 0-2.9.7-3.8 1.8-.2.3-.5.6-.6 1L18.1 35.1 8.9 24.9c-.9-1.2-2.6-2.6-4.7-2.6-3 0-4.2 2.7-4.2 5.1 0 1.3.7 2.3 1.5 3.2l12.6 15.6c.8.9 2.2 1.8 4 1.8 2 0 3.2-.7 4-1.8l25-38.9.3-.6z"></path></svg>
                                 <div class="before change_btn"></div>
-                                <span>야간 앱 푸시 수신</span><span class="refuse">(거부일: 2018.09.23.)</span>
+                                <span class="graytext">야간 앱 푸시 수신</span><span class="refuse">(거부일: 2018.09.23.)</span>
                             </div>
                         </label>
-                        <p>마케팅 정보 수신에 동의하시면 추천책, 신간, 베스트셀러 등 다양한 책 소식과 이벤트 정보, 할인 쿠폰 등의 혜택을 받으실 수 있습니다.</p>
-                        <a href="../nav/withdraw.html"><button>수신 변경</button></a>
+                        <p class="mark_gray">마케팅 정보 수신에 동의하시면 추천책, 신간, 베스트셀러 등 다양한 책 소식과 이벤트 정보, 할인 쿠폰 등의 혜택을 받으실 수 있습니다.</p>
+                        <a href="#" class="market_click"><button>수신 변경</button></a>
                     </td>
                 </tr>
             </table>
@@ -379,6 +379,21 @@
             $(beforeTag).css("background", "#fff").css("borderColor", "#D1D5D9");
             $(inputTag).prop("checked", false);
         }
+        });
+
+        $("input[type=\"email\"]").val("jai122667@naver.com");
+
+        $("input").on("click", function() {
+            $(this).css("borderColor", "#1f8ce6");
+
+        });
+        $("input").on("focusout", function() {
+            $(this).css("borderColor", "#d1d5d9");
+        });
+
+        $(".market_click").on("click", function() {
+            alert("수정되었습니다./n리디북스 마케팅 정보수정(이메일 거부, 앱 푸시 거부, 야간 앱 푸시 거부)이 정상적으로 처리되었습니다.");
+            location.href = "../nav/myridi.html";
         });
 
         /* footer */
