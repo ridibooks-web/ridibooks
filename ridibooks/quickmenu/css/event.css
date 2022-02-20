@@ -1,0 +1,187 @@
+body {
+    letter-spacing: -0.03em;
+    cursor: default;
+}
+
+/* event_detail */
+.event_detail {
+    width: 900px;
+    margin: 30px auto 100px auto;
+}
+
+.event_detail img {
+    width: 100%;
+}
+
+.img_bottom {
+    background: #000;
+    color: #fff;
+    margin-top: -4px;
+}
+
+.bobox {
+    width: 741px;
+    margin: 0 auto;
+    padding: 40px 0 47px 0;
+}
+
+.bobox h2 {
+    padding-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.se_h2 {
+    padding-top: 40px;
+}
+
+.bobox li::before {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 5px;
+    height: 1px;
+    margin-top: 2px;
+    position: absolute;
+    top: 16px;
+    left: 1px;
+}
+
+.bobox li {
+    padding-top: 8px;
+    padding-left: 15px;
+    font-size: 17px;
+    line-height: 22px;
+    opacity: 0.8;
+    position: relative;
+}
+
+.event_book {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.event_intitle {
+    position: relative;
+}
+
+.event_intitle h3 {
+    background: #fff;
+    z-index: 2;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 14px 6px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.titleline {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    z-index: 1;
+}
+
+.category_book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category_book div {
+    margin: 20px 0px 0 20px;
+    width: 14%;
+}
+
+.category_book div img {
+    width: 110px;
+    height: 160px;
+    box-shadow: -1px 8px 8px -4px rgb(0 0 0 / 19%);
+}
+
+.category_book .bookname {
+    font-size: 12px;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 11px;
+}
+
+.category_book .graytext {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.2em;
+    margin: 4px 0;
+}
+
+.category_num {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 19px;
+    color: #666;
+    width: 110px;
+}
+
+/* 리뷰 별 */
+.starbox {
+    font-size: 13px;
+    line-height: 1.2em;
+    overflow-wrap: break-word;
+    color: #666666;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 10px;
+}
+
+.star_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 10px;
+    color: #FA722E;
+    width: 96%;
+}
+
+.star_gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 10px;
+    color: #D1D5D9;
+}
+
+.star_num {
+    color: #999999;
+    font-size: 11px;
+    padding-top: 1px;
+    margin: 0 2px;
+    line-height: 1em;
+}
+
+.buytext {
+    font-size: 11.5px;
+    color: #666;
+    padding: 5px 0;
+}
+
+.buytext span {
+    color: #1f8ce6;
+    font-weight: bold;
+}
+
+/* event */
