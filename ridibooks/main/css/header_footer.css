@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +12,14 @@ html {
 
 body {
     background-color: white;
-    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
-}
-
-p {
-    letter-spacing: -0.03em;
+    font-family: Apple SD Gothic Neo, 'Noto Sans KR', "나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
 
 a {
     color: #808991;
     text-decoration: none;
     cursor: pointer;
-    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+    font-family: Apple SD Gothic Neo, 'Noto Sans KR', "나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
 
 ul {
@@ -30,7 +28,7 @@ ul {
 
 button {
     cursor: pointer;
-    font-family: Apple SD Gothic Neo,"나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
+    font-family: Apple SD Gothic Neo, 'Noto Sans KR', "나눔고딕", Nanum Gothic, "돋움", Dotum, Helvetica Neue,arial, sans-serif;
 }
 
 /* header */
