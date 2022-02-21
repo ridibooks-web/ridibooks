@@ -281,4 +281,131 @@ body {
 /* bookdetail */
 .bookdetail {
     display: flex;
+    width: 1016px;
+    margin: 0 auto 60px auto;
+}
+
+/* detail_left */
+/* 책 메인 */
+.detail_left {
+    width: 793px;
+    padding-bottom: 95px;
+    background: #fff;
+}
+
+.detail_left h2 {
+    font-size: 18px;
+    color: #59667a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px 0 8px 0;
+    border-bottom: 1px solid #7d8e9e;
+}
+
+.author_title {
+    color: #333 !important;
+    padding-bottom: 17px !important;
+    cursor: pointer !important;
+    border-bottom: none !important;
+    margin: 0 !important;
+}
+
+.introduce {
+    line-height: 1.8em;
+    font-size: 13px;
+    color: #333;
+    height: 186px;
+    overflow: hidden;
+}
+
+.open_btn {
+    font-size: 13px;
+    color: #4076b5;
+    background: none;
+    border: none;
+    float: right;
+}
+
+.open_btn i {
+    padding-left: 2px;
+    position: relative;
+    top: 1px;
+}
+
+.book_title {
+    padding: 0 29px 70px 29px;
+}
+
+
+/* 리뷰 */
+
+/* 이 책과 함께 구매한 책 */
+
+
+/* detail_right */
+.detail_right {
+    width: 207px;
+    border-left: 1px solid #E6E8EB;
+}
+
+.detail_right img {
+    width: 207px;
+    margin-bottom: 30px;
+}
+
+.ranking {
+    padding: 0 18px;
+    margin-bottom: 45px;
+}
+
+.ranking p {
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+
+.ranking ul li {
+    padding: 5px 0;
+    border-top: 1px solid #DFDFDF;
+}
+
+.ranking ul li a {
+    display: flex;
+}
+
+.rank_book {
+    color: #666;
+    font-size: 11.5px;
+}
+
+.rank_book:hover, .rank_book:active {
+    color: #1f8ce6;
+}
+
+.rang_text {
+    width: 33px;
+    color: #e64938;
+    font-size: 11.5px;
+    font-weight: bold;
+}
+
+.more {
+    display: block;
+    text-align: center;
+    padding: 4px 0;
+    background: #EEE;
+    font-size: 11px;
+    color: #666;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.more i {
+    padding-left: 2px;
+}
+
+.more:hover, .more:active {
+    color: #333;
+    background: #dfdfdf;
 }
