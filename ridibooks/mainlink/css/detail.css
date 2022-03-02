@@ -440,6 +440,10 @@ body {
     padding-right: 2px;
 }
 
+.au a:hover, .au a:active {
+    color: #1f8ce6;
+}
+
 .event {
     display: flex;
     align-items: baseline;
@@ -926,15 +930,25 @@ body {
 }
 
 textarea {
-    border: 2px solid #d1d5d9;
+    border: 1px solid #d1d5d9;
     border-radius: 5px;
     width: 100%;
     height: 112px;
     padding: 12px 15px;
-    font-size: 13px;    
-    line-height: 1.5em;
-    color: #a7b1bb;
+    font-size: 12px;   
+    font-weight: 600;
+    line-height: 1em;
+    color: #212529;
     outline: none;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #7d8e9e;
+}
+
+.textarea_pe::placeholder {
+    color: #D7DBDE;
 }
 
 .review_btn {
@@ -971,6 +985,9 @@ textarea {
     border-radius: 4px;
     font-weight: bold;
     height: 30px;
+
+    cursor: default;
+    opacity: 0.5;
 }
 
 /* 리뷰 별 맨 위 */
@@ -983,6 +1000,7 @@ textarea {
     align-items: center;
     justify-content: center;
     margin: 20px 0;
+    position: relative;
 }
 
 .view_input_right .star {
@@ -994,20 +1012,16 @@ textarea {
 }
 
 .view_input_right .star_color {
-    position: static !important;
     top: 0;
-    left: 0;
-    overflow-x: hidden;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    overflow-x: hidden !important;
+    width: auto !important;
+    height: 50px !important;
     color: #FA722E;
-    width: auto;
-    height: 50px;
 }
 
 .view_input_right .star_gray {
-    position: static !important;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
     width: auto;
     height: 50px;
     color: #D1D5D9;
@@ -1151,7 +1165,7 @@ textarea {
     height: 18px;
     width: 34px;
     display: inline-block;
-    text-align: center;
+    padding: 0 2px;
 }
 
 .reportbox {
@@ -1231,6 +1245,42 @@ textarea {
 
 .fa-thumbs-up {
     font-size: 14px;
+}
+
+.com_window {
+    background: #f8fbfe;
+    border-top: 1px solid #c4d1de;
+    padding: 8px 7px;
+
+    display: none;
+}
+
+.com_window label {
+    position: relative;
+}
+
+.com_window input {
+    padding: 14px 8px;
+    color: #666;
+    font-size: 12px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #dee4ea;
+    width: 100%;
+    outline: none;
+}
+
+.com_window input::placeholder {
+    font-size: 13px;
+    letter-spacing: -0.02em;
+}
+
+.com_window .write {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 5px 8px;
+    height: 28px;
 }
 
 /* standard */

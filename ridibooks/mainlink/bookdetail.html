@@ -430,8 +430,14 @@
                         <div class="view_right">
                             <p class="review_content">너무 좋았어요. 책을 읽으면서 이렇게 위로가 된 것이.. 지금 이 겨울에 어울리는. 책이에요</p>
                             <div class="commentbox">
-                                <button type="button" class="author_a comment_a"><i class="fa-solid fa-comment"></i>댓글</button>
+                                <button type="button" class="author_a comment_a" id="com_btn"><i class="fa-solid fa-comment"></i>댓글</button>
                                 <button type="button" class="author_a comment_a"><i class="fa-solid fa-thumbs-up"></i>0</button>
+                            </div>
+                            <div class="com_window" id="com_1">
+                                <label for="com">
+                                    <input type="text"  class="com_text" placeholder="이곳에 댓글을 남겨주세요.">
+                                    <button type="submit" class="write" disabled>댓글 달기</button>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -447,8 +453,14 @@
                         <div class="view_right">
                             <p class="review_content">누구에게나 한번은 찾아온다. 생의 가장 혹독한 계절.<br>그 계절을 담대하게 통과하는 여정에 대한 이야기.<br>‘겨울’을 묘사하는 문장들이 참 아름답다.</p>
                             <div class="commentbox">
-                                <button type="button" class="author_a comment_a"><i class="fa-solid fa-comment"></i>댓글</button>
+                                <button type="button" class="author_a comment_a" id="com_btn2"><i class="fa-solid fa-comment"></i>댓글</button>
                                 <button type="button" class="author_a comment_a"><i class="fa-solid fa-thumbs-up"></i>0</button>
+                            </div>
+                            <div class="com_window" id="com_2">
+                                <label for="com">
+                                    <input type="text" class="com_text" placeholder="이곳에 댓글을 남겨주세요.">
+                                    <button type="submit" class="write" disabled>댓글 달기</button>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -553,7 +565,20 @@
     </section>
 
     <div class="report">
-        
+        <div class="report_bg"></div>
+        <div class="reportbox">
+            <div class="re_top">
+                <p>리뷰 신고하기</p>
+
+            </div>
+            <div class="re_mid">
+                <h3>신고하는 이유를 선택해주세요.</h3>
+                
+            </div>
+            <div class="re_btn">
+                
+            </div>
+        </div>
     </div>
 
     <!-- footer -->
@@ -710,6 +735,23 @@
             }
         });
 
+        /* open_btn */
+        $(".open_btn").on("click", function() {
+            let openbtn = $(this);
+            let span = openbtn.children("span");
+            let icon = openbtn.children("i");
+            
+            if($(span).text() == "펼쳐보기") {
+                $(span).text("접기");
+                $(icon).css("transform", "rotate(180deg)").css("left", "2px").css("top", "0px");
+                $(".introduce").css("height", "auto");
+            } else {
+                $(span).text("펼쳐보기");
+                $(icon).css("transform", "rotate(0deg)").css("left", "0px").css("top", "1px");
+                $(".introduce").css("height", "186px");
+            }
+        });
+
         /* review */
         /* 스포일러 */
         function checkBefore() {
@@ -768,6 +810,78 @@
                 $(".standard_btn i").css("transform", "rotate(0)").css("top", "-1px");
                 $(".standard_btn").addClass("open_st_btn");
                 $(".standard_btn").css("color", "#8595a3");
+            }
+        });
+
+        /* com_btn */
+        $("#com_btn").on("click", function() {
+            if($("#com_1").hasClass("open_com") == false) {
+                $("#com_btn").css("color", "#40474d");
+                $("#com_1").css("display", "block");
+                $("#com_1").addClass("open_com");
+            } else if($("#com_1").hasClass("open_com")) {
+                $("#com_btn").css("color", "#808991");
+                $("#com_1").css("display", "none");  
+                $("#com_1").removeClass("open_com");              
+            }
+        });
+
+        $("#com_btn2").on("click", function() {
+            if($("#com_2").hasClass("open_com") == false) {
+                $("#com_btn2").css("color", "#40474d");
+                $("#com_2").css("display", "block");
+                $("#com_2").addClass("open_com");
+            } else if($("#com_2").hasClass("open_com")) {
+                $("#com_btn2").css("color", "#808991");
+                $("#com_2").css("display", "none");  
+                $("#com_2").removeClass("open_com");              
+            }
+        });
+
+        /* textarea */
+        $("textarea").on("input", function() {
+            $("textarea").css("color", "#666");
+
+            if($("textarea").val() == "") {
+                $(".spolierbox .write").css("opacity", "0.5").css("cursor", "default");
+                $(".spolierbox .write").prop("disabled", true);
+            } else {
+                $(".spolierbox .write").css("opacity", "1").css("cursor", "pointer");
+                $(".spolierbox .write").prop("disabled", false);
+            }
+        });
+
+        $("textarea").on("focus", function() {
+            $("textarea").addClass("textarea_pe");
+        });
+
+        $("textarea").on("blur", function() {
+            $("textarea").removeClass("textarea_pe");
+        });
+
+        /* com_window input */
+        $("#com_1 .com_text").on("input", function() {
+            let write = $(this).next();
+
+            if($("#com_1 .com_text").val() == "") {
+                $(write).css("opacity", "0.5").css("cursor", "default");
+                $(write).prop("disabled", true);
+            } else {
+                $(write).css("opacity", "1").css("cursor", "pointer");
+                $(write).prop("disabled", false);
+            }
+        });
+
+
+        $("#com_2 .com_text").on("input", function() {
+            let write = $(this).next();
+
+            if($("#com_2 .com_text").val() == "") {
+                $(write).css("opacity", "0.5").css("cursor", "default");
+                $(write).prop("disabled", true);
+            } else {
+                $(write).css("opacity", "1").css("cursor", "pointer");
+                $(write).prop("disabled", false);
             }
         });
 
